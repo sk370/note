@@ -1,0 +1,21 @@
+{
+  "trashOption": "local",
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "folder",
+  "showUnsupportedFiles": true,
+  "newLinkFormat": "relative",
+  "attachmentFolderPath": "./assets",
+  "showLineNumber": false,
+  "readableLineLength": false,
+  "strictLineBreaks": true,
+  "showFrontmatter": true,
+  "useMarkdownLinks": true,
+  "promptDelete": false,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
+}
