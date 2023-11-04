@@ -69,7 +69,7 @@ ZooKeeper 数据模型的结构与 Unix 文件系统很类似，整体上可以�
 3. 解压安装包至指定路径：`tar -zxvf apache-zookeeper-3.5.7-bin.tar.gz -C /usr/local/zookeeper/`
 4. 进入`/usr/local/zookeeper/apache-zookeeper-3.5.7-bin/conf`目录，拷贝一份 zoo_sample.cfg，命名为 zoo.cfg
 5. 在/root 目录下创建 root/data/zkData 文件夹：
-   - ![image.png](https://cdn.nlark.com/yuque/0/2022/png/1604140/1661502581478-a8024be9-c3e1-4443-b9b9-33768449be7e.png#clientId=u793e2928-102a-4&crop=0&crop=0&crop=1&crop=1&errorMessage=unknown%20error&from=paste&height=34&id=u524df25d&margin=%5Bobject%20Object%5D&name=image.png&originHeight=34&originWidth=218&originalType=binary∶=1&rotation=0&showTitle=false&size=1515&status=error&style=none&taskId=u3ab18ffd-3e41-4ffa-a493-04f2835d942&title=&width=218)
+   - ![Alt text](zookeeper/image2.png)
 6. 修改 zoo.cfg 文件，修改为：`dataDir=/root/data/zkData`
    - 注意：zookeeper3.5.7 及之后的版本会占用 8080 端口，需要按照如下修改：
      - ![image.png](zookeeper/image-1669761918387.png)

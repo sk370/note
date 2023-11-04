@@ -1818,7 +1818,6 @@ rdb-save-incremental-fsync yes
 # the main dictionary scan
 # active-defrag-max-scan-fields 1000
 ```
-+++
 
   - 主要修改内容如下：
     - ![](docker/image-1669752396664.png)

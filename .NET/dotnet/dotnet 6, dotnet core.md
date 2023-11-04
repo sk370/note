@@ -56,9 +56,9 @@
 
 - `.NET Standard`是`.NET Core`和`.NET Framework`的标准。
 - `.NET Core`和`.NET Framework`是 `.NET Standard`的实现。
-- ![](attachments/Pasted%20image%2020230507111400.png)
+- ![](attachments/20230507111400.png)
 - `.NET Standard`只是规范，一个`.NET Standard`类库可以被支持其版本的`.NET Framework`、`.NET Core`、`Xamarin`等引用。而`.NET Core`类库、`.NET Framework`类库则不可以。如果编写一个公用的类库，尽量选择`.NET Standard`,并且尽量用低版本。
-- ![](attachments/Pasted%20image%2020230507112007.png)
+- ![](attachments/20230507112007.png)
 - `.NET Framework`支持到`.NET Standard 2.0`为止。
 
 ### .NET 5开发工具
@@ -72,6 +72,7 @@
 ### .NET Core中的SDK和Runtime
 
 根据.Net核心指南,.NET Core由以下项目组成：
+
 - `.NET`运行时：提供类型系统,程序集加载,垃圾收集器，本机互操作和其他基本服务。
 - 一组框架库：提供原始数据类型，应用程序组合类型和基本实用程序。
 - 一组SDK工具和语言编译器：支持`.NET Core SDK`中提供的基础开发人员体验。

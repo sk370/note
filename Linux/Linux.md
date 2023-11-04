@@ -1,5 +1,5 @@
 > > - 在这个虚拟机中
-> - ![image.png](https://cdn.nlark.com/yuque/0/2022/png/1604140/1661515813449-5316fb89-43dd-4f1e-8aa6-e09b25649eb7.png#averageHue=%23f4f2ef&clientId=u22a69086-656e-4&errorMessage=unknown%20error&from=paste&height=76&id=ube18a8ae&originHeight=76&originWidth=233&originalType=binary&ratio=1&rotation=0&showTitle=false&size=3557&status=error&style=none&taskId=ud02232d2-2f0e-4aaa-8937-a986b631806&title=&width=233)
+> - ![image.png](assets/image.png)
 
 ## 第1章 初识Linux
 ### 1.1 Linux概述
@@ -8,7 +8,7 @@
 2. GNU/Linux表示遵循GNU开源协议
 3. 关系：
 
-![image.png](C:\Users\iceri\assets\image.png)
+![image.png](assets/image-1699065753344.png)
 ### 1.2 Linix安装
 > - 账户名：root
 > - 密码：dimitre123
@@ -16,37 +16,37 @@
 > - 密码：dimitre123
 
 #### 1.2.1 创建虚拟机
-![image.png](C:\Users\iceri\assets\image-1691165691376.png)![image.png](C:\Users\iceri\assets\image-1691165697145.png)![image.png](C:\Users\iceri\assets\image-1691165699117.png)![image.png](C:\Users\iceri\assets\image-1691165702345.png)![image.png](C:\Users\iceri\assets\image-1691165704744.png)![image.png](C:\Users\iceri\assets\image-1691165706568.png)![image.png](C:\Users\iceri\assets\image-1691165708214.png)![image.png](C:\Users\iceri\assets\image-1691165709899.png)![image.png](C:\Users\iceri\assets\image-1691165712236.png)![image.png](C:\Users\iceri\assets\image-1691165715098.png)![image.png](C:\Users\iceri\assets\image-1691165717813.png)![image.png](C:\Users\iceri\assets\image-1691165719461.png)![image.png](C:\Users\iceri\assets\image-1691165721660.png)![image.png](C:\Users\iceri\assets\image-1691165723623.png)![image.png](C:\Users\iceri\assets\image-1691165725680.png)![image.png](C:\Users\iceri\assets\image-1691165728083.png)
+![image.png](assets/image-1699065755784.png)![image.png](assets/image-1699065758579.png)![image.png](assets/image-1699065760376.png)![image.png](assets/image-1699065762752.png)![image.png](assets/image-1699065764743.png)![image.png](assets/image-1699065766770.png)![image.png](assets/image-1699065769582.png)![image.png](assets/image-1699065777628.png)![image.png](assets/image-1699065780638.png)![image.png](assets/image-1699065783323.png)![image.png](assets/image-1699065785735.png)![image.png](assets/image-1699065788145.png)![image.png](assets/image-1699065790149.png)![image.png](assets/image-1699065792322.png)![image.png](assets/image-1699065794456.png)![image.png](assets/image-1699065796721.png)
 #### 1.2.2 安装CentOS
-![image.png](C:\Users\iceri\assets\image-1691165730291.png)![image.png](C:\Users\iceri\assets\image-1691165733281.png)![image.png](C:\Users\iceri\assets\image-1691165735923.png)![image.png](C:\Users\iceri\assets\image-1691165737801.png)![image.png](C:\Users\iceri\assets\image-1691165739804.png)
-![CentOS安装.png](C:\Users\iceri\assets\CentOS安装.png)
+![image.png](assets/image-1699065799829.png)![image.png](assets/image-1699065878726.png)![image.png](assets/image-1699065880967.png)![image.png](assets/image-1699065884898.png)![image.png](assets/image-1699065894627.png)
+![CentOS安装.png](assets/CentOS安装.png)
 
 - 主机可以起一个好记的名字，然后点应用，以太网要选择打开。
 
-![image.png](C:\Users\iceri\assets\image-1691165744080.png)![image.png](C:\Users\iceri\assets\image-1691165747017.png)![image.png](C:\Users\iceri\assets\image-1691165748811.png)![image.png](C:\Users\iceri\assets\image-1691165750601.png)![image.png](C:\Users\iceri\assets\image-1691165752374.png)![image.png](C:\Users\iceri\assets\image-1691165754417.png)![image.png](C:\Users\iceri\assets\image-1691165758611.png)![image.png](https://cdn.nlark.com/yuque/0/2022/png/1604140/1650293542941-eacc8a53-ec72-4723-b115-438e83aea36d.png#averageHue=%23e7e7e6&clientId=u5f76eb2b-cb72-4&errorMessage=unknown%20error&from=paste&height=150&id=ubcf91b11&originHeight=946&originWidth=1718&originalType=binary&ratio=1&rotation=0&showTitle=false&size=251120&status=error&style=none&taskId=u0abc1143-d0ca-43fd-bd25-cb37ae78dcc&title=&width=272)![image.png](C:\Users\iceri\assets\image-1691165761563.png)![image.png](C:\Users\iceri\assets\image-1691165763803.png)![image.png](C:\Users\iceri\assets\image-1691165765576.png)![image.png](C:\Users\iceri\assets\image-1691165767930.png)![image.png](C:\Users\iceri\assets\image-1691165770540.png)![image.png](C:\Users\iceri\assets\image-1691165773905.png)![image.png](C:\Users\iceri\assets\image-1691165775781.png)![image.png](C:\Users\iceri\assets\image-1691165777592.png)
+![image.png](assets/image-1699065902077.png)![image.png](assets/image-1699065904743.png)![image.png](assets/image-1699065907634.png)![image.png](assets/image-1699065917312.png)![image.png](assets/image-1699065919312.png)![image.png](assets/image-1699065923842.png)![image.png](assets/image-1699065925878.png)![image.png](assets/image-1699065928174.png)![image.png](assets/image-1699065929894.png)![image.png](assets/image-1699065932274.png)![image.png](assets/image-1699065934379.png)![image.png](assets/image-1699065935865.png)![image.png](assets/image-1699065938032.png)![image.png](assets/image-1699065940058.png)![image.png](assets/image-1699065941541.png)![image.png](assets/image-1699065943602.png)
 #### 1.2.3 安装Centos迷你版
 极简安装：一路默认。
 网络配置：
 
 - centos7中，查看本机ip指令变成了`ip addr`
-   - ![image.png](C:\Users\iceri\assets\image-1691165781058.png)
+   - ![image.png](assets/image-1699065945400.png)
 - 修改网卡配置，设置为开机即启动网卡：`vi /etc/sysconfig/network-scripts/ifcfg-ens33`
-   - ![image.png](C:\Users\iceri\assets\image-1691165783274.png)
+   - ![image.png](assets/image-1699065946968.png)
 - 重启网路服务：`systemctl restart network`
 #### 1.2.4 配置静态ip
 
 - 修改网卡配置：`vi /etc/sysconfig/network-scripts/ifcfg-ens33`
-   - ![image.png](C:\Users\iceri\assets\image-1691165787979.png)
+   - ![image.png](assets/image-1699065951620.png)
    - 图中netmask写错了
 - 重启网路服务：`systemctl restart network`
 #### 1.2.5 解决设置静态IP后无法联网问题
 无法联网表现：
-![image.png](C:\Users\iceri\assets\image-1691165791430.png)
+![image.png](assets/image-1699065960413.png)
 排查网关设置是否正确
 
-1. ![image.png](https://cdn.nlark.com/yuque/0/2022/png/1604140/1661400924136-15cc9dc1-ac01-4b03-92a9-7e72221dfcee.png#averageHue=%23f2f0ef&clientId=u160651cb-a54d-4&errorMessage=unknown%20error&from=paste&height=162&id=u1ea2a7e8&originHeight=162&originWidth=297&originalType=binary&ratio=1&rotation=0&showTitle=false&size=11521&status=error&style=none&taskId=uff3c2a8c-7a86-43cc-a779-c8ce5341cbf&title=&width=297)
-2. ![image.png](C:\Users\iceri\assets\image-1691165795481.png)
-3. ![image.png](C:\Users\iceri\assets\image-1691165798311.png)
+1. ![image.png](assets/image-1699065970181.png)
+2. ![image.png](assets/image-1699065967038.png)
+3. ![image.png](assets/image-1699066004221.png)
 
 可以看到网关地址没有设置正确。按照0.3修改即可。
 ### 1.3 Linux前置基础
@@ -61,44 +61,44 @@
 #### 1.3.2 虚拟机克隆
 
 1. 方式一：直接拷贝创建虚拟机时保存的文件夹。
-   - ![image.png](C:\Users\iceri\assets\image-1691165804154.png)
-2. 方式二：![image.png](C:\Users\iceri\assets\image-1691165805957.png)
+   - ![image.png](assets/image-1699066008895.png)
+2. 方式二：![image.png](assets/image-1699066010532.png)
    - 注意：需要在虚拟机关机的情况下克隆。
 
 #### 1.3.3 虚拟机快照
 
 1. 创建方式
-   - ![image.png](C:\Users\iceri\assets\image-1691165808707.png)
+   - ![image.png](assets/image-1699066012553.png)
 2. 恢复快照：
-   - ![image.png](C:\Users\iceri\assets\image-1691165811179.png)
+   - ![image.png](assets/image-1699066014678.png)
 #### 1.3.4 虚拟机的删除和迁移
 删除：从VMware卸载centos虚拟机的过程。
 迁移：从F盘到G盘，将安装文件夹剪切即可。
 然后在vmwere中，打开虚拟机的配置文件即可
-![image.png](C:\Users\iceri\assets\image-1691165813336.png)
+![image.png](assets/image-1699066017222.png)
 #### 1.3.5 安装vmtools
 
 1. 作用：使得本机和虚拟机都能操作同一份文件夹
 2. 步骤1：下载vmtools到虚拟机
-   - ![image.png](C:\Users\iceri\assets\image-1691165815160.png)
+   - ![image.png](assets/image-1699066018885.png)
    - 下载完成后虚拟机桌面会出现vmtools的图标，双击打开
-   - ![image.png](C:\Users\iceri\assets\image-1691165818587.png)
+   - ![image.png](assets/image-1699066020544.png)
 3. 步骤二：将vmtools压缩文件拷贝至虚拟机opt目录下
-   - ![image.png](C:\Users\iceri\assets\image-1691165820950.png)
+   - ![image.png](assets/image-1699066026155.png)
 4. 步骤四：解压vmtools压缩文件
-   - ![image.png](C:\Users\iceri\assets\image-1691165822704.png)
+   - ![image.png](assets/image-1699066030387.png)
 5. 步骤五：安装vmtools。进入解压后的文件夹，在终端执行安装命令
-   - ![image.png](C:\Users\iceri\assets\image-1691165824902.png)
-   - ![image.png](C:\Users\iceri\assets\image-1691165827322.png)
+   - ![image.png](assets/image-1699066032564.png)
+   - ![image.png](assets/image-1699066034559.png)
    - 安装成功：
-   - ![image.png](C:\Users\iceri\assets\image-1691165829507.png)
+   - ![image.png](assets/image-1699066036730.png)
 6. 设置共享文件夹：在vm虚拟机中指定共享文件夹
-   - ![image.png](C:\Users\iceri\assets\image-1691165832623.png)
+   - ![image.png](assets/image-1699066038733.png)
 7. 在虚拟机中查找本地主机共享的文件夹。
-   - ![image.png](C:\Users\iceri\assets\image-1691165834511.png)
+   - ![image.png](assets/image-1699066041095.png)
 ## 第2章 Linux入门
 ### 2.1 Linux的目录结构
-![image.png](C:\Users\iceri\assets\image-1691165836294.png)
+![image.png](assets/image-1699066042765.png)
 
 - /boot：存放的是启动Linux时使用的一些核心文件，包括一些连接文件以及镜像文件。
 - /dev：类似windows的设备管理器，把所有的硬件用文件的形式存储。
@@ -121,26 +121,26 @@
 - /opt：**这是给主机额外安装软件所摆放的目录，如安装ORACLE数据库就可放到该目录下。默认为空。**
 - /selinux：SELinux是一种安全子系统，它能控制程序只能访问特定文件。
 
-![image.png](C:\Users\iceri\assets\image-1691165846991.png)
+![image.png](assets/image-1699066050687.png)
 个人守则：将所有安装都放到opt目录下，配置文件、数据文件root用户放到root目录下，其他用户放到home自己的目录下。
 ### 2.2 Linux远程登录
 > 注意：每次登录，虚拟机的ip好像都会变
 
 即xshell工具的使用
-![image.png](C:\Users\iceri\assets\image-1691165849161.png)![image.png](C:\Users\iceri\assets\image-1691165851441.png)
+![image.png](assets/image-1699066048433.png)![image.png](assets/image-1699066057225.png)
 ### 2.3 Linux远程文件传输
 即xftp的使用
-![image.png](C:\Users\iceri\assets\image-1691165864467.png)
-![image.png](C:\Users\iceri\assets\image-1691165869936.png)
+![image.png](assets/image-1699066063400.png)
+![image.png](assets/image-1699066065869.png)
 解决乱码问题：
-![image.png](C:\Users\iceri\assets\image-1691165873498.png)![image.png](https://cdn.nlark.com/yuque/0/2022/png/1604140/1660828897824-f42bf8c3-3139-4ecb-989b-12e79c22f5e7.png#averageHue=%23e4e0dd&clientId=u0e2f0b3f-c855-4&from=paste&height=150&id=u75126b3a&originHeight=187&originWidth=481&originalType=binary&ratio=1&rotation=0&showTitle=false&size=9833&status=done&style=none&taskId=u8bbb105e-4437-41c9-b142-88822b2a9ad&title=&width=384.8)
+![image.png](assets/image-1699066076497.png)![image.png](https://cdn.nlark.com/yuque/0/2022/png/1604140/1660828897824-f42bf8c3-3139-4ecb-989b-12e79c22f5e7.png#averageHue=%23e4e0dd&clientId=u0e2f0b3f-c855-4&from=paste&height=150&id=u75126b3a&originHeight=187&originWidth=481&originalType=binary&ratio=1&rotation=0&showTitle=false&size=9833&status=done&style=none&taskId=u8bbb105e-4437-41c9-b142-88822b2a9ad&title=&width=384.8)
 ### 扩展：vscode替代xshell和xftp
 
 1. 下载`Remote-SSH`插件，文件传输需要安装`sftp`插件
-2. 连接配置：![image.png](C:\Users\iceri\assets\image-1691165877312.png)
+2. 连接配置：![image.png](assets/image-1699066079121.png)
 ### 2.4 Vim和Vi的使用
 模式切换：
-![image.png](C:\Users\iceri\assets\image-1691165880928.png)
+![image.png](assets/image-1699066081468.png)
 文档修改：
 
 - :wq	保存并退出
@@ -258,7 +258,7 @@ which 命令
    	 =				输出当前行的行号
    	 :f				输出文件名和当前行的行号
 - less：用来分屏查看文件内容，与more相似，但是更强大，支持各种显示终端。less指令在显示文件内容时，并不是一次将整个文件加载之后才显示，而是根据显示需要加载内容。对于显示大型文件具有较高的效率。
-   - ![image.png](C:\Users\iceri\assets\image-1691165892464.png)
+   - ![image.png](assets/image-1699066097579.png)
 - echo：输出内容到控制台
 - head：显示文件开头部分，默认显示前10行
    - head -n 5 文件名：显示前5行内容
@@ -350,7 +350,7 @@ done
 ```
 
    - 进入/root/bin目录，给脚本添加可执行权限：`chmod 777 xsync`
-      - ![image.png](C:\Users\iceri\assets\image-1691165905755.png)
+      - ![image.png](assets/image-1699066105082.png)
    - 此时即可使用`xrsync 文件名`分发文件。
    - 如果遇到分发文件权限不足，可使用`sudo /root/bin/xsync 文件名`的方式进行分发。
 ### 2.6 ssh免密登录
@@ -368,13 +368,13 @@ done
 8. 为了能够在任意路径下执行Java命令，需要将Java的环境变量写入/etc/profile文件中去。
 9. 进行全局环境变量配置：
    - `vi /etc/profile`
-   - ![image.png](C:\Users\iceri\assets\image-1691165911386.png)
+   - ![image.png](assets/image-1699066107660.png)
 10. 刷新环境变量：`source /etc/profile`
 ### x.2 安装tomcat
 
 1. 复制文件：
 
-![image.png](C:\Users\iceri\assets\image-1691165913303.png)
+![image.png](assets/image-1699066111282.png)
 
 2. 解压缩：`tar -zxvf apache-tomcat-8.5.82.tar.gz `
 3. 将解压目录移动至/usr/local/tomcat文件夹下：`mv apache-tomcat-8.5.82 /usr/local/tomcat`
@@ -382,10 +382,10 @@ done
    - `mv apache-tomcat-8.5.82 /usr/local/tomcat`会把apache-tomcat-8.5.82里面的内容移到tomcat文件夹下，apache-tomcat-8.5.82文件夹删除。
    - `mv apache-tomcat-8.5.82/ /usr/local/tomcat`会把apache-tomcat-8.5.82整个文件夹放在tomcat文件夹下
 4. 进入tomcat/bin目录，执行`./startup.sh`
-   - ![image.png](C:\Users\iceri\assets\image-1691165916513.png)
+   - ![image.png](assets/image-1699066323837.png)
 5. 访问测试：
-   - ![image.png](C:\Users\iceri\assets\image-1691165919116.png)
-   - ![image.png](C:\Users\iceri\assets\image-1691165946090.png)
+   - ![image.png](assets/image-1699066114356.png)
+   - ![image.png](assets/image-1699066116235.png)
    - 注：这里已经提前关闭里linux的防火墙。同时也设置了阿里云域名解析。
 ### x.x 安装Hadoop（大数据）
 #### x.x.1 安装环境
@@ -394,10 +394,10 @@ done
 2. 关闭防火墙、设置开机也关闭。
 3. 解压hadoop3.2.4到/usr/local/hadoop目录下，作为安装目录：`tar -zxvf hadoop-3.2.4.tar.gz -C /usr/local/hadoop`
 4. 配置环境变量：`vi /etc/profile`
-   - ![image.png](C:\Users\iceri\assets\image-1691165940300.png)
+   - ![image.png](assets/image-1699066122618.png)
 6. 刷新环境变量：`source /etc/profile`
 7. 执行hadoop测试是否安装成功：`hadop`
-   - ![image.png](C:\Users\iceri\assets\image-1691165937241.png)
+   - ![image.png](assets/image-1699066125272.png)
 #### x.x.2 本地运行模式（演示——统计单词数）
 > 统计word.txt文件中每个单词出现的次数
 
@@ -407,12 +407,12 @@ done
    - wordcount是Hadoop的命令
    - wcinput是要执行数据出路的文件路径
    - wcoutput是处理完数据存放的路径
-      - ![image.png](C:\Users\iceri\assets\image-1691165925990.png)
+      - ![image.png](assets/image-1699066309490.png)
    - 执行该命令时，wcoutput不能存在
 4. 此时wcoutput路径下会生成两个文件
-   - ![image.png](C:\Users\iceri\assets\image-1691165928294.png)
+   - ![image.png](assets/image-1699066293680.png)
 5. `cat part-r-0000`查看处理后的文件：
-   - ![image.png](C:\Users\iceri\assets\image-1691165930579.png)
+   - ![image.png](assets/image-1699066296571.png)
    - 表示helloworld!这个单词出现了一次
 #### x.x.3 集群配置
 
