@@ -1550,3 +1550,83 @@ class Program
 ![Alt text](assets/image-95.png)
 
 ![Alt text](assets/image-96.png)
+
+## 14. 委托
+
+### 14.1 委托简述
+
+1. 委托和类一样，是一种用户定义的类型。
+    1. 可以认为委托是持有一个或多个方法的对象。
+    2. 委托不需要在类内部声明。
+2. 委托声明：
+    1. ![Alt text](assets/image.png)
+3. 委托是引用类型，因此有引用和对象。
+4. 创建委托对象：
+    1. 完全体方式：
+        - ![Alt text](assets/image-25.png)
+    2. 快捷语法（不要new）：
+        - ![Alt text](assets/image-29.png)
+
+### 14.2 组合委托
+
+1. 组合委托指委托的调用列表的方法不止一个。
+2. 组合委托形式：
+    1. ![Alt text](assets/image-35.png)
+    2. delC的调用列表有两个方法，依次为`myInstObj.MyM1`、`SClass.OtherM2`。
+
+### 14.3 委托添加方法和移除方法
+
+1. 添加方法：
+    1. ![Alt text](assets/image-78.png)
+    2. ![Alt text](assets/image-79.png)
+    3. +=的实际发生过程为创建一个新的委托，其调用列表为左边的委托加上右边的方法组合。
+    4. 旧委托会被垃圾回收器回收。
+2. 移除方法：
+    1. ![Alt text](assets/image-80.png)
+    2. 移除方法本质是创建一个新委托。
+    3. 委托的调用列表有多个方法时，从调用列表的最后一个匹配，移除匹配到的第一个。
+    4. 删除委托中不存在的方法无效。
+    5. 委托的调用列表为空，则委托为null，调用空委托会抛出异常。
+
+### 14.4 调用委托
+
+1. 调用委托的形式有两种，一种类似于调用方法，一种时使用委托的Invoke方法：
+    1. ![Alt text](assets/image-81.png)
+2. 委托有返回值并且在调用列表的方法大于一个，则：
+    1. 调用列表中最后一个方法的返回值就是委托调用的返回的值。
+    2. 调用列表中所有其他方法的返回值都会被忽略。
+    3. ![Alt text](assets/image-82.png)
+3. 委托有参数时，调用委托参时，数值会作用到每个调用列表的方法上（输出参数除外）：
+    1. ![Alt text](assets/image-83.png)
+    2. ![Alt text](assets/image-84.png)
+4. 委托有引用参数时，调用委托时，参数值会根据调用列表方法的计算结果而传递。
+    1. ![Alt text](assets/image-86.png)
+    2. ![Alt text](assets/image-87.png)
+
+### 14.5 匿名方法
+
+1. 语法：
+    1. 声明不变。
+    2. 调用：
+        - ![Alt text](assets/image-97.png)
+2. 声明委托时委托的参数列表不包含任何out参数，并且调用委托时委托的匿名方法不使用任何参数，可以省略匿名方法的括号：
+    1. ![Alt text](assets/image-98.png)
+3. 声明委托时委托的参数列表包含了params参数，调用委托时匿名方法的参数列表可以忽略params关键字：
+    1. ![Alt text](assets/image-99.png)
+    2. ![Alt text](assets/image-100.png)
+
+### 14.6 Lambda表达式
+
+1. Lambda是对匿名方法语法的一种优化。
+2. 变化过程：
+    1. 删除delegate管家字
+    2. 调用的匿名方法，在参数列表和匿名方法主体之间放置Lambda=>运算符，读作goes to。
+3. 进一步简化：
+    1. 编译器可以从委托声明推断委托参数类型。
+        - 带有类型的参数列表称为显示类型
+        - 省略类型的参数列表称为隐式类型。
+    2. 只有一个隐式类型的参数时，可以省略两端的圆括号。
+    3. 匿名方法主体是一句表达式时，并且是一个return表达式时，可以省略方法主体的大括号和return关键字。
+4. 示例：
+    1. ![Alt text](assets/image-101.png)
+    2. ![Alt text](assets/image-102.png)
