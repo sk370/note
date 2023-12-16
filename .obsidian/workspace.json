@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02.Study/02.笔记-2023/Python/Python.md",
+                "file": "README.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02.Study/02.笔记-2023/Python/Python.md",
+                "file": "README.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "02.Study/02.笔记-2023/Python/Python.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02.Study/02.笔记-2023/Python/Python.md"
+                "file": "README.md"
               }
             }
           },
@@ -195,6 +195,10 @@
   },
   "active": "e97e0ac305cdf37b",
   "lastOpenFiles": [
+    "工作/Longi/业务/02.切片机运维/设备对接/切片机改造需求.md",
+    "工作/Longi/业务/03.异常过站及异常损耗/异常过站及异常损耗.md",
+    "工作/Longi/业务/05.移动端前后端/移动端前后端.md",
+    "工作/Longi/业务/02.切片机运维/切片机运维.md",
     "01.Work/Longi/入职培训/03.FTPC平台单表开发/FTPC平台单表开发.md",
     "02.Study/01.笔记-2022/技术理论/分布式理论.md",
     "02.Study/02.笔记-2023/Toys/Tlegraf+InfluxDB.md",
@@ -230,10 +234,6 @@
     "Omnivore/2023-10-27/Python 开始准备让 GIL 变为可选了(PEP 703) - V2EX.md",
     "Omnivore/2023-10-27/SpringBoot 内置工具类应有尽有，别再自己瞎造轮子了！.md",
     "Omnivore/2023-10-27/VLAN基础及VLAN划分详细步骤讲解.md",
-    "Omnivore/2023-10-27/Windows 如何实现网络转发- - V2EX.md",
-    "01.Work/Longi/工作/01.生产设备数据采集/生产设备数据采集.md",
-    "Omnivore/2023-10-27/C#使WinCC如虎添翼.md",
-    "Omnivore/2023-10-27/6.5K Star开源一款仅2MB的Windows系统优化软件.md",
     "Omnivore/2023-10-27",
     "Omnivore/2023-10-26",
     "Omnivore/2023-10-25",
