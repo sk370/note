@@ -471,8 +471,7 @@ public @interface AutoConfigurationPackage {}
 2. spring-boot-starter-parent 使用了 spring-boot-dependencies 作为父项目进行依赖管理。而 spring-boot-dependencies 中声明了几乎开发中常用的依赖版本号——自动仲裁机制。
 3. 依赖中 spring-boot-starter-\*称为场景启动器，是一组整合好的方便的依赖描述符。只要引入 starter，满足该场景的常规依赖都会自动引入。
    - spring-boot-starter-web 底层基础依赖是 spring-boot-starter，是所有场景启动最底层的依赖。
-   - \*-spring-boot-starter： 第三方提供的简化开发的场景启动器。
-   -
+   - *-spring-boot-starter： 第三方提供的简化开发的场景启动器。
 
 #### 3.1.2 自动配置内容
 
@@ -516,13 +515,11 @@ public @interface AutoConfigurationPackage {}
 ### 3.4 【心得】spring boot 开发最佳实践流程
 
 1. 引入场景依赖（场景启动器）
-   -
 2. 查看自动配置了哪些（选做）
    - 自己分析，引入场景对应的自动配置一般都生效了
    - application.properties 核心配置文件中 debug=true 开启自动配置报告。在控制台输出中查看：Negative（不生效）\Positive（生效）
 3. 是否需要修改
    - 参照文档修改配置项
-     -
      - 自己分析。xxxxProperties 绑定了配置文件的哪些。
    - 自定义加入或者替换组件
      - @Bean、@Component。。。

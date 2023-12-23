@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "SSM/ssm/SSM.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "SSM/ssm/SSM.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "SSM/ssm/SSM.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "SSM/ssm/SSM.md"
               }
             }
           },
@@ -177,8 +177,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 446.5,
-    "collapsed": true
+    "width": 446.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -195,6 +194,13 @@
   },
   "active": "e97e0ac305cdf37b",
   "lastOpenFiles": [
+    "SSM/mybatisplus/MyBatisPlus.md",
+    "README.md",
+    "读书笔记/C#图解教程/C#图解教程.md",
+    "读书笔记/实用软件工程/实用软件工程.md",
+    "读书笔记/实用软件工程/Untitled.md",
+    "读书笔记/实用软件工程",
+    "读书笔记/Untitled Folder",
     "工作/Longi/业务/02.切片机运维/设备对接/切片机改造需求.md",
     "工作/Longi/业务/03.异常过站及异常损耗/异常过站及异常损耗.md",
     "工作/Longi/业务/05.移动端前后端/移动端前后端.md",
@@ -229,17 +235,10 @@
     "02.Study/01.笔记-2022/javase/Java语言基础（上）.md",
     "学习/未命名",
     "Omnivore/2023-10-27/36张图详解计算机网络知识点.md",
-    "Omnivore/2023-10-27/搞工控不懂组态软件，那就out了！.md",
-    "Omnivore/2023-10-27/如何同步整理相册，现阶段两台手机设备，一台苹果，一台安卓，想使用谷歌相册整合相册，集中化管理，但发现不尽如人意。 - V2EX.md",
-    "Omnivore/2023-10-27/Python 开始准备让 GIL 变为可选了(PEP 703) - V2EX.md",
-    "Omnivore/2023-10-27/SpringBoot 内置工具类应有尽有，别再自己瞎造轮子了！.md",
-    "Omnivore/2023-10-27/VLAN基础及VLAN划分详细步骤讲解.md",
     "Omnivore/2023-10-27",
     "Omnivore/2023-10-26",
     "Omnivore/2023-10-25",
     "Omnivore/2023-07-03",
-    "Omnivore/2023-06-02",
-    "Omnivore/2023-05-21",
-    "Omnivore/2021-05-09"
+    "Omnivore/2023-06-02"
   ]
 }

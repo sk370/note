@@ -906,7 +906,9 @@ CREATE table `t_accout`(
    - `@Transactional`可以添加在类上面：表示该类中所有方法都添加事务。
    - `@Transactional`可以添加到方法上面：表示给该方法添加事务。
 
-#### 4.4.3 注解声明式事务管理配置参数![image.png](spring5/image-1669759831453.png)
+#### 4.4.3 注解声明式事务管理配置参数
+
+![image.png](spring5/image-1669759831453.png)
 
 1. `propagation`：事务传播行为，
    - 事务传播行为是为了解决业务层方法之间互相调用的事务问题。
