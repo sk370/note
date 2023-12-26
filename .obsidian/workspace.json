@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SSM/ssm/SSM.md",
+                "file": "智能制造/IoT/node-red实践/原材料.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SSM/ssm/SSM.md",
+                "file": "智能制造/IoT/node-red实践/原材料.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "SSM/ssm/SSM.md",
+                "file": "智能制造/IoT/node-red实践/原材料.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "SSM/ssm/SSM.md"
+                "file": "智能制造/IoT/node-red实践/原材料.md"
               }
             }
           },
@@ -194,6 +194,8 @@
   },
   "active": "e97e0ac305cdf37b",
   "lastOpenFiles": [
+    "未分类/大杂烩/大杂烩.md",
+    "SSM/ssm/SSM.md",
     "SSM/mybatisplus/MyBatisPlus.md",
     "README.md",
     "读书笔记/C#图解教程/C#图解教程.md",
@@ -232,9 +234,7 @@
     "02.Study/01.笔记-2022/javase/Java语言基础（中）.md",
     "02.Study/01.归档/未命名",
     "02.Study/01.笔记-2022/javase/Java语言基础（下）.md",
-    "02.Study/01.笔记-2022/javase/Java语言基础（上）.md",
     "学习/未命名",
-    "Omnivore/2023-10-27/36张图详解计算机网络知识点.md",
     "Omnivore/2023-10-27",
     "Omnivore/2023-10-26",
     "Omnivore/2023-10-25",
