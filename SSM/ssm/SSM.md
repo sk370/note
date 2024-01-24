@@ -5,12 +5,19 @@ date: '2022-06-28 00:33:11 +0800'
 tags: [SSM]
 categories: [SSM]
 ---
+
 *SSM（SpringMVC+Spring+MyBatis）是目前市场上最流行的开发 web 项目的框架，它由 SpringMVC、Spring、MyBatis 整合而成。*
+
+
 <!-- more -->
+
+
 > - SSM（SpringMVC+Spring+MyBatis）是目前市场上最流行的开发 web 项目的框架，它由 SpringMVC、Spring、MyBatis 整合而成。——**即 springmvc 整合 spring 和 mybatis**
+
 >   - SpringMVC 框架负责接收浏览器发送的请求，并响应浏览器数据；
 >   - Spring 框架使用其核心 IOC 思想管理服务器中各个组件，使用 AOP 思想面向切面编程，在不改变源码的基础上实现功能增强；
 >   - MyBatis 框架封装 JDBC，负责访问数据库，完成持久化操作。
+
 > - 意义：一是不用使用 mapper.xml 文件，使用时自动注入简化开发过程，后续的操作由 spring 完成。二是对各种配置文件简单化，不要纠缠在一起。
 
 ## 1. SpringMVC
@@ -29,8 +36,8 @@ categories: [SSM]
 
 ### 4.0 三者的关系
 
-spring 容器是 ApplicationContext/contextloaderlistener，管理的是 service 和 dao
-springmvc 容器是 webApplicationContext/dispatchservlet，管理的是 controller
+spring 容器是 ApplicationContext/contextloaderlistener，管理的是 service 和 dao  
+springmvc 容器是 webApplicationContext/dispatchservlet，管理的是 controller  
 springmvc 容器是 spring 容器的子容器
 
 ### 4.1 引入
@@ -46,11 +53,11 @@ springmvc 容器是 spring 容器的子容器
 
 #### 4.1.2 整合思路
 
-spring 整合 mybatis
-![image.png](ssm/image-1669761796509.png)
-即虚线框外的是需要程序员做的。
-spring 整合 springmvc：
-![image.png](ssm/image-1669761798865.png)
+spring 整合 mybatis  
+![image.png](ssm/image-1669761796509.png)  
+即虚线框外的是需要程序员做的。  
+spring 整合 springmvc：  
+![image.png](ssm/image-1669761798865.png)  
 总体思路：tomcat 服务器会读取 web.xml，所以在读取 web.xml 文件时，spring.xml、spring-mvc.xml、mybatis.xml 都要配置好。
 
 - spring.xml 配置 mybatis.xml，简化了 mybatis 的使用。在 web.xml 文件中，将 mybatix.xml 的文件配置在`<context-param>`中，随着工程一启动加载。
@@ -61,14 +68,16 @@ spring 整合 springmvc：
 
 #### 4.1.3 ContextLoaderListener
 
-Spring 提供了监听器`ContextLoaderListener`，实现`ServletContextListener`接口，可监听
-`ServletContext`的状态，在 web 服务器的启动，读取 Spring 的配置文件，创建 Spring 的 IOC 容器。
+Spring 提供了监听器`ContextLoaderListener`，实现`ServletContextListener`接口，可监听  
+`ServletContext`的状态，在 web 服务器的启动，读取 Spring 的配置文件，创建 Spring 的 IOC 容器。  
 ![image.png](ssm/image-1669761801573.png)
 
 #### 4.1.4 使用监听器加载 spring 配置文件
 
 1. 创建新工程，使用 Maven 作为构建工具。
+
    - ![image.png](ssm/image-1669761803040.png)
+
 2. 引入依赖：
 
 ```xml
@@ -118,7 +127,9 @@ Spring 提供了监听器`ContextLoaderListener`，实现`ServletContextListener
 ```
 
 3. 配置 web 工程：
+
    - ![image.png](ssm/image-1669761806514.png)
+
 4. 配置 springMVC 前端控制器，及 spring 配置文件
 
 ```xml
@@ -347,10 +358,14 @@ Spring 提供了监听器`ContextLoaderListener`，实现`ServletContextListener
 ```
 
 3. 创建 web 支持
+
    - ![image.png](ssm/image-1669761816078.png)
+
 4. 创建测试表：
+
    - ![image.png](ssm/image-1669761818049.png)
    - 生成数据【任意数量】
+
 
 #### 4.2.2 配置 web.xml
 
@@ -561,7 +576,7 @@ Spring 提供了监听器`ContextLoaderListener`，实现`ServletContextListener
 </beans>
 ```
 
-**注 1：配置后就不需要 mybatis-config.xml 了，但由于 spring.xml 中有`<property name="configLocation" value="classpath:mybatis-cofig.xml"/>`，所以还是允许 mybatis-config.xml 存在的。**
+**注 1：配置后就不需要 mybatis-config.xml 了，但由于 spring.xml 中有****`<property name="configLocation" value="classpath:mybatis-cofig.xml"/>`** **<property name="configLocation" value="classpath:mybatis-cofig.xml"/>****，所以还是允许 mybatis-config.xml 存在的。**  
 **注 2：29 行老师讲的时候说可以不配置，他的演示里也没有配置，但本地测试，必须配置，否则会报 500 错误：**
 
 - ![image.png](ssm/image.png)
@@ -594,7 +609,9 @@ Spring 提供了监听器`ContextLoaderListener`，实现`ServletContextListener
 ```
 
 2. spring.xml 中配置事务：
+
    - 同 spring5 事务配置[Spring5](https://www.yuque.com/zhuyuqi/zna9x5/aze75g?view=doc_embed&inner=IORB4)
+
 
 ### 4.3 实践
 

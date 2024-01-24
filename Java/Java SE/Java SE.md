@@ -12,14 +12,14 @@ java8和java17都会自动添加环境变量，并将bin目录下的部分`exe`�
 
 ![](attachments/20230407095018.png)
 
-**1. 调整环境变量的顺序即可变更默认运行的java版本。**
+**1. 调整环境变量的顺序即可变更默认运行的java版本。**  
 **2. 进入相应的路径打开终端执行也可运行相应的版本。**
 
-但是无论哪种操作方式，执行`javac -version`命令，总是执行的高版本Java命令（低版本不会拷贝`javac.exe`到默认环境变量的地址中），。只安装一个版本的java时，运行的版本与`java -version`一致。
+但是无论哪种操作方式，执行`javac -version`命令，总是执行的高版本Java命令（低版本不会拷贝`javac.exe`到默认环境变量的地址中）。只安装一个版本的java时，运行的版本与`java -version`一致。
 
 ### 方式二
 
-下载jvms：https://github.com/ystyle/jvms
+下载jvms：[https://github.com/ystyle/jvms](https://github.com/ystyle/jvms)
 
 ![](attachments/20230407111255.png)
 
@@ -118,6 +118,7 @@ public class App {
 #### 方式一：`String.format()`
 
 步骤：
+
 1. 将浮点数转为`String`。
 2. 使用`String.format()`处理数据。
 3. 调用`Float`的`parseFloat`或`valueOf()`方法转换为浮点数
@@ -142,6 +143,7 @@ public class App {
 #### 方式二：`s.subString()`
 
 步骤：
+
 1. 将浮点数转为`String`。
 2. 使用`String.format()`处理数据。
 3. 调用`Float`的`parseFloat`或`valueOf()`方法转换为浮点数。
@@ -161,10 +163,10 @@ public class App {
 }
 ```
 
-
 #### 方式三：`DecimalFormat`
 
 步骤：
+
 1. 引入`java.text.DecimalFormat`。
 2. 创建`DecimalFormat`对象，指定格式化格式。
 3. 调用`DecimalFormat`对象的`format()`，得到`String`。
@@ -190,16 +192,20 @@ public class App {
 ```
 
 知识点：
+
 1. `DecimalFormat`是`NumberFormat`的一个子类，专门用于格式化十进制数据。
-2. 格式化格式：
-![](attachments/20230404131445.png)
+2. 格式化格式：  
+   ![](attachments/20230404131445.png)
 3. `#`的用法，对于`new DecimalFormat("#.00")`：
-	- `String ans_3 = decimalFormat.format(456.125);`得到`456.12`
-	- `String ans_3 = decimalFormat.format(0.125);`得到`.12`
+
+   - `String ans_3 = decimalFormat.format(456.125);`得到`456.12`
+   - `String ans_3 = decimalFormat.format(0.125);`得到`.12`
+
 
 #### 方式四：`NumberForamt`
 
 步骤：
+
 1. 引入`java.text.NumberFormat`。
 2. 引入`java.math.RoundingMode`。
 3. 调用`NumberForamt`的`getNumberInstance()`方法，创建`NumberForamt`实例。
@@ -234,6 +240,7 @@ public class App {
 #### 方式五：`DecimalFormat`
 
 步骤：
+
 1. 引入`java.math.BigDecimal`。
 2. 创建`BigDecimal`实例。
 3. 调用`BigDecimal`实例对象的`setScale()`方法，指定小数位数和多余位数处理方式。在调用`floatValue()`方法的到`float`。

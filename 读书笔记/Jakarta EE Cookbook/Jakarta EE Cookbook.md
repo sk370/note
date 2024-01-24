@@ -5,8 +5,9 @@ tags:
 categories:
   - Java EE
 ---
->[!note]
-> 基于Jakarta EE 8，但是Jakarta EE 9也完美适配。
+
+> [!note]  
+基于Jakarta EE 8，但是Jakarta EE 9也完美适配。
 
 ## 1. New Features and Improvements
 
@@ -28,7 +29,7 @@ categories:
 </dependencies>
 ```
 
-![](attachments/2023-09-10.png)
+![](assets/2023-09-10.png)
 
 #### 1.1.2 指定校验规则
 
@@ -61,11 +62,11 @@ public class User {
 }
 ```
 
-![](attachments/2023-09-10-1.png)
+![](assets/2023-09-10-1.png)
 
 #### 1.2.3 使用校验规则
 
-```java  
+```java
 import com.eldermoraes.ch01.bv.User;  
 import static java.util.Arrays.asList;  
 import java.util.Set;  
@@ -234,7 +235,7 @@ public class OrderedObserver {
 
 4. 执行结果
 
-![](attachments/2023-09-12.png)
+![](assets/2023-09-12.png)
 
 #### 1.2.3 执行原理
 
@@ -242,7 +243,9 @@ public class OrderedObserver {
 2. 激活要被观察的对象：`container.getBeanManager().fireEvent(new MyEvent("……"));`
 3. `@Observers`：必选。告诉观察器激活被观察的对象时，要执行的方法。
 4. `@Priority(int)`：可选。执行方法的优先级，接受一个整数值。`Interceptor`是java提供的一个整数对象。
-	- ![](attachments/2023-09-13.png)
+
+   - ![](assets/2023-09-13.png)
+
 
 没有`@Priority(int)`时执行如下：
 
@@ -266,7 +269,7 @@ import javax.interceptor.Interceptor;
 }
 ```
 
-![](attachments/2023-09-13-1.png)
+![](assets/2023-09-13-1.png)
 
 #### 1.2.4 扩展
 
@@ -281,7 +284,8 @@ import javax.interceptor.Interceptor;
 ```
 
 - *这也是个元依赖。*
-- *使用了上述依赖后，代码还是按上面那样写，不报错，但是运行报错。不知道怎么改。*
+- *使用了上述依赖后，代码还是按上面那样写，编译不报错，但是运行报错。不知道怎么改。*
+
 ### 1.3 JAX-RS 2.1
 
 Jakarta RESTful Web Service（JAX-RS 2.1）用于便携、标准的构建RESTful web services。
@@ -289,6 +293,7 @@ Jakarta RESTful Web Service（JAX-RS 2.1）用于便携、标准的构建RESTful
 JAX-RS 2.1最酷的特性是引入了SSE（Server-Sent Events），这是HTML5的规范。SSE建立了从服务器到客户端的单向通道。
 
 SSE是一种传输数据的消息协议。
+
 #### 1.3.1 引入依赖
 
 ```xml
@@ -311,7 +316,7 @@ SSE是一种传输数据的消息协议。
 </dependencies>
 ```
 
-![](attachments/2023-09-16.png)
+![](assets/2023-09-16.png)
 
 这里使用了jersey，这是因为jersey实现了所有jaxrs的特性。同时jersey还包含了grizzly，可以本地启动一个小服务，用来展示SSE行为。
 
@@ -433,24 +438,32 @@ public class ClientConsumer {
 
 4. 启动服务端，然后启动客户端，输出如下：
 
-![](attachments/2023-09-16-1.png)
+![](assets/2023-09-16-1.png)
 
-![](attachments/2023-09-16-2.png)
+![](assets/2023-09-16-2.png)
 
 #### 1.3.4 执行原理
 
 `ServerMock`是服务，`SseResource`是SSE引擎，`ClientConsumer`是客户端。
 
 1. 当`ServerMock`初始化时，就会注册`SseResource`：
-	- `final HttpServer server = GrizzlyHttpServerFactory.createHttpServer(CONTEXT, resourceConfig, false);`
+
+   - `final HttpServer server = GrizzlyHttpServerFactory.createHttpServer(CONTEXT, resourceConfig, false);`
+
 2. `SseResource`添加message到服务队列。
-	- `addMessage(final String message, @Context Sse sse)`
+
+   - `addMessage(final String message, @Context Sse sse)`
+
 3. `SseResource`消费队列中的消息，并发送到客户端：
-	- `@GET@Produces(MediaType.SERVER_SENT_EVENTS)public void getMessageQueue(@Context SseEventSink sink)`
-	- `SERVER_SENT_EVENTS`是此版本引入的媒体类型。
+
+   - `@GET@Produces(MediaType.SERVER_SENT_EVENTS)public void getMessageQueue(@Context SseEventSink sink)`
+   - `SERVER_SENT_EVENTS`是此版本引入的媒体类型。
+
 4. `ClientConsumer`发送和消费本消息：
-	- 消费消息：`sseSource.register(System.out::println);sseSource.open();`
-	- 发送消息：`ServerMock.WEB_TARGET.request().post(Entity.json("event " + innerCounter));`
+
+   - 消费消息：`sseSource.register(System.out::println);sseSource.open();`
+   - 发送消息：`ServerMock.WEB_TARGET.request().post(Entity.json("event " + innerCounter));`
+
 
 ### 1.4 JSF 2.3
 
@@ -466,8 +479,7 @@ Jakarta Server Faces (JSF)是一种简化UI构建过程的Java技术。
 </dependency>
 ```
 
-
-![](attachments/2023-10-17.png)
+![](assets/2023-10-17.png)
 
 #### 1.4.2 使用JSF
 
@@ -507,7 +519,7 @@ public class User implements Serializable {
 
 2. `UserBean`管理UI
 
-```java  
+```java
 import java.io.Serializable;  
 import javax.annotation.PostConstruct;  
 import javax.enterprise.context.RequestScoped;  

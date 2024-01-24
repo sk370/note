@@ -1,15 +1,17 @@
 ## 官方文档
 
-https://docs.oracle.com/cd/E11882_01/server.112/e41084/functions089.htm#SQLRF30030
+[https://docs.oracle.com/cd/E11882_01/server.112/e41084/functions089.htm#SQLRF30030](https://docs.oracle.com/cd/E11882_01/server.112/e41084/functions089.htm#SQLRF30030)
 
 ## Oracle和MySQL的区别
 
-[浅谈Oracle和mysql数据语法的区别 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/448175793)
+[浅谈Oracle和mysql数据语法的区别 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/448175793)  
 [Oracle和MySQL语法区别_oracle和mysql语法区别大吗_初尘19的博客-CSDN博客](https://blog.csdn.net/lanmuhhh2015/article/details/97763615)
 
 ## 合并所有查询结果为一行
 
 ### listagg实现
+
+原始数据：
 
 ```sql
 SELECT
@@ -53,6 +55,7 @@ LEFT JOIN AT_OM_DATACOLLECTION aod ON aor.SERIAL_NUMBER_S = aod.SERIAL_NUMBER_S
 WHERE (aor.A1_SAW_MARK_QTY_I IS NOT NULL OR aor.B_LINE_MARK_QTY_I IS NOT NULL) AND aod.UP_STEELWIRE_NUMBER_S ='V21212H03A0B0'
 ORDER BY aod.STEELWIRE_CUT_COUNT_I;
 ```
+
 ![](attachments/20230322164245.png)
 
 2. 拼接第几刀和线痕总和
@@ -69,6 +72,7 @@ LEFT JOIN AT_OM_DATACOLLECTION aod ON aor.SERIAL_NUMBER_S = aod.SERIAL_NUMBER_S
 WHERE (aor.A1_SAW_MARK_QTY_I IS NOT NULL OR aor.B_LINE_MARK_QTY_I IS NOT NULL) AND aod.UP_STEELWIRE_NUMBER_S ='V21212H03A0B0'
 ORDER BY aod.STEELWIRE_CUT_COUNT_I;
 ```
+
 ![](attachments/20230322165000.png)
 
 3. 合并列显示（列转行）
@@ -83,9 +87,11 @@ FROM
 LEFT JOIN AT_OM_DATACOLLECTION aod ON aor.SERIAL_NUMBER_S = aod.SERIAL_NUMBER_S
 WHERE (aor.A1_SAW_MARK_QTY_I IS NOT NULL OR aor.B_LINE_MARK_QTY_I IS NOT NULL) AND aod.UP_STEELWIRE_NUMBER_S ='V21212H03A0B0';
 ```
+
 ![](attachments/20230322172114.png)
 
 注意：
+
 - listagg可以取别名
 - 注释掉的内容不能打开，打开报错。
 
@@ -102,6 +108,7 @@ LEFT JOIN AT_OM_DATACOLLECTION aod ON aor.SERIAL_NUMBER_S = aod.SERIAL_NUMBER_S
 WHERE (aor.A1_SAW_MARK_QTY_I IS NOT NULL OR aor.B_LINE_MARK_QTY_I IS NOT NULL) 
 GROUP BY aod.UP_STEELWIRE_NUMBER_S ;
 ```
+
 ![](attachments/20230322172752.png)
 
 ### xmlagg实现
@@ -116,8 +123,8 @@ listagg对字段长度有限制，会报下列错误：
 
 ## WHERE和HAVING的区别
 
-“Where” 是一个约束声明，使用Where来约束来之数据库的数据，Where是在结果返回之前起作用的，且Where中不能使用聚合函数。
-“Having”是一个过滤声明，是在查询返回结果集以后对查询结果进行的过滤操作，在Having中可以使用聚合函数。
+1. “Where” 是一个约束声明，使用Where来约束来之数据库的数据，Where是在结果返回之前起作用的，且Where中不能使用聚合函数。
+2. “Having”是一个过滤声明，是在查询返回结果集以后对查询结果进行的过滤操作，在Having中可以使用聚合函数。
 
 ## Group By
 
@@ -177,9 +184,11 @@ FROM
 
 **截取小数：**
 
-* 语法：`trunc(number,[decimals])`
-    * `number`：指需要截取的数字。
-    * `decimals`：截取位数，可选参数，如果参数是负数表示从小数点左边截取。注意这里的截取都不做四舍五入，直接舍掉。
+- 语法：`trunc(number,[decimals])`
+
+  - `number`：指需要截取的数字。
+  - `decimals`：截取位数，可选参数，如果参数是负数表示从小数点左边截取。注意这里的截取都不做四舍五入，直接舍掉。
+
 
 ```sql
 SELECT
@@ -310,11 +319,12 @@ SELECT EQUIP FROM (
 - `select 列名`时：别名不使用双引号`"` ，是否使用`AS`，都不会报错。
 - `select 列名`时：别名使用双引号`"` ，是否使用`AS`，都会报错。
 
-指南：`select *`，并不使用双引号`"`,`AS`无所谓。
+指南：`select *`，并不使用双引号`"`，`AS`无所谓。
 
 ## 分析执行效率
 
 针对以下sql对查询效率进行分析：
+
 ```sql
 SELECT
 	'XX-西咸' AS base, 
@@ -377,16 +387,25 @@ ORDER BY
 ### 方式一：使用图形化工具
 
 分析步骤：
+
 1. 在pl/slq工具中新建解释计划窗口：
-	- ![](attachments/Pasted%20image%2020230228144634.png)
+
+   - ![](attachments/Pasted%20image%2020230228144634.png)
+
 2. 粘贴sql语句，点击执行：
-	- ![](attachments/Pasted%20image%2020230228144820.png)
+
+   - ![](attachments/Pasted%20image%2020230228144820.png)
+
 3. 查看执行结果：
-	- ![](attachments/Pasted%20image%2020230228144941.png)
+
+   - ![](attachments/Pasted%20image%2020230228144941.png)
+
 4. 分析执行结果：
-	- filter表示全表过滤
-	- acesss表示根据索引查询
-	- 上述sql主表进行了全表过滤，但其他关联表均通过索引查询，**所以执行效率没有问题**。
+
+   - filter表示全表过滤
+   - acesss表示根据索引查询
+   - 上述sql主表进行了全表过滤，但其他关联表均通过索引查询，**所以执行效率没有问题**。
+
 
 ### 方式二：使用sql语句
 
@@ -544,59 +563,65 @@ WITH READ ONLY;
 
 ### table access full（全表扫描）
 
--   Oracle 会读取表中所有的行，并检查每一行是否满足 where 限制条件
--   全表扫描时可以使用多块读（一次 I/O 读取多块数据块）操作，提升吞吐量
--   使用建议：数据量太大的表不建议使用全表扫描，除非本身需要取出的数据较多，占到表数据总量的 5% ~ 10% 或以上。
+- Oracle 会读取表中所有的行，并检查每一行是否满足 where 限制条件
+- 全表扫描时可以使用多块读（一次 I/O 读取多块数据块）操作，提升吞吐量
+- 使用建议：数据量太大的表不建议使用全表扫描，除非本身需要取出的数据较多，占到表数据总量的 5% ~ 10% 或以上。
 - ![](attachments/Pasted%20image%2020230228150526.png)
 
 ### table access by rowid（通过 rowid 扫描）
 
--   rowid：伪列，Oracle 自带的，不会存储 rowid 的值，不能被增、删、改
--   一旦一行数据插入后，则其对应的 rowid 在该行的生命周期内是唯一的，即使发生行迁移，该行的 rowid 值也不变
+- rowid：伪列，Oracle 自带的，不会存储 rowid 的值，不能被增、删、改
+- 一旦一行数据插入后，则其对应的 rowid 在该行的生命周期内是唯一的，即使发生行迁移，该行的 rowid 值也不变
 - `select ROWID form dual`可以查询行数据的rowid。
 - ![](attachments/Pasted%20image%2020230228150609.png)
 
 ### table access by index scan（索引扫描）
 
--   在索引块中，既存储每个索引的键值，也存储具有该键值行的 rowid
--   所以索引扫描其实分为两步：
-    -   扫描索引得到对应的 rowid
-    -   通过 rowid 定位到具体的行读取数据
+- 在索引块中，既存储每个索引的键值，也存储具有该键值行的 rowid
+- 所以索引扫描其实分为两步：
+
+  - 扫描索引得到对应的 rowid
+  - 通过 rowid 定位到具体的行读取数据
+
 - ![](attachments/Pasted%20image%2020230228151108.png)
 
-#### index unique scan（索引唯一扫描） 
+#### index unique scan（索引唯一扫描）
 
--   每次至多返回一条记录
--   有下列两种情况（当查询字段有下列约束时）
-    -   unique
-    -   primary key
+- 每次至多返回一条记录
+- 有下列两种情况（当查询字段有下列约束时）
+
+  - unique
+  - primary key
+
 - ![](attachments/Pasted%20image%2020230228150855.png)
 
 #### index range scan（索引范围扫描）
 
--   每次至少返回一条记录
--   一般有下列三种情况
-    -   在唯一索引列上使用了范围操作符（如：`>` 、`<`、`>`、`=`、 `<=` 、`between`）
-    -   在组合索引上，只使用部分列进行查询（查询时必须包含前导列，否则会走全表扫描）
-    -   对非唯一索引列上进行的任何查询
+- 每次至少返回一条记录
+- 一般有下列三种情况
+
+  - 在唯一索引列上使用了范围操作符（如：`>` 、`<`、`>`、`=`、 `<=` 、`between`）
+  - 在组合索引上，只使用部分列进行查询（查询时必须包含前导列，否则会走全表扫描）
+  - 对非唯一索引列上进行的任何查询
+
 
 #### index full scan（索引全扫描）
 
--   order by 唯一索引列
+- order by 唯一索引列
 - ![](attachments/Pasted%20image%2020230228151045.png)
 
-####  index fast full scan（索引快速扫描）
+#### index fast full scan（索引快速扫描）
 
 - 与 index full scan 类似，只是不进行排序。
 
 #### index skip scan（索引跳跃扫描）
 
--   必须是 组合索引
--   除了前导列（索引中第一列）外的其他列作为条件
+- 必须是 组合索引
+- 除了前导列（索引中第一列）外的其他列作为条件
 
 ### 参考文档
 
-https://blog.csdn.net/qq_34745941/article/details/96475940
+[https://blog.csdn.net/qq_34745941/article/details/96475940](https://blog.csdn.net/qq_34745941/article/details/96475940)
 
 ## Oracle表连接方式
 
@@ -612,16 +637,18 @@ https://blog.csdn.net/qq_34745941/article/details/96475940
 - 内连接  inner join，简写 join
 - 左连接  left  join
 - 右连接  right join
-- 全连接  full  join   
+- 全连接  full  join
 
 #### 写法
 
 写法一：
+
 ```sql
 select a.*, b.* from a left join b on a.id = b.id;
 ```
 
 写法二：(+) 一侧，表示左连接
+
 ```sql
 select a.*, b.* from a, b where a.id = b.id(+);
 ```
@@ -631,11 +658,12 @@ select a.*, b.* from a, b where a.id = b.id(+);
 ### 概念
 
 - Driving Table（驱动表）：执行计划最先执行的那个表 /*+ leading(t1)*/
-- Probed Table（匹配表）：与驱动表进行连接的表     
+- Probed Table（匹配表）：与驱动表进行连接的表
 
 ### 分类
 
 三种连接方式：hint
+
 - nested loops：
 - hash join
 - merge
@@ -644,6 +672,7 @@ select a.*, b.* from a, b where a.id = b.id(+);
 #### nested loops
 
 1. 工作原理：
+
 ```sql
 驱动表 t1，有 m 条记录
 匹配表 t2，有 n 条记录
@@ -658,11 +687,16 @@ end loop;
 ```
 
 2. 结论：
-	- T1 表每返回一条记录，都要去 T2 表去轮询一次，得到与其匹配的数据，推送到结果集中。所以，在嵌套表循环的使用中，必须设置 '返回记录少' 的表作为驱动表。
-	- 可以通过以下两点来提高嵌套循环的速度：
-		- 第一：尽量提高 T1 表 '取'  记录的速度(T1 表的连接列上创建索引)
-		- 第二：尽量提高 T2 表 '匹配' 记录的速度(T2 表的连接列上创建索引)
+
+   - T1 表每返回一条记录，都要去 T2 表去轮询一次，得到与其匹配的数据，推送到结果集中。所以，在嵌套表循环的使用中，必须设置 '返回记录少' 的表作为驱动表。
+   - 可以通过以下两点来提高嵌套循环的速度：
+
+     - 第一：尽量提高 T1 表 '取'  记录的速度(T1 表的连接列上创建索引)
+     - 第二：尽量提高 T2 表 '匹配' 记录的速度(T2 表的连接列上创建索引)
+
+
 3. 示例：
+
 ```sql
 设：
 	scott.emp -- 14 条记录
@@ -670,6 +704,7 @@ end loop;
 ```
 
 以 scott.dept（小表） 为驱动表，执行计划如下：
+
 ```sql
 SQL> alter session set statistics_level = all;
 
@@ -701,6 +736,7 @@ Predicate Information (identified by operation id):
 ```
 
 执行结果解释：
+
 ```sql
 1. 首先，读取表 DEPT，读取次数 Starts = 1，实际读取记录数 A-Rows = 4 条(dept表行数)
 2. 其次，读取表 EMP，读取次数 Starts = 4，实际读取记录数（每次） A-Rows = 14 条 （emp表行数）
@@ -709,6 +745,7 @@ Predicate Information (identified by operation id):
 ```
 
 以 scott.emp（“大表”） 为驱动表，执行结果如下：
+
 ```sql
 --------------------------------------------------------------------------------------------------
 | Id  | Operation                    | Name    | Starts | E-Rows | A-Rows |   A-Time   | Buffers |
@@ -742,6 +779,7 @@ SQL> SELECT /*+ leading(e) use_hash(d)*/ e.*, d.* FROM scott.emp e, scott.dept d
 3. 注意：不能使用`=`、`!=`、`<>`、`in`、`not in`进行判断。
 
 ### 日期时间
+
 #### 日期格式化
 
 格式化日期指的是将日期转为字符串，或将字符串转为日期，下面几个函数可以用来格式化日期：
@@ -753,15 +791,15 @@ SQL> SELECT /*+ leading(e) use_hash(d)*/ e.*, d.* FROM scott.emp e, scott.dept d
 
 format格式：
 
-|**Format**|**List item**|
-|---|---|
-|YYYY-MM-DD|2015-06-15|
-|YYYY-MON-DD|2015-JUN-15|
-|YYYY-MM-DD HH24:MI:SS FF3|2015-06-15 13:18:10 700|
-|YYYY-MM-DD HH24:MI:SS FF3 TZR|2015-06-15 13:18:10 700 +08:00|
-|DS|6/15/2015|
-|DL|Monday, June 15, 2015|
-|TS|1:18:10 PM|
+| **Format**                    | **List item**                  |
+| ----------------------------- | ------------------------------ |
+| YYYY-MM-DD                    | 2015-06-15                     |
+| YYYY-MON-DD                   | 2015-JUN-15                    |
+| YYYY-MM-DD HH24:MI:SS FF3     | 2015-06-15 13:18:10 700        |
+| YYYY-MM-DD HH24:MI:SS FF3 TZR | 2015-06-15 13:18:10 700 +08:00 |
+| DS                            | 6/15/2015                      |
+| DL                            | Monday, June 15, 2015          |
+| TS                            | 1:18:10 PM                     |
 
 #### 计算时间差分钟数
 
@@ -920,7 +958,6 @@ WHERE
 	rm = 2;
 ```
 
-
 #### 分组后查询第一条数据
 
 **方式一：子查询**
@@ -990,7 +1027,6 @@ select t.a,t.b,decode(t.a,t.b,'相等','不相等')
 from t
 ```
 
-
 ## 数据类型
 
 ### 字符类型
@@ -1002,8 +1038,8 @@ from t
 
 *unicode字符集是为了解决字符集不兼容的问题而产生的，所有字符都用两个字节表示，即英文字符也用两个字节表示。*
 
-
 ## 官方工具
+
 ### Oracle Install Client
 
 官方工具有（[Instant Client for Microsoft Windows (x64) 64-bit (oracle.com)](https://www.oracle.com/database/technologies/instant-client/winx64-64-downloads.html)）：
@@ -1015,6 +1051,7 @@ from t
 ![](attachments/2023-09-04-2.png)
 
 安装使用pl/sql一般使用basic。
+
 #### SQL PLUS
 
 自带的sql命令行执行窗口。
@@ -1037,12 +1074,16 @@ from t
 plsql安装过程如下：
 
 1. 使用plsql需要先安装oracle客户端，即Oracle install client，同时，plsql与oracle client的版本（32/64）要一致。。
-	- 下载地址：[Oracle Instant Client Downloads](https://www.oracle.com/database/technologies/instant-client/downloads.html)
-	- ![](attachments/2023-09-05-1.png)
-	- 
+
+   - 下载地址：[Oracle Instant Client Downloads](https://www.oracle.com/database/technologies/instant-client/downloads.html)
+   - ![](attachments/2023-09-05-1.png)
+   - 
+
 2. 选择激活安装：
-	- ![](attachments/2023-09-05.png)
-	- 激活码：
+
+   - ![](attachments/2023-09-05.png)
+   - 激活码：
+
 
 ```bash
  product code : ke4tv8t5jtxz493kl8s2nn3t6xgngcmgf3
@@ -1051,15 +1092,24 @@ plsql安装过程如下：
 ```
 
 3. 首次登录报错解决：
-	- 首次登录及报错：
-		- ![](attachments/2023-09-05-2.png)
-		- ![](attachments/2023-09-05-3.png)
-	- 解决步骤：
-		- 登录界面选择取消。
-		- ![](attachments/2023-09-05-4.png)
-		- 重启plsql。
+
+   - 首次登录及报错：
+
+     - ![](attachments/2023-09-05-2.png)
+     - ![](attachments/2023-09-05-3.png)
+
+   - 解决步骤：
+
+     - 登录界面选择取消。
+     - ![](attachments/2023-09-05-4.png)
+     - 重启plsql。
+
+
 4. 保存登录密码：
-	- ![](attachments/2023-09-06.png)
+
+   - ![](attachments/2023-09-06.png)
+
+
 ## SQL Developer Data Modeler
 
 数据建模软件。
@@ -1069,9 +1119,8 @@ plsql安装过程如下：
 
 ![](attachments/2023-09-04-3.png)
 
-### Live SQL 
+### Live SQL
 
 oracle官方sql训练工具。
 
 地址：[Oracle Live SQL](https://livesql.oracle.com/apex/f?p=590:1000)
-
