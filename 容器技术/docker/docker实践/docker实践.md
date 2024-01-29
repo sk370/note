@@ -1,4 +1,4 @@
-## 安装docker
+## 1. 安装docker
 
 **注意：docker及其实例都需要使用管理员权限安装、运行**
 
@@ -9,13 +9,13 @@
 - 查看是否设置开机自启：`systemctl list-unit-files | grep enable`
 - 查看已启动的服务：`systemctl list-units --type=service`
 
-## docker应用
+## 2. docker应用
 
-### docker可视化工具
+### 2.1 docker可视化工具
 
 [三种docker可视化工具（全网最详细）_CN-FuWei的博客-CSDN博客](https://blog.csdn.net/zfw_666666/article/details/126538026)
 
-#### docker.ui
+#### 2.1.1 docker.ui
 
 - 官网：[GitHub - gohutool/docker.ui](https://github.com/gohutool/docker.ui)
 
@@ -39,7 +39,7 @@
 
 ![](./attachments/2023-08-07-5.png)
 
-#### Portainer
+#### 2.2 Portainer
 
 - 官网（CE版——社区开源）：[Install Portainer CE with Docker on Linux - Portainer Documentation](https://docs.portainer.io/start/install-ce/server/docker/linux)
 - 官网（BE版——商业收费）：[Getting Started with Portainer Business](https://install.portainer.io/)——**可以了解容器知识**
@@ -71,7 +71,7 @@
 - docker ui：可以直接从镜像启动容器。
 - portainer：可以直接展示未使用容器数据卷。
 
-### 安装mysql
+### 2.3 安装mysql
 
 1. 启动容器：`docker run -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=123456  -d mysql`
 
@@ -102,16 +102,44 @@
 - 账号：root，密码：123456。
 - 查看mysql版本：[Linux系统中查看Mysql数据库版本号的四种方法（图文完整版）_linux查看mysql版本-CSDN博客](https://blog.csdn.net/weixin_50093343/article/details/116751228) 
 
-开启允许远程用户连接：
+#### 2.3.1 开启允许远程用户连接
 
 1. 参考连接：[MySQL8.0允许远程连接_mysql8.0允许远程访问-CSDN博客](https://blog.csdn.net/sinat_41721615/article/details/99417075) 
 2. 进入mysql
 3. 执行`mysql -u root -p`
 4. 输入密码
 5. `use mysql`
-6. 
 
-### 安装EMQX
+#### 2.3.2 修改内存占用
+
+1. `docker stats`可以查看容器中各个应用占用的内存大小。
+
+2. 当物理机内存小，而docker应用占用内存过多时，会经常杀死应用，同时如果docker设置了`--restart unless-stopped`属性，则应用会不断被杀死，不断重启，而数据会丢失。
+
+   - 数据丢失的原因没找到，按理说设置了文件挂载，数据会持久化保存。
+
+3. 进入MySQL容器内部：`docker exec -it mysql bash`
+
+4. 切换至MySQL配置文件目录：` cd /etc/mysql/conf.d`
+
+5. 修改配置文件内容：`vim docker.cnf`
+
+   - 如果没有改文件，创建即可。
+   - 如果设置了文件挂在，也可不进入容器内操作。
+
+6. 添加参数：
+
+   ```bash
+   [mysqld]
+   performance_schema_max_table_instances=400  
+   table_definition_cache=400    #缓存
+   performance_schema=off    #用于监控MySQL server在一个较低级别的运行过程中的资源消耗、资源东西
+   table_open_cache=64    #打开表的缓存
+   innodb_buffer_pool_chunk_size=64M    #InnoDB缓冲池大小调整操作的块大小
+   innodb_buffer_pool_size=64M    #InnoDB 存储引擎的表数据和索引数据的最大内存缓冲区大小
+   ```
+
+### 2.4 安装EMQX
 
 EMQX是一款完全开源，高可用低时延的百万级分布式物联网 MQTT 5.0 消息服务器。
 
@@ -125,7 +153,7 @@ docker run -d --name emqx -p 1883:1883 -p 8083:8083 -p 8883:8883 -p 8084:8084 -p
 
 访问dashboard：`http://ip:18083`。账号：admin，密码：public
 
-### 安装zentao
+### 2.5 安装zentao
 
 > 官方文档：[官方文档](https://www.zentao.net/book/zentaopms/455.html)
 
@@ -150,7 +178,7 @@ docker run -d --name emqx -p 1883:1883 -p 8083:8083 -p 8883:8883 -p 8084:8084 -p
 
 3. 访问`http://ip:80`进行配置。
 
-### 安装Redis
+### 2.6 安装Redis
 
 > 官方文档：[在 Docker 上运行 Redis 堆栈 |雷迪斯](https://redis.io/docs/install/install-stack/docker/) 
 
@@ -175,7 +203,7 @@ docker run -d --name emqx -p 1883:1883 -p 8083:8083 -p 8883:8883 -p 8084:8084 -p
   --requirepass 123456 --appendonly yes
   ```
 
-### 安装Nginx
+### 2.7 安装Nginx
 
 1. 创建Ngnix配置文件：
 
@@ -209,7 +237,7 @@ docker run -d --name emqx -p 1883:1883 -p 8083:8083 -p 8883:8883 -p 8084:8084 -p
    -d nginx
    ```
 
-### 安装minio
+### 2.8 安装minio
 
 1. apache对象存储
 

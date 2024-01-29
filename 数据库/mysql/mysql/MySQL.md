@@ -2778,9 +2778,10 @@ MySQL 8.0 将自增主键的计数器持久化到 重做日志 中。每次计�
    - `SHOW INDEXES FROM table_name`
    - `SHOW KEYS FROM table_name`
 6. 创建：
-- 主键索引：`ALTER TABLE table_name ADD PRIMARY KEY (id)`——添加主键的第三种方式，也是创建主键索引的方式
-- 唯一索引：`CREATE UNIQUE INDEX 索引名 ON table_name(col)`
-- 普通索引：`CREATE INDEX 索引名 ON table_name(col)`
+   - 主键索引：`ALTER TABLE table_name ADD PRIMARY KEY (id)`——添加主键的第三种方式，也是创建主键索引的方式
+   - 唯一索引：`CREATE UNIQUE INDEX 索引名 ON table_name(col)`
+   - 普通索引：`CREATE INDEX 索引名 ON table_name(col)`
+
 7. 删除：
    - `DROP INDEX 索引名 ON table_name`
    - `ALTER TABLE table_name DROP PRIMARY KEY`
