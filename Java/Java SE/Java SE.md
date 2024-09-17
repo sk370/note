@@ -265,3 +265,23 @@ public class App {
 ### 定时服务
 
 [在Java Web项目中添加定时任务 - 东窗凝残月 - 博客园 (cnblogs.com)](https://www.cnblogs.com/dcncy/p/8205065.html)
+
+## 读取输入
+
+### 读取多行输入
+
+```java
+Scanner in = new Scanner(System.in);
+//int human = Integer.parseInt(in.nextLine());
+int human = in.nextInt();
+in.nextLine();
+String humanName = in.nextLine();
+//int ticketNum = Integer.parseInt(in.nextLine());
+int ticketNum = in.nextInt();
+in.nextLine();
+String tickets = in.nextLine();
+```
+
+![Alt text](assets/image.png)
+
+> 核心：`in.nextLine();`表示开始读取下一行内容
