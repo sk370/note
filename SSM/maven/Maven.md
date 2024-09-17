@@ -516,7 +516,7 @@ public class HelloServlet extends HttpServlet{
 </dependency>
 ```
 
-#### 3.7.5 依赖的继承
+#### 3.7.5 依赖的继承（父子工程）
 
 1. Maven 工程之间，A 工程继承 B 工程，本质上是 A 工程的 pom.xml 中的配置继承了 B 工程中 pom.xml 的配置。
    - 作用：通过父工程统一管理各个模块的依赖及版本，保证项目中依赖的统一，减少冲突等异常情况。

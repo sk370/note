@@ -96,11 +96,15 @@
    -e MYSQL_ROOT_PASSWORD=123456 \
    -d mysql
    ```
-
-- 创建容器时设置开机自启：`docker run --restart=always`
-- 已经创建了容器设置开机自启：`docker update --restart=always 容器id/容器name`
-- 账号：root，密码：123456。
-- 查看mysql版本：[Linux系统中查看Mysql数据库版本号的四种方法（图文完整版）_linux查看mysql版本-CSDN博客](https://blog.csdn.net/weixin_50093343/article/details/116751228) 
+   
+   - 创建容器时设置开机自启：`docker run --restart=always`
+   
+   - 已经创建了容器设置开机自启：`docker update --restart=always 容器id/容器name`
+   
+   - 账号：root，密码：123456。
+   
+   - 查看mysql版本：[Linux系统中查看Mysql数据库版本号的四种方法（图文完整版）_linux查看mysql版本-CSDN博客](https://blog.csdn.net/weixin_50093343/article/details/116751228) 
+   
 
 开启允许远程用户连接：
 
@@ -109,7 +113,6 @@
 3. 执行`mysql -u root -p`
 4. 输入密码
 5. `use mysql`
-6. 
 
 ### 安装EMQX
 
