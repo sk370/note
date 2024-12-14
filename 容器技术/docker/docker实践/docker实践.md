@@ -1,13 +1,37 @@
 ## 1. 安装docker
 
-**注意：docker及其实例都需要使用管理员权限安装、运行**
+linux系统不同发行版安装的命令不一样：
 
-[CentOS Docker 安装 | 菜鸟教程 (runoob.com)](https://www.runoob.com/docker/centos-docker-install.html)
+### Ubuntu
 
-- 设置开机自启：`systemctl enable docker.service`
+1. 更新软件包索引：`sudo apt update`
+2. 安装依赖包：`sudo apt install apt-transport-https ca-certificates curl software-properties-common`
+3. 添加 Docker 的官方 GPG 密钥：`curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg`
+4. 添加 Docker 的 APT 仓库：`echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null`
+5. 更新软件包索引：`sudo apt update`
+6. 安装 Docker：`sudo apt install docker-ce docker-ce-cli containerd.io`
+7. 查看是否安装成功：`docker --version`
+
+- 设置开机自启：`systemctl enable docker.service`或者`sudo systemctl enable docker`
 - 关闭开机自启：`systemctl disable docker.service`
 - 查看是否设置开机自启：`systemctl list-unit-files | grep enable`
 - 查看已启动的服务：`systemctl list-units --type=service`
+- 配置加速镜像su 镜像源：在 /etc/docker/ 中的 daemon.json 中添加下面内容 
+
+```json
+sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["https://bnzui6g7.mirror.aliyuncs.com"]
+}
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+
+### CentOS
+
+[CentOS Docker 安装 | 菜鸟教程 (runoob.com)](https://www.runoob.com/docker/centos-docker-install.html)
 
 ## 2. docker应用
 
@@ -21,11 +45,11 @@
 
 查找镜像：`docker search docker.ui`
 
-![](./attachments/2023-08-07.png)
+![](./assets/2023-08-07.png)
 
 拉取镜像：`docker image pull joinsunsoft/docker.ui`
 
-![](./attachments/2023-08-07-1.png)
+![](./assets/2023-08-07-1.png)
 
 运行容器并不安装（ctrl + c会退出）：`docker container run --rm --name docker.ui -v /var/run/docker.sock:/var/run/docker.sock -p 8999:8999 joinsunsoft/docker.ui`
 
@@ -33,11 +57,11 @@
 
 **不要修改挂载容器数据卷的linux地址，会启动不了**
 
-![](./attachments/2023-08-07-4.png)
+![](./assets/2023-08-07-4.png)
 
 访问 `http://ip:8999` 即可打开gui界面，账号/密码：`ginghan/123456`
 
-![](./attachments/2023-08-07-5.png)
+![](./assets/2023-08-07-5.png)
 
 #### 2.2 Portainer
 
@@ -46,25 +70,25 @@
 
 查找镜像：`docker search portainer`
 
-![](./attachments/2023-08-07-6.png)
+![](./assets/2023-08-07-6.png)
 
 创建容器数据卷：`docker volume create portainer_data`
 
-![](./attachments/2023-08-07-7.png)
+![](./assets/2023-08-07-7.png)
 
 运行容器：`docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest`
 
-**不要修改挂在容器数据卷的linux地址，会启动不了**
+**不要修改挂载容器数据卷的linux地址，会启动不了**
 
-![](./attachments/2023-08-07-8.png)
+![](./assets/2023-08-07-8.png)
 
 访问gui页面设置密码：`https://ip:9443`，账号admin，密码Courage@1115
 
-![](./attachments/2023-08-07-9.png)
+![](./assets/2023-08-07-9.png)
 
 重启容器：`docker restart portainer`
 
-![](./attachments/2023-08-07-10.png)
+![](./assets/2023-08-07-10.png)
 
 二者对比：
 
@@ -73,7 +97,7 @@
 
 ### 2.3 安装mysql
 
-1. 启动容器：`docker run -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=123456  -d mysql`
+1. 启动容器：`docker run -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql`
 
 2. 拷贝配置文件到宿主机：`docker cp  mysql:/etc/mysql /root/docker/mysql`
 
@@ -113,6 +137,7 @@
 3. 执行`mysql -u root -p`
 4. 输入密码
 5. `use mysql`
+6. `select user,host from mysql.user;`
 
 #### 2.3.2 修改内存占用
 
@@ -124,7 +149,7 @@
 
 3. 进入MySQL容器内部：`docker exec -it mysql bash`
 
-4. 切换至MySQL配置文件目录：` cd /etc/mysql/conf.d`
+4. 切换至MySQL配置文件目录：`cd /etc/mysql/conf.d`
 
 5. 修改配置文件内容：`vim docker.cnf`
 
@@ -226,7 +251,7 @@ docker run -d --name emqx -p 1883:1883 -p 8083:8083 -p 8883:8883 -p 8084:8084 -p
    docker cp nginx:/usr/share/nginx/html /root/docker/nginx/
    ```
 
-3. 删除容器：
+3. 删除容器：`docker rm nginx`
 
 4. 重新运行：
 
@@ -256,7 +281,85 @@ docker run -d --name emqx -p 1883:1883 -p 8083:8083 -p 8883:8883 -p 8084:8084 -p
       -e "MINIO_ROOT_USER=admin" \
       -e "MINIO_ROOT_PASSWORD=12345678" \
       minio/minio server /data --console-address ":9001"
-   
    ```
 
 3. 访问：http://117.72.38.236:9001/login
+
+### 2.9 安装code-server
+
+1. 浏览器版本的vscode
+2. docker cli方式：
+
+   ```bash
+   docker run -d \
+   --name=code-server \
+   -e PUID=1000 \
+   -e PGID=1000 \
+   -e TZ=Etc/UTC \
+   -e PASSWORD=password `#optional` \
+   -e HASHED_PASSWORD= `#optional` \
+   -e SUDO_PASSWORD=password `#optional` \
+   -e SUDO_PASSWORD_HASH= `#optional` \
+   -e PROXY_DOMAIN=code-server.my.domain `#optional` \
+   -e DEFAULT_WORKSPACE=/config/workspace `#optional` \
+   -p 8443:8443 \
+   -v /path/to/code-server/config:/config \
+   --restart unless-stopped \
+   lscr.io/linuxserver/code-server:latest
+   ```
+
+   - `PUID`：设置用户ID，默认为1000。
+   - `PGID`：设置用户组ID，默认为1000。
+   - `TZ`：设置时区。
+   - `PASSWORD`：设置密码。
+   - `HASHED_PASSWORD`：设置密码的哈希值。
+   - `SUDO_PASSWORD`：设置sudo密码。
+   - `PROXY_DOMAIN`：设置代理域名。
+   - `DEFAULT_WORKSPACE`：设置默认工作空间。
+   - `/path/to/code-server/config`：设置配置文件路径。
+   - `--restart unless-stopped`：设置容器在关闭后自动重启。
+   - `lscr.io/linuxserver/code-server:latest`：镜像名称。
+   - `8443:8443`：映射端口。
+
+   ```bash
+   docker run -d \
+   --name=code-server \
+   -e PUID=1000 \
+   -e PGID=1000 \
+   -e TZ=Etc/UTC \
+   -e PASSWORD=918049 `#optional` \
+   -e SUDO_PASSWORD=918049 `#optional` \
+   -e DEFAULT_WORKSPACE=/config/workspace `#optional` \
+   -p 8443:8443 \
+   -v /root/docker/code-server/config:/config \
+   --restart unless-stopped \
+   lscr.io/linuxserver/code-server:latest
+   ```
+
+3. 访问：ip/8443
+
+## 3.常见问题
+
+### 3.1 关闭不掉进程
+
+**问题：**
+
+执行`systemctl stop docker`或`service docker stop`提示：`Warning: Stopping docker.service, but it can still be activated by: docker.socket`
+
+**原因：**
+
+Docker默认开启自动唤醒机制，即docker默认在关闭状态下被访问会自动唤醒Docker。
+
+查看Docker是否开启自动唤醒机制：`systemctl status docker`
+
+如果出现如下图的状态：即为开启自动唤醒机制
+
+![c4759495d01d67c9cc8348a3881fe300.png](../_resources/c4759495d01d67c9cc8348a3881fe300.png)
+
+**解决方式：**
+
+1. 停用Docker自动唤醒机制：`systemctl stop docker.socket`
+2.  查看Docker自动唤醒机制是否关闭：`systemctl status docker`
+3.  停用Docker：`systemctl stop docker`
+
+

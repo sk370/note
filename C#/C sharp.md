@@ -23,15 +23,15 @@
 
 #### 上位机语言对比
 
-![](attachments/20230504134557.png)
+![](assets/20230504134557.png)
 
 #### C#和组态软件对比
 
-![](attachments/20230504135049.png)
+![](assets/20230504135049.png)
 
 #### C#和LibView对比
 
-![](attachments/20230504135116.png)
+![](assets/20230504135116.png)
 
 ### .net介绍
 
@@ -41,15 +41,15 @@ C# 程序在 .NET 上运行，而 .NET 是名为**公共语言运行时** (CLR) 
 
 #### 发展
 
-![](attachments/20230504134352.png)
+![](assets/20230504134352.png)
 
 #### .NET平台和C#编程语言
 
-![](attachments/20230504134651.png)
+![](assets/20230504134651.png)
 
 ### 编译及运行过程
 
-![](attachments/Pasted%20image%2020230504213627.png)
+![](assets/20230504213627.png)
 
 程序集是包含代码和元数据的自描述功能单元，因此无需在 C# 中使用 `#include` 指令和头文件。
 
@@ -67,10 +67,10 @@ C# 并不限制源文件只能声明一种公共类型（`public`），也不要
 
 - 官方文档：[C# 文档 - 入门、教程、参考。 | Microsoft Learn](https://learn.microsoft.com/zh-cn/dotnet/csharp/)
 - MSDN文档（基于2022版本）：
-  - ![](attachments/20230503114541.png)
-  - ![](attachments/20230503114758.png)
+  - ![](assets/20230503114541.png)
+  - ![](assets/20230503114758.png)
   - 需要哪些添加哪些，也可以全部添加。
-  - 下载好后可以在左侧选择需要阅读的内容![](attachments/20230503120402.png)
+  - 下载好后可以在左侧选择需要阅读的内容![](assets/20230503120402.png)
 - 图书：《C# 8.0 in a Nutshell》
 
 ### 软件环境
@@ -78,8 +78,8 @@ C# 并不限制源文件只能声明一种公共类型（`public`），也不要
 第一阶段：
 
 - visual studio
-  - 必装![img]()attachments/20230504140312.png]
-  - 建议![](attachments/20230504140423.png)
+  - 必装![img](./assets/20230504140312.png)
+  - 建议![](assets/20230504140423.png)
 - SQLServer
 
 第二阶段：
@@ -93,20 +93,20 @@ C# 并不限制源文件只能声明一种公共类型（`public`），也不要
 
 ### 创建新项目
 
-![](attachments/20230504141524.png]
-![](attachments/20230504141618.png)
-![](attachments/20230504141800.png)
+![](assets/20230504141524.png]
+![](assets/20230504141618.png)
+![](assets/20230504141800.png)
 
 ### Solution和project
 
 - Solution：解决方案
 - Poject：解决问题的方法。Solution包含Project。vs提供了Project模板。
 
-![](attachments/20230504094116.png)
+![](assets/20230504094116.png)
 
 ### 托管代码和非托管代码
 
-![](attachments/Pasted%20image%2020230504224436.png)
+![](assets/20230504224436.png)
 
 ## 认识C#语言
 
@@ -165,7 +165,7 @@ class Hello
 
 黑盒引用时，如果类库之间存在依赖关系，使用和管理都很不便，这时可以使用NuGet工具进行自动管理，具体如下：
 
-![](attachments/20230504093523.png)
+![](assets/20230504093523.png)
 
 ### 程序结构
 
@@ -221,11 +221,11 @@ public class Stack<T>
 
 #### 关键字（Keyword）
 
-![](attachments/20230504112710.png)
+![](assets/20230504112710.png)
 
 #### 操作符、运算符（Operator）
 
-![](attachments/20230504113029.png)
+![](assets/20230504113029.png)
 
 #### 标识符
 
@@ -298,7 +298,7 @@ class Calculator
 - 值类型：每个变量都有自己的数据。
 - 引用类型：每个对象存储对数据的引用。
 
-![](attachments/Csharp类型.png)
+![](assets/Csharp类型.png)
 
 #### 类型声明
 

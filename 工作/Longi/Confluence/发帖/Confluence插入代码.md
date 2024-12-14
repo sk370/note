@@ -12,12 +12,12 @@ public String getFoo()
 {code} 
 ```
  3. 图形界面：
-	- ![](attachments/Pasted%20image%2020230312144153.png)
+	- ![](attachments/20230312144153.png)
 4. 代码高亮：
-	- ![](attachments/Pasted%20image%2020230312151004.png)
-	- ![](attachments/Pasted%20image%2020230312151053.png)
+	- ![](attachments/20230312151004.png)
+	- ![](attachments/20230312151053.png)
 5. 预览效果：
-	- ![](attachments/Pasted%20image%2020230312151124.png)
+	- ![](attachments/20230312151124.png)
 
 ## 方式二：Markwodn转换
 

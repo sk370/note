@@ -47,13 +47,13 @@
 
 控制台应用程序：
 
-![](attachments/2023-05-20-2.png)
+![](assets/2023-05-20-2.png)
 
 控制台程序会在执行完毕立即终止，导致无法看到结果，可以在代码中加入`Console.ReadKey()`，告诉代码在结束前等待按键。
 
 桌面应用程序：
 
-![](attachments/2023-05-20-1.png)
+![](assets/2023-05-20-1.png)
 
 C#代码文件扩展名为`.cs`。
 
@@ -89,17 +89,17 @@ using System.Threading.Tasks;
 
 1. 整数类型：
 
-![](attachments/2023-05-21.png)
+![](assets/2023-05-21.png)
 
 “u”是unsigned的缩写，表示不能在这些类型的变量中存储负数。
 
 2. 浮点类型：
 
-![](attachments/2023-05-21-1.png)
+![](assets/2023-05-21-1.png)
 
 3. 其他类型：
 
-![](attachments/2023-05-21-2.png)
+![](assets/2023-05-21-2.png)
 
 - string没有存储上限，是一个可变大小类型。
 - string是引用类型，其余都是值类型，string可以赋值为null，表示不引用任何东西。
@@ -115,11 +115,11 @@ using System.Threading.Tasks;
 
 字面值后可添加字符指定类型：
 
-![](attachments/2023-05-21-3.png)
+![](assets/2023-05-21-3.png)
 
 字符串字面值表示特殊符号需要使用转移：
 
-![](attachments/2023-05-21-4.png)
+![](assets/2023-05-21-4.png)
 
 - `\'` 和 `\u0027` 表示的转义含义一致。
 - `@" . . ."`  @和" 这种方式可以让语句原样输出，包括空格、换行、制表符、特殊字符等。
@@ -131,7 +131,7 @@ using System.Threading.Tasks;
 	- 一元运算符（包括赋值运算符）都有可能发生类型转换。
 	- 两个short值相乘的结果并不会返回一个short值。因为这个操作的结果很可能大于32767（这是short类型可以存储的最大值），所以这个操作的结果实际上是int值。
 
-![](attachments/2023-05-24-6.png)
+![](assets/2023-05-24-6.png)
  任何类型A，只要其取值范围完全包含在类型B的取值范围内，就可以隐式转换为类型B。
 
 - 显式转换：从类型A到类型B的转换只能在某些情况下进行，转换规则比较复杂，应进行某种类型的额外处理。
@@ -153,7 +153,7 @@ WriteLine($"destinationVar val: {destinationVar}");
 
 右键解决方案，可以设定本解决方案在构建时的算数校验规则：
 
-![](attachments/2023-05-24-7.png)
+![](assets/2023-05-24-7.png)
 
 Convert.ToXXX()显式转换。
 
@@ -173,8 +173,8 @@ Convert.ToXXX()显式转换。
 
 #### 3.3.1 数学运算符
 
-![](attachments/2023-05-21-5.png)
-![](attachments/2023-05-21-6.png)
+![](assets/2023-05-21-5.png)
+![](assets/2023-05-21-6.png)
 
 - `+`和`-`有二元和一元两种形式。
 - `+` 的一元运算符不会对结果产生影响。如果var2是-1，则+var2仍是-1。
@@ -186,13 +186,13 @@ Convert.ToXXX()显式转换。
 
 #### 3.3.2 赋值运算符
 
-![](attachments/2023-05-24.png)
+![](assets/2023-05-24.png)
 
 - `+=` 也可用于字符串操作。
 
 #### 3.3.3 运算符优先级
 
-![](attachments/2023-05-24-1.png)
+![](assets/2023-05-24-1.png)
 
 ### 3.4 名称空间
 
@@ -377,21 +377,21 @@ if (userResponse == "y")
 
 #### 4.1.1 比较运算符
 
-![](attachments/2023-05-24-2.png)
+![](assets/2023-05-24-2.png)
 
 #### 4.1.2 条件布尔运算符
 
-![](attachments/2023-05-24-3.png)
+![](assets/2023-05-24-3.png)
 
 `|` 和 `&` 与上述条件布尔运算符作用一致，但上述布尔运算符性能更高。
 
 #### 4.1.3 布尔赋值运算符
 
-![](attachments/2023-05-24-4.png)
+![](assets/2023-05-24-4.png)
 
 #### 4.1.4 运算符优先级
 
-![](attachments/2023-05-24-5.png)
+![](assets/2023-05-24-5.png)
 
 ### 4.2 分支
 
@@ -510,7 +510,7 @@ static void ShowDouble(ref int val) {
 - 这个函数可以返回void或int。
 - 执行控制台应用程序时，指定的任何命令行参数都放在这个args数组中
 	- Debug页面，在Command line arguments设置中添加所希望的命令行参数：
-	- ![](attachments/2023-06-02.png)
+	- ![](assets/2023-06-02.png)
 	- 在项目输出所在的目录`（C:\BegCSharp\Chapter06\Ch06Ex04\Ch06Ex04\bin\Debug）`下打开命令提示窗口，键入下述代码，也可以得到同样的结果：
 		- `Ch06Ex04 256 myFile.txt "a longer argument"`
 		- 每个参数都用空格分开。如果参数包含空格，就可以用双引号把参数括起来，这样才不会把这个参数解释为多个参数。
