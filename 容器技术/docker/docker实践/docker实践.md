@@ -338,6 +338,58 @@ docker run -d --name emqx -p 1883:1883 -p 8083:8083 -p 8883:8883 -p 8084:8084 -p
 
 3. 访问：ip/8443
 
+### 2.10 安装simplemindmap
+
+1. 在线思维导图
+2. docker cli
+
+```bash
+docker run -d -p 8081:8080 shuiche/mind-map:latest
+```
+
+3. 访问：http://ip:8081
+
+### 2.11 安装showdoc
+
+1. 在线知识库。
+2. 官方文档：[ShowDoc](https://www.showdoc.cc/help/manual/install)   
+3. dicker cli创建：
+
+   ```bash
+   docker run -d --name showdoc --user=root --restart=always --privileged=true -p 4999:80 \
+   -v /root/docker/showdoc_data/html:/var/www/html/ star7th/showdoc
+   ```
+
+4. 访问：http://123.249.82.18:4999/。账户密码是showdoc/123456
+
+### 2.12 安装onlyoffice
+
+1. 在线文档编辑器。
+2. 参考文档：
+   - [OnlyOffice](https://helpcenter.onlyoffice.com/installation/docs-community-install-docker.aspx)
+   - [实践](https://blog.51cto.com/u_16213372/12861068)
+3. dicker cli创建：
+
+   ```bash
+   docker run -i -t -d -p 82:80 --restart=always \
+    -v /root/onlyoffice/DocumentServer/logs:/var/log/onlyoffice  \
+    -v /root/onlyoffice/DocumentServer/data:/var/www/onlyoffice/Data  \
+    -v /root/onlyoffice/DocumentServer/lib:/var/lib/onlyoffice \
+    -v /root/onlyoffice/DocumentServer/db:/var/lib/postgresql \
+    -e DB_TYPE=mysql -e DB_HOST=127.0.0.1 -e DB_NAME=onlyoffice -e DB_USER=root -e DB_PASS=123456 \
+    -e JWT_SECRET=my_jwt_secret onlyoffice/documentserver
+   ```
+
+   ```bash
+   docker run -i -t -d -p 82:80 --restart=always \
+    -v /root/onlyoffice/DocumentServer/logs:/var/log/onlyoffice  \
+    -v /root/onlyoffice/DocumentServer/data:/var/www/onlyoffice/Data  \
+    -v /root/onlyoffice/DocumentServer/lib:/var/lib/onlyoffice \
+    -v /root/onlyoffice/DocumentServer/db:/var/lib/mysql \
+    -e DB_TYPE=mysql -e DB_HOST=127.0.0.1 -e DB_NAME=onlyoffice -e DB_USER=root -e DB_PASS=123456 \
+    -e JWT_SECRET=my_jwt_secret onlyoffice/documentserver
+   ```
+
 ## 3.常见问题
 
 ### 3.1 关闭不掉进程
@@ -359,7 +411,5 @@ Docker默认开启自动唤醒机制，即docker默认在关闭状态下被访�
 **解决方式：**
 
 1. 停用Docker自动唤醒机制：`systemctl stop docker.socket`
-2.  查看Docker自动唤醒机制是否关闭：`systemctl status docker`
-3.  停用Docker：`systemctl stop docker`
-
-
+2. 查看Docker自动唤醒机制是否关闭：`systemctl status docker`
+3. 停用Docker：`systemctl stop docker`
