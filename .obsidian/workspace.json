@@ -1,0 +1,115 @@
+{
+  "main": {
+    "id": "a1639ab7c1203711",
+    "type": "split",
+    "children": [
+      {
+        "id": "5f469b7424123aff",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8ad16add7097e529",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "读书笔记/利用Python进行数据分析/利用Python进行数据分析.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ce7d54674d6588ed",
+    "type": "split",
+    "children": [
+      {
+        "id": "9db9e36bf081942c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "670e16253227c498",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "6efd49c69cbf7499",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e80fb9af183d27b4",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "db4e00768853bc2e",
+    "type": "split",
+    "children": [
+      {
+        "id": "dca9ee936bb28123",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d9e5b8990a648cbd",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "读书笔记/利用Python进行数据分析/利用Python进行数据分析.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "8ad16add7097e529",
+  "lastOpenFiles": [
+    "Python/廖学锋/廖雪峰.md",
+    "读书笔记/利用Python进行数据分析/利用Python进行数据分析.md",
+    "读书笔记/利用Python进行数据分析/assets/20250126-1.png",
+    "读书笔记/利用Python进行数据分析/assets/Pasted image 20250126131220.png.nssyncsc",
+    "读书笔记/利用Python进行数据分析/assets/20250126.png",
+    "Python/Django/Django.md",
+    "工具/01.Obsidian使用/Obsidian使用.md"
+  ]
+}

@@ -15,7 +15,7 @@ MQTT（Message Queuing Telemetry Transport）是一种轻量级、基于发布-�
 2. mqtt explorer：[mqtt explorer](https://mqtt-explorer.com/)
 3. MQTTX客户端
     1. 下载地址：[Releases · emqx/MQTTX (github.com)](https://github.com/emqx/MQTTX/releases)
-        - ![Alt text](assets/image.png)
+        - ![Alt text](开源/EMQX实践/assets/image.png)
     2. 使用教程：[MQTTX 桌面客户端使用指南 | EMQ (emqx.com)](https://www.emqx.com/zh/blog/mqtt-x-guideline)
 
 #### MQTT Broker

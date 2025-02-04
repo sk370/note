@@ -282,6 +282,6 @@ in.nextLine();
 String tickets = in.nextLine();
 ```
 
-![Alt text](assets/image.png)
+![Alt text](Java/Java%20SE/assets/image.png)
 
 > 核心：`in.nextLine();`表示开始读取下一行内容

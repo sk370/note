@@ -1,24 +1,24 @@
 ## 常见UML图
 
-![alt text](assets/image.png)
+![alt text](UML/assets/image.png)
 
 ### 结构行为图
 
 #### 类图
 
-![alt text](assets/image-1.png)
+![alt text](UML/assets/image-1.png)
 
 #### 对象图
 
-![alt text](assets/image-2.png)
+![alt text](UML/assets/image-2.png)
 
 #### 组件图
 
-![alt text](assets/image-3.png)
+![alt text](UML/assets/image-3.png)
 
 #### 部署图
 
-![alt text](assets/image-4.png)
+![alt text](UML/assets/image-4.png)
 
 #### 用例图
 

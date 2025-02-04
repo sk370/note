@@ -113,4 +113,4 @@
 
 图片自动保存至“assets”文件夹下，并自动添加到markdown中。
 
-![alt text](assets/image.png)
+![alt text](工具/03.VsCode使用/assets/image.png)

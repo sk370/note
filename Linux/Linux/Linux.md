@@ -1,5 +1,5 @@
 > > - 在这个虚拟机中
-> - ![image.png](assets/image.png)
+> - ![image.png](Linux/Linux/assets/image.png)
 
 ## 第1章 初识Linux
 ### 1.1 Linux概述
