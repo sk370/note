@@ -13,8 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "读书笔记/利用Python进行数据分析/利用Python进行数据分析.md",
+                "file": "Python/廖学锋/廖雪峰.md",
                 "mode": "source",
+                "backlinks": false,
                 "source": false
               }
             }
@@ -86,7 +87,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "读书笔记/利用Python进行数据分析/利用Python进行数据分析.md"
+                "file": "Python/廖学锋/廖雪峰.md"
               }
             }
           }
@@ -104,11 +105,20 @@
   },
   "active": "8ad16add7097e529",
   "lastOpenFiles": [
+    "Python/廖学锋/assets/20250208-4.png",
+    "Python/廖学锋/assets/20250208-3.png",
+    "Python/廖学锋/assets/20250208-2.png",
+    "Python/廖学锋/assets/20250208-1.png",
+    "Python/廖学锋/assets/20250208.png",
+    "Python/廖学锋/assets/2024-08-06.png",
+    "Python/廖学锋/assets/image.png",
+    "Python/廖学锋/assets/image-1.png",
     "Python/廖学锋/廖雪峰.md",
+    "Python/廖学锋/assets/20250208.png",
+    "Python/廖学锋/assets/20250208-1.png",
     "读书笔记/利用Python进行数据分析/利用Python进行数据分析.md",
     "读书笔记/利用Python进行数据分析/assets/20250126-1.png",
     "读书笔记/利用Python进行数据分析/assets/Pasted image 20250126131220.png.nssyncsc",
-    "读书笔记/利用Python进行数据分析/assets/20250126.png",
     "Python/Django/Django.md",
     "工具/01.Obsidian使用/Obsidian使用.md"
   ]
