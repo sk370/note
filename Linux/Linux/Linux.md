@@ -175,4 +175,3 @@
 5. 刷新环境变量：`source /etc/profile`
 6. 测试Hadoop安装：`hadoop`
 
-通过以上优化，笔记将更加简洁明了，便于阅读和参考。

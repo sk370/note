@@ -11,8 +11,13 @@
             "id": "8ad16add7097e529",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Linux/Linux/Linux.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ]
@@ -80,7 +85,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Linux/Linux/Linux.md"
+              }
             }
           }
         ]
@@ -95,10 +102,15 @@
       "oz-clear-unused-images:Clear Unused Images": false
     }
   },
-  "active": "670e16253227c498",
+  "active": "8ad16add7097e529",
   "lastOpenFiles": [
-    "Linux/Linux/tongyi.md",
+    "C#/C sharp.md",
+    "Java/juc/JUC.md",
+    "转型/个人.md",
+    "Java/javaweb/javaweb.md",
+    "Java/压力测试/压力测试.md",
     "Linux/Linux/Linux.md",
+    "Linux/Linux/tongyi.md",
     "Linux/Linux/coplit.md",
     "Python/廖学锋/廖雪峰.md",
     "Python/廖学锋/assets/20250208-4.png",
