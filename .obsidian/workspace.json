@@ -91,10 +91,11 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "command-palette:打开命令面板": false
+      "command-palette:打开命令面板": false,
+      "oz-clear-unused-images:Clear Unused Images": false
     }
   },
-  "active": "8ad16add7097e529",
+  "active": "670e16253227c498",
   "lastOpenFiles": [
     "Linux/Linux/tongyi.md",
     "Linux/Linux/Linux.md",
