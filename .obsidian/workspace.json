@@ -11,13 +11,8 @@
             "id": "8ad16add7097e529",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Python/廖学锋/廖雪峰.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -70,8 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "db4e00768853bc2e",
@@ -86,17 +80,14 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Python/廖学锋/廖雪峰.md"
-              }
+              "state": {}
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -105,6 +96,10 @@
   },
   "active": "8ad16add7097e529",
   "lastOpenFiles": [
+    "Linux/Linux/tongyi.md",
+    "Linux/Linux/Linux.md",
+    "Linux/Linux/coplit.md",
+    "Python/廖学锋/廖雪峰.md",
     "Python/廖学锋/assets/20250208-4.png",
     "Python/廖学锋/assets/20250208-3.png",
     "Python/廖学锋/assets/20250208-2.png",
@@ -113,11 +108,9 @@
     "Python/廖学锋/assets/2024-08-06.png",
     "Python/廖学锋/assets/image.png",
     "Python/廖学锋/assets/image-1.png",
-    "Python/廖学锋/廖雪峰.md",
     "Python/廖学锋/assets/20250208.png",
     "Python/廖学锋/assets/20250208-1.png",
     "读书笔记/利用Python进行数据分析/利用Python进行数据分析.md",
-    "读书笔记/利用Python进行数据分析/assets/20250126-1.png",
     "读书笔记/利用Python进行数据分析/assets/Pasted image 20250126131220.png.nssyncsc",
     "Python/Django/Django.md",
     "工具/01.Obsidian使用/Obsidian使用.md"
