@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Linux/Linux.md",
+                "file": "eladmin/eladmin.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Linux/Linux/Linux.md"
+                "file": "eladmin/eladmin.md"
               }
             }
           }
@@ -104,12 +104,12 @@
   },
   "active": "8ad16add7097e529",
   "lastOpenFiles": [
+    "Linux/Linux/Linux.md",
     "C#/C sharp.md",
     "Java/juc/JUC.md",
     "转型/个人.md",
     "Java/javaweb/javaweb.md",
     "Java/压力测试/压力测试.md",
-    "Linux/Linux/Linux.md",
     "Linux/Linux/tongyi.md",
     "Linux/Linux/coplit.md",
     "Python/廖学锋/廖雪峰.md",
