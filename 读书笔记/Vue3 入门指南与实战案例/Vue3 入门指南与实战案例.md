@@ -126,3 +126,49 @@ Runtime ，可以叫它 “运行时” 或者 “运行时环境” ，这个�
 Node 就是一个让 JS 可以脱离浏览器运行的环境，当然，这里并不是说 Node 就是浏览器，没有 Window 、没有 Document 、没有 DOM 、没有 Web API ，没有 UI 界面，同时提供了很多浏览器做不到的能力，比如和操作系统的交互。
 
 ### 1.7 工程化构建工具
+
+1. 流行的构建工具：[Grunt](https://github.com/gruntjs/grunt) 、 [Gulp](https://github.com/gulpjs/gulp) 、 [Webpack](https://github.com/webpack/webpack) 、 [Snowpack](https://github.com/FredKSchott/snowpack) 、 [Parcel](https://github.com/parcel-bundler/parcel) 、 [Rollup](https://github.com/rollup/rollup) 、 [Vite](https://github.com/vitejs/vite)
+2. 构建工具的理解：构建工具通常集 “语言转换 / 编译” 、 “资源解析” 、 “代码分析” 、 “错误检查” 、 “任务队列” 等非常多的功能于一身。是一套工具链、工具集。
+3. 构建工具作用：
+
+	- 浏览器不支持的语言转换/编译
+	- 代码检查、css转换
+	- 上线前期代码混淆
+
+**webpack和vite对比：**
+
+1. Webpack 会先打包，再启动开发服务器，访问开发服务器时，会把打包好的结果直接给过去。
+
+	- ![](assets/20250222.png)
+
+2. Vite 是基于浏览器原生的 ES Module ，所以不需要预先打包，而是直接启动开发服务器，请求到对应的模块的时候再进行编译。
+
+	- ![](assets/20250222-1.png)
+
+**开发环境、生产环境判断：
+
+1. 在 Webpack ，可以使用 `process.env.NODE_ENV` 来区分开发环境（ development ）还是生产环境（ production ），它会返回当前所处环境的名称。
+2. 在 Vite ，还可以通过判断 `import.meta.env.DEV` 为 `true` 时是开发环境，判断 `import.meta.env.PROD` 为 `true` 时是生产环境（这两个值永远相反）。
+
+## 2. 工程化项目
+
+### 2.1 node项目
+
+#### 2.1.1 package.json
+
+`npm init`或`npm init -y`会初始化一个node项目，项目的相关信息会保存在package.json文件中。
+
+| 字段名             | 含义                                                                                                                                                                |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name            | 项目名称，如果打算发布成 npm 包，它将作为包的名称                                                                                                                                       |
+| version         | 项目版本号，如果打算发布成 npm 包，这个字段是必须的，遵循 [语义化版本号](https://vue3.chengpeiquan.com/guide.html#%E8%AF%AD%E4%B9%89%E5%8C%96%E7%89%88%E6%9C%AC%E5%8F%B7%E7%AE%A1%E7%90%86) 的要求   |
+| description     | 项目的描述                                                                                                                                                             |
+| keywords        | 关键词，用于在 npm 网站上进行搜索                                                                                                                                               |
+| homepage        | 项目的官网 URL                                                                                                                                                         |
+| main            | 项目的入口文件                                                                                                                                                           |
+| scripts         | 指定运行脚本的命令缩写，常见的如 `npm run build` 等命令就在这里配置，详见 [脚本命令的配置](https://vue3.chengpeiquan.com/guide.html#%E8%84%9A%E6%9C%AC%E5%91%BD%E4%BB%A4%E7%9A%84%E9%85%8D%E7%BD%AE) |
+| author          | 作者信息                                                                                                                                                              |
+| license         | 许可证信息，可以选择适当的许可证进行开源                                                                                                                                              |
+| dependencies    | 记录当前项目的生产依赖，安装 npm 包时会自动生成，详见：[依赖包和插件](https://vue3.chengpeiquan.com/guide.html#%E4%BE%9D%E8%B5%96%E5%8C%85%E5%92%8C%E6%8F%92%E4%BB%B6)                           |
+| devDependencies | 记录当前项目的开发依赖，安装 npm 包时会自动生成，详见：[依赖包和插件](https://vue3.chengpeiquan.com/guide.html#%E4%BE%9D%E8%B5%96%E5%8C%85%E5%92%8C%E6%8F%92%E4%BB%B6)                           |
+| type            | 配置 Node 对 CJS 和 ESM 的支持                                                                                                                                           |

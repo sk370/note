@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "eladmin/eladmin.md",
+                "file": "读书笔记/Vue3 入门指南与实战案例/Vue3 入门指南与实战案例.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "eladmin/eladmin.md"
+                "file": "读书笔记/Vue3 入门指南与实战案例/Vue3 入门指南与实战案例.md"
               }
             }
           }
@@ -104,6 +104,9 @@
   },
   "active": "8ad16add7097e529",
   "lastOpenFiles": [
+    "读书笔记/Vue3 入门指南与实战案例/assets/20250222-1.png",
+    "读书笔记/Vue3 入门指南与实战案例/assets/20250222.png",
+    "读书笔记/Vue3 入门指南与实战案例/assets",
     "Linux/Linux/Linux.md",
     "C#/C sharp.md",
     "Java/juc/JUC.md",
@@ -122,7 +125,6 @@
     "Python/廖学锋/assets/image.png",
     "Python/廖学锋/assets/image-1.png",
     "Python/廖学锋/assets/20250208.png",
-    "Python/廖学锋/assets/20250208-1.png",
     "读书笔记/利用Python进行数据分析/利用Python进行数据分析.md",
     "读书笔记/利用Python进行数据分析/assets/Pasted image 20250126131220.png.nssyncsc",
     "Python/Django/Django.md",
