@@ -145,7 +145,7 @@ Node 就是一个让 JS 可以脱离浏览器运行的环境，当然，这里�
 
 	- ![](assets/20250222-1.png)
 
-**开发环境、生产环境判断：
+**开发环境、生产环境判断**：
 
 1. 在 Webpack ，可以使用 `process.env.NODE_ENV` 来区分开发环境（ development ）还是生产环境（ production ），它会返回当前所处环境的名称。
 2. 在 Vite ，还可以通过判断 `import.meta.env.DEV` 为 `true` 时是开发环境，判断 `import.meta.env.PROD` 为 `true` 时是生产环境（这两个值永远相反）。
@@ -172,3 +172,322 @@ Node 就是一个让 JS 可以脱离浏览器运行的环境，当然，这里�
 | dependencies    | 记录当前项目的生产依赖，安装 npm 包时会自动生成，详见：[依赖包和插件](https://vue3.chengpeiquan.com/guide.html#%E4%BE%9D%E8%B5%96%E5%8C%85%E5%92%8C%E6%8F%92%E4%BB%B6)                           |
 | devDependencies | 记录当前项目的开发依赖，安装 npm 包时会自动生成，详见：[依赖包和插件](https://vue3.chengpeiquan.com/guide.html#%E4%BE%9D%E8%B5%96%E5%8C%85%E5%92%8C%E6%8F%92%E4%BB%B6)                           |
 | type            | 配置 Node 对 CJS 和 ESM 的支持                                                                                                                                           |
+
+**name字段：**
+
+如果打算发布成 npm 包，它将作为包的名称，可以是普通包名，也可以是范围包的包名。
+
+| 类型  | 释义                                                          | 例子                                            |
+| --- | ----------------------------------------------------------- | --------------------------------------------- |
+| 范围包 | 具备 `@scope/project-name` 格式，一般有一系列相关的开发依赖之间会以相同的 scope 进行命名 | 如 `@vue/cli` 、 `@vue/cli-service` 就是一系列相关的范围包 |
+| 普通包 | 其他命名都属于普通包                                                  | 如 `vue` 、 `vue-router`                        |
+
+**version字段：**
+
+Node 项目遵循 [语义化版本号](https://semver.org/lang/zh-CN/) 的规则，例如 `1.0.0` 、 `1.0.1` 、 `1.1.0` 这样的版本号。
+
+基本格式与升级规则：
+
+版本号的格式为： `Major.Minor.Patch` （简称 `X.Y.Z` ），它们的含义和升级规则如下：
+
+|英文|中文|含义|
+|---|---|---|
+|Major|主版本号|当项目作了大量的变更，与旧版本存在一定的不兼容问题|
+|Minor|次版本号|做了向下兼容的功能改动或者少量功能更新|
+|Patch|修订号|修复上一个版本的少量 BUG|
+
+一般情况下，三者均为正整数，并且从 `0` 开始，遵循这三条注意事项：
+
+- 当主版本号升级时，次版本号和修订号归零
+- 当次版本号升级时，修订号归零，主版本号保持不变
+- 当修订号升级时，主版本号和次版本号保持不变
+
+下面以一些常见的例子帮助快速理解版本号的升级规则：
+
+- 如果不打算发布，可以默认为 `0.0.0` ，代表它并不是一个进入发布状态的包
+- 在正式发布之前，可以将其设置为 `0.1.0` 发布第一个测试版本，自此，代表已进入发布状态，但还处于初期开发阶段，这个阶段可能经常改变 API ，但不需要频繁地更新主版本号
+- 在 `0.1.0` 发布后，修复了 BUG ，下一个版本号将设置为 `0.1.1` ，即更新了一个修订号
+- 在 `0.1.1` 发布后，有新的功能发布，下一个版本号可以升级为 `0.2.0` ，即更新了一个次版本号
+- 当觉得这个项目已经功能稳定、没有什么 BUG 了，决定正式发布并给用户使用时，那么就可以进入 `1.0.0` 正式版了
+
+版本标识符：
+
+以上是一些常规的版本号升级规则，也可以通过添加 “标识符” 来修饰的版本更新：
+
+格式为： `Major.Minor.Patch-Identifier.1` ，其中的 `Identifier` 代表 “标识符” ，它和版本号之间使用 `-` 短横线来连接，后面的 `.1` 代表当前标识符的第几个版本，每发布一次，这个数字 +1 。
+
+|标识符|含义|
+|---|---|
+|alpha|内部版本，代表当前可能有很大的变动|
+|beta|测试版本，代表版本已开始稳定，但可能会有比较多的问题需要测试和修复|
+|rc|即将作为正式版本发布，只需做最后的验证即可发布正式版|
+
+**scripts字段：**
+
+```json
+{
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  }
+}
+```
+
+运行 `npm run dev` 也可以相当于运行了 `vue-cli-service serve`。
+
+**type字段：**
+
+type 字段涉及到模块规范的支持，它有两个可选值： `commonjs` 和 `module` ，其默认值为 `commonjs` 。
+
+- 当不设置或者设置为 `commonjs` 时，扩展名为 `.js` 和 `.cjs` 的文件都是 CommonJS 规范的模块，如果要使用 ES Module 规范，需要使用 `.mjs` 扩展名。
+- 当设置为 `module` 时，扩展名为 `.js` 和 `.mjs` 的文件都是 ES Module 规范的模块，如果要使用 CommonJS 规范，需要使用 `.cjs` 扩展名。
+
+### 2.2 模块化设计
+
+前端工程中，符合软件设计”单一原则“的代码块，就叫做模块（Module），模块有自己的作用域，功能与业务解耦，方便复用和移植。
+
+主流模块化机制：
+
+|模块化方案|全称|适用范围|
+|---|---|---|
+|CJS|CommonJS|Node 端|
+|AMD|Async Module Definition|浏览器|
+|CMD|Common Module Definition|浏览器|
+|UMD|Universal Module Definition|Node 端和浏览器|
+|ESM|ES Module|Node 端和浏览器|
+
+ESM （ ES Module ） 是 JavaScript 在 ES6（ ECMAScript 2015 ）版本推出的模块化标准，旨在成为浏览器和服务端通用的模块解决方案。
+
+CJS （ CommonJS ） 原本是服务端的模块化标准（设计之初也叫 ServerJS ），是为 JavaScript 设计的用于浏览器之外的一个模块化方案， Node 默认支持了该规范。
+
+#### 2.2.1 CJS
+
+```bash
+hello-node
+│ # 源码文件夹
+├─src
+│ │ # 业务文件夹
+│ └─cjs
+│   │ # 入口文件
+│   ├─index.cjs
+│   │ # 模块文件
+│   └─module.cjs
+│ # 项目清单
+└─package.json
+```
+
+package.json文件：
+
+```json
+{
+  "scripts": {
+    "dev:cjs": "node src/cjs/index.cjs"
+  }
+}
+```
+
+命令行执行 `npm run dev:cjs` 命令，就可以测试刚刚添加的 CJS 模块了。
+
+**基本语法：**
+
+CJS 使用 `module.exports` 语法导出模块，可以导出任意合法的 JavaScript 类型，例如：字符串、布尔值、对象、数组、函数等等。
+
+使用 `require` 导入模块，在导入的时候，当文件扩展名是 `.js` 时，可以只写文件名，而此时使用的是 `.cjs` 扩展名，所以需要完整的书写。
+
+**默认导入和导出**：
+
+默认导出的时候，一个模块只包含一个值。
+
+```js
+// src/cjs/module.cjs 导出：
+module.exports = 'Hello World'
+```
+
+```js
+// src/cjs/index.cjs 导入：
+const m = require('./module.cjs')
+console.log(m)
+```
+
+**命名导入和导出：**
+
+命名导入和导出，一个模块可以包含多个值。
+
+```js
+// src/cjs/module.cjs 导出：
+function foo() {
+  console.log('Hello World from foo.')
+}
+
+const bar = 'Hello World from bar.'
+
+module.exports = {
+  foo,
+  bar,
+}
+```
+
+```js
+// src/cjs/index.cjs 导入：
+const m = require('./module.cjs')
+console.log(m.foo())
+
+或
+
+// src/cjs/index.cjs
+const { foo, bar } = require('./module.cjs')
+foo()
+console.log(bar)
+
+导入时重命名：
+
+// src/cjs/index.cjs
+const {
+  foo: foo2,  // 这里进行了重命名为foo2
+  bar,
+} = require('./module.cjs')
+```
+
+#### 2.2.1 ESM
+
+```bash
+hello-node
+│ # 源码文件夹
+├─src
+│ │ # 这次要用的 ES Module 测试文件
+│ └─esm
+│   │ # 入口文件
+│   ├─index.mjs
+│   │ # 模块文件
+│   └─module.mjs
+│
+│ # 项目清单
+└─package.json
+```
+
+package.json文件：
+
+```json
+{
+  "scripts": {
+    "dev:esm": "node src/esm/index.mjs"
+  }
+}
+```
+
+命令行执行 `npm run dev:esm` 命令，就可以测试刚刚添加的 ESM 模块了。
+
+**基本语法：**
+
+ESM 使用 `export default` （默认导出）和 `export` （命名导出）这两个语法导出模块，和 CJS 一样， ESM 也可以导出任意合法的 JavaScript 类型，例如：字符串、布尔值、对象、数组、函数等等。
+
+使用 `import ... from ...` 导入模块，在导入的时候，如果文件扩展名是 `.js` 则可以省略文件名后缀，否则需要把扩展名也完整写出来。
+
+**默认导入和导出**：
+
+默认导出的时候，一个模块只包含一个值。
+
+```js
+// src/cjs/module.cjs 导出：
+export default 'Hello World'
+```
+
+```js
+// src/cjs/index.cjs 导入：
+import m from './module.mjs'
+console.log(m)
+```
+
+**命名导入和导出：**
+
+命名导入和导出，一个模块可以包含多个值。
+
+```js
+// src/cjs/module.cjs 导出：
+export function foo() { 
+	console.log('Hello World from foo.') 
+} 
+
+export const bar = 'Hello World from bar.'
+```
+
+```js
+// src/cjs/index.cjs 导入：
+import { foo, bar } from './module.mjs' 
+
+foo()
+console.log(bar)
+
+或
+
+// src/cjs/index.cjs
+import * as m from './module.mjs' 
+
+m.foo() 
+console.log(m.bar)
+
+导入时重命名：
+
+// src/cjs/index.cjs
+import {
+  foo as foo2,  // 这里进行了重命名为foo2
+  bar,
+} from './module.mjs' 
+```
+
+### 2.3 组件化设计
+
+模块化属于 JavaScript 的概念，把代码块的职责单一化，一个函数、一个类都可以独立成一个模块。组件就是把一些可复用的 HTML 结构和 CSS 样式再做一层抽离，然后再放置到需要展示的位置。
+
+在 Vue ，是通过 Single-File Component （简称 SFC ， `.vue` 单文件组件）来实现组件化开发。
+
+一个 Vue 组件是由三部分组成的：
+
+```vue
+<template>
+  <!-- HTML 代码 -->
+</template>
+
+<script>
+// JavaScript 代码
+</script>
+
+<style scoped>
+/* CSS 代码 */
+</style>
+```
+
+### 2.4 插件包和依赖
+
+插件在 Node 项目里的体现是一个又一个的依赖包。在 Node 项目里，包可以简单理解为模块的集合，一个包可以只提供一个模块的功能，也可以作为多个模块的集合集中管理。
+
+node_modules 是 Node 项目下用于存放已安装的依赖包的目录，如果不存在，会自动创建。
+
+如果是本地依赖，会存在于项目根目录下，如果是全局依赖，会存在于环境变量关联的路径下。
+
+执行 `npm install` 的时候，添加 `--save` 或者 `-S` 选项可以将依赖安装到本地，并列为生产依赖。
+
+执行 `npm install` 的时候，如果添加 `--save-dev` 或者 `-D` 选项，可以将依赖安装到本地，并写入开发依赖里。
+
+执行 `npm install` 的时候，如果添加 `--global` 或者 `-g` 选项，可以将依赖安装到全局，它们将被安装在 [配置环境变量](https://vue3.chengpeiquan.com/guide.html#%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F) 里配置的全局资源路径里。
+
+项目的依赖建议优先选择本地安装，这是因为本地安装可以把依赖列表记录到 package.json 里，多人协作的时候可以减少很多问题出现，特别是当本地依赖与全局依赖版本号不一致的时候。
+
+包的导入和在模块化设计一节了解到的模块导入用法是一样的，只是把 `from` 后面的文件路径换成了包名。
+
+#### 2.4.1 包管理器npm
+
+| 指令                                                       | 含义              |
+| -------------------------------------------------------- | --------------- |
+| `npm -v`                                                 | 输出npm版本号        |
+| `npm config get registry`                                | 查看当前的 npm 配置    |
+| `npm config set registry https://registry.npmmirror.com` | 绑定国内镜像源         |
+| `npm config rm registry`                                 | 删除自定义镜像源，恢复默认   |
+| `npm install --save <package-name>`                      | 安装依赖到本地，并作为生产依赖 |
+| `npm install --save-dev <package-name>`                  | 安装依赖到本地，并作为开发依赖 |
+| `npm install --global <package-name>`                    | 安装依赖到全局         |
+| `npm install <package-name>@<version \| tag>`            | 安装指定版本依赖        |
+| `npm update`                                             | 更新全部包           |
+| `npm update <package-name>`                              | 更新指定包           |
+| `npm uninstall <package-name>`                           | 卸载本地指定包         |
+| `npm uninstall --global <package-name>`                  | 卸载全局指定包         |
