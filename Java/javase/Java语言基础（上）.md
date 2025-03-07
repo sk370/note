@@ -1,17 +1,3 @@
----
-title: Java语言基础（上）
-urlname: ywao29
-date: '2022-05-28 17:16:03 +0800'
-tags: [Java]
-categories: [Java基础]
----
-
-本文介绍了Java语言的基本特性，如数据类型、数组、类和对象、接口、异常等，是步入Java编程语言的第一步。
-
-
-<!-- more -->
-
-
 ## 第 1 章 java 语言概述
 
 ### 1.0 计算机基础
@@ -123,8 +109,6 @@ categories: [Java基础]
      - 解释性语言编译后不能直接被机器运行，需要解释器执行。
      - 编译性语言编译后的代码可以直接被机器执行，如 C，C++
 
-
-
 #### 1.1.2 下载 JDK 程序
 
 1. 由于发展原因：推荐下载 jdk8U201 版本（最后一稳定版本、长期支持版本）
@@ -134,7 +118,6 @@ categories: [Java基础]
 
      - ![image.png](Java%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%8A%EF%BC%89/image-1669754031841.png)
      - ![image.png](Java%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%8A%EF%BC%89/image-1669754028556.png)
-
 
 2. 本机的安装参考：![image.png](Java%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%8A%EF%BC%89/image-1669754026461.png)
 
@@ -151,7 +134,6 @@ categories: [Java基础]
    - `CLASSPATH`：`.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;`——JDK5 之后不需要配置了，jre 会自动搜索当前路径下的 jar 包，并加载 dt.jar 和 tools.jar，这是 Oracle 公司的改进设计。这个路径表示 class 文件的路径，即 JVM 去哪里寻找要运行的 class 文件。![image.png](Java%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%8A%EF%BC%89/image-1669754018706.png)
    - `Path`：`%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;`![image.png](Java%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%8A%EF%BC%89/image-1669754016460.png)
 
-
 #### 1.1.4 java 命令基本使用
 
 1. 运行 Java 程序：
@@ -159,7 +141,6 @@ categories: [Java基础]
    - `javac 文件名.java`编译代码，生成`文件名.class`字节码文件。
    - `java 文件名`自动查找对应的`文件.class`文件并执行。
    - **java11 后，**`java 文件名.java`**可以直接运行一个单文件源码，但多数情况下，无法直接这样操作，因为**`文件名.java`**文件需要依赖其他库。**
-
 
 ### 1.2 Java 程序基础
 
@@ -179,7 +160,6 @@ categories: [Java基础]
        - **执行方式是**`java 类名`**。**
        - **main 方法必须按 java 程序规定的入口语法编写，即**`public static void main(String[] args)`
 
-
    - 类名必须以英文字母开头（习惯首字母大写），后接字母、数字、下划线的组合。
    - `public static void main(String[] args)`规定的 java 程序入口
 
@@ -191,26 +171,8 @@ categories: [Java基础]
 
    - 单行注释：`//`
    - 多行注释：
-
+   - 文档注释：注释内容可以被 JDK 提供的 javadoc 所解析，生成一套以网页文件形式体现在该程序
      - 多行注释不能嵌套多行注释。
-
-
-
-```java
-/*
-xxxx
-*/
-```
-
-````
- - 文档注释：注释内容可以被 JDK 提供的 javadoc 所解析，生成一套以网页文件形式体现在该程序
-````
-
-```java
-/**
-xxx
-*/
-```
 
 3. 转义字符
 
@@ -221,7 +183,6 @@ xxx
 
      - `霜冷长河\r寒冬`--------->输出后`寒冬长河`
 
-
 4. Java 代码规范：
 
    - 类、方法的注释，要以 javadoc 的方式书写。
@@ -231,7 +192,6 @@ xxx
    - 源文件使用 UTF-8 编码。
    - 每行字符不要超过 80 字符。
    - 代码编写行尾风格（起始大括号在同一行）或次行风格（起始大括号在下一行）
-
 
 #### 1.1.2 标识符规范
 
@@ -253,8 +213,6 @@ xxx
      - 接收浮点数：`double sth = myScanner.netDouble();`
      - 接收字符：`char charNum = myScanner.next().charAt(0);`
 
-
-
 ## 第 2 章 基本语法
 
 ### 2.1 变量和数据类型
@@ -272,7 +230,6 @@ xxx
 
      - `int num; num = 10;`
 
-
 3. 注意点：
 
    - 变量必须先声明，后使用。
@@ -284,7 +241,6 @@ xxx
 
    - 左右两边都是数值时，做加法运算。
    - 左右一边有字符串时，做拼接运算。
-
 
 #### 2.1.2 数据类型
 
@@ -326,7 +282,6 @@ xxx
      - Java 对布尔类型的存储占用空间大小没有做规定，理论上只需要 1bit（0 或者 1），但由于计算机中最小存储单元为字节（Byte），所以占用应为 1 字节，同时又因为编译后虚拟机（JVM）中布尔类型的值会被转换为 int 类型的数据代替，所以会占用 4 个字节。
      - Java 中不可以用 0 或者非 0 的整数代替 false 或 true，即 Java 中布尔类型的值只能为 true 或 false。
 
-
 2. 自动类型转换：
 
    - Java 中程序在进行赋值或运算时，精度小的类型会自动转换为精度大的类型。
@@ -344,7 +299,6 @@ xxx
        - int=byte+byte（对），short=byte+byte（错），其他同理。
 
      - 布尔类型不参与自动类型转换。
-
 
 3. 强制类型转换
 
@@ -370,13 +324,10 @@ xxx
        - String 类型转换为基本类型时，必须先确保可以转换为对应的类型。如`123hello`不能转换为`int`
        - 如果格式不正确，会抛出异常，程序终止。
 
-
-
 5. 变量的赋值：
 
    - 如果变量是基本数据类型，此时赋值的是变量所保存的数据值。
    - 如果变量是引用数据类型，此时赋值的是变量所保存的数据的地址值。
-
 
 ### 2.2 运算符
 
@@ -401,7 +352,6 @@ xxx
    - Infinity 表示无穷大，`1.0 / 0`
    - -Infinity 表示负无穷大，`-1.0 / 0`
 
-
 #### 2.2.2 关系运算符
 
 1. 关系运算符的结果都是 boolean 类型，要么是 true，要么是 false。
@@ -415,13 +365,11 @@ xxx
 
      - boolean 除外，boolean 与不是 boolean 的比较时会报错。
 
-
 4. 判断字符串时：
 
    - 字符串以字面量形式声明：比较内容
    - 字符串以 new 关键字声明：比较地址值
    - 规范情况：须使用 isequals（）方法
-
 
 #### 2.2.3 逻辑运算符
 
@@ -447,8 +395,6 @@ xxx
    - `条件表达式1 ？ 表达式1 : 表达式2`
 
      - 表达式 1 和表达式 2 要求类型一致，所以会自动类型提升。
-
-
 
 #### 2.2.6 位运算符
 
@@ -488,7 +434,6 @@ xxx
   - 逻辑运算：
   - 三元运算：
 
-
 ### 2.3 流程控制
 
 ![](Java%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%8A%EF%BC%89/yuque_mind-1669753996510.jpeg)
@@ -512,19 +457,17 @@ xxx
 
      - **如下述的伪代码，最高分为 80 时，考了 90 分的只会从第一个入口进，输出 A，而不会再去判断后面的 B、C、D**
 
-
-
-```java
-if(成绩成绩>=最高分-10){
-    等级为A
-}else if(成绩>=最高分-20){
-    等级为B
-}else if(成绩>=最高分-30){
-    等级为C
-}else{
-    等级为D
-}
-```
+   ```java
+   if(成绩成绩>=最高分-10){
+      等级为A
+   }else if(成绩>=最高分-20){
+      等级为B
+   }else if(成绩>=最高分-30){
+      等级为C
+   }else{
+      等级为D
+   }
+   ```
 
 4. 嵌套分支：
 
@@ -532,21 +475,19 @@ if(成绩成绩>=最高分-10){
 
      - 为了保证可读性，不要超过三层。
 
-
-
-```java
-if(){
-	if(){
-    	else if(){
-        xxx;
-        }else{
-        xxx;
-        }
-    }else{
-    xxx;
-    }
-}
-```
+   ```java
+   if(){
+      if(){
+         else if(){
+         xxx;
+         }else{
+         xxx;
+         }
+      }else{
+      xxx;
+      }
+   }
+   ```
 
 5. switch 分支：
 
@@ -558,27 +499,25 @@ if(){
    - switch 表达式的返回值必须是 byte、short、int、char、enum【枚举】、String。
    - case 语句的值必须是常量或常量表达式，不能是变量或带变量的表达式。
 
-
-```java
-switch(表达式){
-    case 常量1:
-        语句1;
-        break;
-        ……
-    case 常量n:
-        语句n;
-        break;
-    default:
-        default语句块;
-        break;
-}
-```
+   ```java
+   switch(表达式){
+      case 常量1:
+         语句1;
+         break;
+         ……
+      case 常量n:
+         语句n;
+         break;
+      default:
+         default语句块;
+         break;
+   }
+   ```
 
 6. switch 和 if 的选择：
 
    - 运算的结果数值不多，且是 byte、short、int、char、enmu、String 的某种类型，建议使用 swtich。
    - 对于区间判断、结果为 boolean 的判断，建议使用 if。
-
 
 #### 2.3.3 循环控制
 
@@ -644,7 +583,6 @@ switch(表达式){
 
    - 依次从 nums 数组、枚举类等中取出数据，赋给 i
 
-
 #### 2.3.4 多重循环控制
 
 1. 建议循环嵌套不要超过 2 层，否则可读性非常差。
@@ -691,7 +629,6 @@ switch(表达式){
 5. return:
 
    - return 用在方法内时，表示跳出方法，用在 main 方法中表示退出程序。本质上不是退出循环。
-
 
 ## 第 3 章 数组和数组操作
 
@@ -749,8 +686,6 @@ switch(表达式){
      - 通过 new 关键字重新确定容量大小。
      - ~~动态初始化情况下改变传入变量的大小控制数组的大小。~~
 
-
-
 #### 3.1.2 二维数组
 
 1. 动态初始化——方式一：
@@ -771,7 +706,6 @@ switch(表达式){
      - `a[0]`：指向内存地址。
      - `a[0][0]`：输出该数组对应数据类型的默认值。
 
-
 2. 动态初始化——方式二：
 
    - 声明数组：
@@ -790,7 +724,6 @@ switch(表达式){
 
      - `a[0]`：指向内存地址。
      - `a[0][0]`：输出该数组对应数据类型的默认值。
-
 
 3. 动态初始化——列数不确定：
 
@@ -820,7 +753,6 @@ switch(表达式){
      - `a[0] = new int[3];a[0][0]`：输出该数组对应数据类型的默认值，本例为 0。
      - `没有a[0] = new int[3];直接a[0]`：报错。
 
-
 4. 静态初始化——方式一：
 
    - `数据类型 数组名[][] = {{值1, 值2,……},{值1, 值2,……},{值1, 值2,……}}`
@@ -849,7 +781,6 @@ switch(表达式){
      - 默认情况下：拷贝的是内存中的地址，arr1 和 arr2 不论哪个的值变化，都会引起另外一个的变化。
      - 值拷贝方式：给 arr1 和 arr2 分别开辟独立的内存空间。`int[] arr1 = {1,2……};int[] arr2 = new int[arr1.length];`
 
-
 2. 反转数组：
 
    - 交换数据法：
@@ -859,9 +790,7 @@ switch(表达式){
 
    - 创建新数组，新数组添加元素，将新数组赋值给旧数组。
 
-4. 数组缩减：
-
-创建新数组，新数组长度比旧数组少 1，循环赋值。
+4. 数组缩减：创建新数组，新数组长度比旧数组少 1，循环赋值。
 
 5. 数组排序：
 
@@ -875,7 +804,6 @@ switch(表达式){
 
    - 顺序查找：
    - 二分查找：
-
 
 #### 3.2.2 Arrays 工具类（常用）
 
@@ -930,7 +858,6 @@ switch(表达式){
    - 不定列二维数组某个一维数组未初始化，访问了该一维数组的具体值。
    - 一维字符串数组的某个值赋值为空。
 
-
 #### 3.2.4 数组输出问题
 
 1. 详见（详见 Java 问答，1.4.14）.
@@ -945,7 +872,6 @@ switch(表达式){
    - 声明并初始化（指定数组大小）：
    - 指定两个大小：输出数组显示内存地址、输出一维元素显示内存地址或一维数组、输出二维元素为默认值或指定值
    - 指定一个大小：输出数组显示内存地址、输出一位元素显式为空、输出二维元素编译不报错，运行报错
-
 
 ## 第 4 章 面向对象
 
@@ -970,26 +896,25 @@ switch(表达式){
 
    - 涉及到 Java 语言与 HTML、后端数据库交互时，前后端的结构在 java 层面交互时，都体现为类、对象。
 
-
 #### 4.1.1 类
 
 1. 类的语法格式：
 
-```java
-修饰符 class 类名{
-    属性声明;
-    方法声明;
-}
-```
+   ```java
+   修饰符 class 类名{
+      属性声明;
+      方法声明;
+   }
+   ```
 
-```java
-public class Person{
-    private int age ; //声明私有变量 age
-    public void showAge(int i) { //声明方法showAge( )
-        age = i;
-    }
-}
-```
+   ```java
+   public class Person{
+      private int age ; //声明私有变量 age
+      public void showAge(int i) { //声明方法showAge( )
+         age = i;
+      }
+   }
+   ```
 
 2. 类的成员：
 
@@ -1000,7 +925,6 @@ public class Person{
    - 行为：对应类中的成员方法
 
      - Method = 方法 = 函数
-
 
 3. 类权限修饰符只能缺省或 public
 
@@ -1019,12 +943,10 @@ public class Person{
      - boolean：false
      - String：null
 
-
 3. 属性赋值：遵循变量赋值的规定，即：
 
    - 如果变量是基本数据类型，此时赋值的是变量所保存的数据值。
    - 如果变量是引用数据类型，此时赋值的是变量所保存的数据的地址值。
-
 
 #### 4.1.3 类的成员——方法
 
@@ -1073,7 +995,6 @@ public class Person{
 
      - 方法体的语句可以为输入、输出、变量、运算、分支、循环、方法调用，但是不能嵌套定义——方法中不能再声明方法。
 
-
 3. 方法调用的细节
 
    - 同一个类中的方法 A（非 main 方法）中调用方法 B 时，可以直接调用`方法名()`
@@ -1104,11 +1025,9 @@ public class Person{
      - 形参不影响实参的情况：形参在方法内开辟了新的内存空间（需要在方法体内的语句实现）。
      - 字符串的传参？
 
-
 7. 克隆对象：创建两个独立的对象，只是属性、方法一致。
 
    - 利用引用数据类型传参的机制（在方法体内创建新对象，逐一赋值）。
-
 
 #### 4.1.4 类的实例化——对象
 
@@ -1140,8 +1059,6 @@ public class Person{
      - 临时使用、不需要保留
      - 作为方法的参数
 
-
-
 #### 4.1.5 方法重载（OverLoad）
 
 1. 定义：在同一个类中，允许存在一个以上的同名方法，只要它们的参数个数或者参数类型不同即可。
@@ -1156,7 +1073,6 @@ public class Person{
        - 参数个数不同
        - 参数类型不同
        - 同类型参数顺序不同
-
 
    - 跟方法的权限修饰符、返回值类型、形参变量名、方法体都没有关系！
 
@@ -1177,7 +1093,6 @@ public class Person{
    - 方法中使用引用数据类型的变量时，就会共享该引用类型的数据。
    - 递归必须向退出递归的条件逼近，否则就是无限递归。
    - 当一个方法执行完毕，或者遇到 return 语句，就会返回，遵循谁调用，结果就返回给谁。同时该方法执行完毕或返回时，该方法也就执行完毕。
-
 
 #### 4.1.7 构造方法/构造器（Constructor）
 
@@ -1206,7 +1121,6 @@ public class Person{
 
      - 如果想继续使用，需要再重新显式定义一下。
 
-
 5. 对象创建流程：
 
    - 加载类信息，加载到方法区，只会加载一次
@@ -1223,7 +1137,6 @@ public class Person{
 7. 注意点：使用了构造器后，实例化对象要用构造器的方法，否则会报错。
 
    - 原因为：显式声明构造器后，默认的无参构造器会不可用。
-
 
 #### 4.1.8 方法重写（override/overwrite）
 
@@ -1259,34 +1172,29 @@ public class Person{
 
    - 相同点：
 
-     - 都可以用于对类的属性、声明初始化
-     - 都可以声明多个代码块，但一般每种最多写一个
-     - 多个代码块默认执行顺序都是先上后下
+     1. 都可以用于对类的属性、声明初始化
+     2. 都可以声明多个代码块，但一般每种最多写一个
+     3. 多个代码块默认执行顺序都是先上后下
 
    - 不同点：
 
-     - 静态代码块：
+     1. 静态代码块：
 
        - 只能调用静态的属性和方法
        - 随类的加载而执行，只执行一次
 
-         - 类加载的三个时机：
+         1. 类加载的三个时机：
 
-           - 创建对象实例时（new）
-           - 创建子对象实例时，父类会被加载
-           - 使用类的静态成员时。
+            - 创建对象实例时（new）
+            - 创建子对象实例时，父类会被加载
+            - 使用类的静态成员时。
 
+     2. 非静态代码块：
 
+         - 既可以调用静态的属性和方法，也可以调用非静态的属性方法
+         - 随对象的创建而执行，创建一次执行一次。**先于构造器执行**
 
-     - 非静态代码块：
-    
-       - 既可以调用静态的属性和方法，也可以调用非静态的属性方法
-       - 随对象的创建而执行，创建一次执行一次。**先于构造器执行**
-    
-         - **可以将构造器相同的部分写到代码块内，减少不同构造器间的代码冗余。**
-
-
-
+            1. **可以将构造器相同的部分写到代码块内，减少不同构造器间的代码冗余。**
 
 4. 创建对象时，类的调用顺序：
 
@@ -1303,7 +1211,6 @@ public class Person{
    - 子类的普通代码块和普通属性。取决于书写顺序。
    - 子类的构造器。
 
-
 #### 4.1.10 内部类（InenerClass）
 
 1. 含义：定义在类内部的一个类，包含内部的类叫外部类
@@ -1318,7 +1225,6 @@ public class Person{
 
      - 可以被 final 修饰，表示此类不能被继承。
      - 可以被 abstract 修饰，表示不能被实例化
-
 
 3. 局部内部类：
 
@@ -1336,7 +1242,6 @@ public class Person{
      - 外部类需要访问内部类的成员时，需要通过上述流程，在外部类的方法中，将内部类实例化。
      - 外部其他类不能访问。
 
-
 4. 成员内部类：
 
    - 可以直接访问外部类的所有成员，包含私有的
@@ -1352,7 +1257,6 @@ public class Person{
      - 非静态内部类：`外部类.内部类 变量名 = 外部类的引用.new 内部类();`
 
        - `外部类.内部类 变量名 = 外部类的引用.new 外部类.内部类();`
-
 
    - 内部类的成员与外部类的成员重名时，内部类调用遵循就近原则，需要调用外部成员时，需要通过`外部类.this.成员名`的方式，调用内部类自身的属性，`this.成员名`
 
@@ -1428,7 +1332,6 @@ public class Person{
    - 成员内部类：外部类$内部类名.class
    - 局部内部类：外部类$数字 内部类名.class
 
-
 ### 4.2 jvm 内存分析
 
 #### 4.2.1 内存结构
@@ -1441,7 +1344,6 @@ public class Person{
 
    - null
    - 包含变量类型的地址值。
-
 
 #### 4.2.2 内存分配
 
@@ -1489,10 +1391,7 @@ public class Person{
      - 属性：生命周期长，伴随对象的创建而创建，伴随对象的销毁而销毁。
      - 局部变量：生命周期短，伴随代码块的执行而创建，伴随代码块的执行结束而销毁。
 
-
 3. 属性和局部变量可以重名，访问时遵循就近原则。
-
-<br/>
 
 4. 属性赋值过程：
 
@@ -1503,7 +1402,6 @@ public class Person{
 
    - 构造器中初始化
    - 通过“对象.属性“或“对象.方法”的方式赋值
-
 
 #### 4.2.4 可变个数形参
 
@@ -1517,7 +1415,6 @@ public class Person{
 
      - `public static void test(int a, String… books);`
 
-
 2. 注意点：
 
    - 调用方法时，可传入的参数个数可以是 0 个，1 个或多个
@@ -1528,7 +1425,6 @@ public class Person{
    - 可变参数方法的使用与方法参数部分使用数组是一致的，方法体内使用 for 循环
    - 方法的参数部分有可变形参时，需要放在形参声明的最后
    - 一个方法最多只能声明一个可变个数形参
-
 
 ### 4.3 封装、继承和多态
 
@@ -1573,7 +1469,6 @@ public class Person{
    - 局部变量（方法内、方法形参等）的修饰符只能缺省。
    - protected 修饰的属性、方法需要在不同包内访问时，一是需要父子继承关系，且 protected 修饰的内容是父类，二是需要在子类中导入包
 
-
 #### 4.3.2 继承（**inheritance**）
 
 1. 作用：
@@ -1599,7 +1494,6 @@ public class Person{
 
        - 通过`super.属性`的方法也访问不到。
 
-
    - 子类继承父类以后，还可以声明自己特有的属性或方法：实现功能的拓展。
    - 子类必须调用父类的构造器，完成父类的初始化。
 
@@ -1611,8 +1505,6 @@ public class Person{
 
        - 解决方案一：父类 B 中显式声明无参构造器。
        - 解决方案二：子类 A 中调用父类 B 中指定的构造器。声明 A 的构造器方法体内使用`super(形参列表)`
-
-
 
 4. 规定：
 
@@ -1637,7 +1529,6 @@ public class Person{
 
    - 虽然创建子类对象时，调用了父类的构造器，但是自始至终就创建过一个对象，即为 new 的子类对象。
    - ![18446744072569838818556192156.png](Java%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%8A%EF%BC%89/18446744072569838818556192156.png)
-
 
 #### 4.3.3 多态性（**Polymorphism**）
 
@@ -1678,13 +1569,11 @@ public class Person{
      - 属性不具有多态性。
      - 由于父类的属性通常设置为 private，所以需要 getter 方法才能获取到。
 
-
 6. `instance of`操作符：
 
    - `x instanceof A`：检验 x 的运行类是否为类 A 或其子类的对象，返回值为 boolean 型。
 
      - 如果 x 是类 B 的对象，而 B 是 A 的子类，则仍返回 true。
-
 
    ```java
    AA aa = new BB();
@@ -1708,7 +1597,6 @@ public class Person{
 
    - 当调用对象的方法时，该方法会和对象的内存地址/运行类型绑定。
    - 当调用对象的属性时，没有动态绑定机制，哪里声明，哪里使用。
-
 
 ### 4.4 关键字
 
@@ -1770,7 +1658,6 @@ public class Person{
    - java.sql----包含了 java 进行 JDBC 数据库编程的相关类/接口
    - java.awt----包含了构成抽象窗口工具集（abstract window toolkits）的多个类，这些类被用来构建和管理应用程序的图形用户界面(GUI)。 B/S C/S
 
-
 #### 4.4.3 import
 
 1. 作用：为使用定义在不同包中的 Java 类，需用 import 语句来引入指定包层次下所需要的类或全部类(.*)。
@@ -1785,7 +1672,6 @@ public class Person{
    - 如果在代码中使用不同包下的同名的类。那么就需要使用类的全类名的方式指明调用的是哪个类。
    - 如果已经导入 java.a 包下的类。那么如果需要使用 a 包的子包下的类的话，仍然需要导入。
    - import static 组合的使用：调用指定类或接口下的静态的属性或方法
-
 
 #### 4.4.4 super
 
@@ -1818,11 +1704,9 @@ public class Person{
 
      - 因为所有的对象都是继承来的，都必然具有父类的特征。
 
-
 5. 默认的无参构造器默认调用的`super()`
 
    - 无论哪个构造器创建子类对象，需要先保证初始化父类，当子类继承父类以后，继承了父类中的属性和方法，因此子类有必要知道父类如何对对象初始化。
-
 
 #### 4.4.5 static
 
@@ -1843,7 +1727,6 @@ public class Person{
 
      - 不能修饰构造器的原因：static 随着类的加载而加载，根据构造器的加载时机区分 static 和非 static，先于构造器加载的为 static，后于构造器加载的为非 static
 
-
 3. 特点：
 
    - 属性和方法随着类的加载而加载，与是否创建对象无关。
@@ -1857,7 +1740,6 @@ public class Person{
    - 访问权限允许时，可不创建对象，直接被类调用。
 
      - 被 static 修饰的内部类实例化的特点呢？以及与多线程的关系？
-
 
 4. 注意点：
 
@@ -1882,7 +1764,6 @@ public class Person{
 
      - 设置为 private 时，只能被`类名.静态属性`、`类名.静态方法名()`调用，不能被对象的引用调用。
 
-
 5. 使用时机：
 
    - 属性：
@@ -1894,8 +1775,6 @@ public class Person{
 
      - 操作静态属性
      - 工具类中的方法。如 Math、Collection、Arrays
-
-
 
 #### 4.4.6 main
 
@@ -1943,7 +1822,6 @@ public class Person{
 
    - `static final`：只能用于修饰属性、普通方法，修饰属性时，表示全局常量。
 
-
 #### 4.4.8 abstract（抽象类与抽象方法）
 
 1. 修饰结构：类、方法、内部类
@@ -1981,13 +1859,9 @@ public class Person{
 
          - `int p = new Person(){int a = 1;重写Person的虚拟方法}.a;`改变返回值类型、`.a`为`.方法名()`可以获取`.方法名()`的返回值。但是仅限于有返回值类型的方法（含自有方法）。
 
-
-
    - 匿名类匿名对象：`new Person(){重写Person的虚拟方法}`
 
      - 注意分号不能省略。
-
-
 
 ### 4.5 面向对象补充知识
 
@@ -2001,7 +1875,6 @@ public class Person{
    - 有属性
 
      - 属性一般定义为 private，有对应的 getter、setter
-
 
 3. 可以使用 JavaBean 将功能、处理、值、数据库访问和其他任何可以用 Java 代码创造的对象进行打包，并且其他的开发者可以通过内部的 JSP 页面、Servlet、其他 JavaBean、applet 程序或者应用来使用这些对象。用户可以认为 JavaBean 提供了一种随时随地的复制和粘贴的功能，而不用关心任何改变。
 
@@ -2040,7 +1913,6 @@ public class Person{
    - 相关工具类：view.utils
    - 自定义 view：view.ui
 
-
 #### 4.5.4 Object 类的使用
 
 1. Object 类是所有 Java 类的根父类。
@@ -2060,7 +1932,6 @@ public class Person{
        - 一致性：如果 x.equals(y)返回是 true，只要 x 和 y 内容一直不变，不管重复 x.equals(y)多少次，返回都是 true。
        - 任何情况下，x.equals(null)，永远返回是 false，null。equals(x)会空指针异常。
        - x.equals(和 x 不同类型的对象)永远返回是 false。
-
 
    - `toString()`：
 
@@ -2121,7 +1992,6 @@ public class Person{
    - 结构型（7 种）：
    - 行为型（11 种）：
 
-
 #### 4.6.1 单例模式（**Singleton**）
 
 1. 定义：采取一定的方法保证在整个的软件系统中，对某个类只能存在一个对象实例，并且该类只提供一个取得其对象实例的方法。
@@ -2180,7 +2050,6 @@ public class Person{
      - 优点：延迟对象的创建。
      - 缺点线程不安全。
 
-
 5. 应用场景：
 
    - 网站计数器：
@@ -2191,8 +2060,6 @@ public class Person{
 
      - windows 系统的任务管理器
      - windows 系统的回收站
-
-
 
 #### 4.6.2 模板方法设计模式（**TemplateMethod**）
 
@@ -2224,7 +2091,6 @@ public class Person{
    - 子类继承抽象类，重写抽象方法，在方法中完成需要工作的代码。
    - 实例化子类，子类由于继承了父类的方法，通过子类对象的引用调用父类的模板方法的那个方法。
 
-
 #### 4.6.3 代理模式（Proxy）
 
 1. 体现：类 A 实现了接口，实际需要类 A 去调用（操作）接口时，表面上通过实例化类 B 去操作，而将 A 作为一个参数调用。
@@ -2247,7 +2113,6 @@ public class Person{
 
    - 静态代理（上述描述）
    - 动态代理（JDK 自带的静态代理，需要反射实现）
-
 
 #### 4.6.4 工厂模式（略）
 
@@ -2292,7 +2157,6 @@ public class Person{
      - 可以通过类对象来调用
      - 实现类可以不用重写接口的默认方法
 
-
 5. 注意点：
 
    - 接口不能被实例化（不能声明构造器），匿名接口的方式可以 new
@@ -2305,8 +2169,6 @@ public class Person{
 
        - 继承+实现情况下属性名重复会报错
        - 实现+实现情况下属性名重复会报错
-
-
 
 6. 接口也具有多态性
 
@@ -2345,7 +2207,6 @@ public class Person{
    - final 和 static 永远可搭配（内部类、属性、方法）
    - static 和 abstract 可同时修饰内部类，不可同时修饰方法。
 
-
 ## 第 5 章 常用类
 
 ### 5.1 包装类
@@ -2354,7 +2215,7 @@ public class Person{
 
 1. Java 定义了 8 种数据类型对应的引用类型（包装类、封装类），使得可以调用类中的方法。
 
-#### 5.1.2 分类：
+#### 5.1.2 分类
 
 - ![image.png](Java%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%8A%EF%BC%89/image-1669753912787.png)
 
@@ -2393,15 +2254,12 @@ public class Person{
 
    - 调用包装类的`tostring()`方法。
 
-
-<br/>
-
-5. JDK1.5 之后支持自动装箱、自动拆箱，但类型必须匹配
+7. JDK1.5 之后支持自动装箱、自动拆箱，但类型必须匹配
 
    - Integer a = 10; 自动封箱
    - int b = a; 自动拆箱
 
-6. 基本数据类型和包装类型使用功能`==`号比较时，比较的是数值值。
+8. 基本数据类型和包装类型使用功能`==`号比较时，比较的是数值值。
 
 ### 5.2 String 类
 
@@ -2425,7 +2283,6 @@ public class Person{
    - 如果改变字符串变量的字面量值，如将`String str = s;`改为`String str = str;`则表示 str 指向常量池中新的地址。而不是对常量池中 s 所在的地址空间重新填充内容。
    - 体现： - 当对字符串重新赋值时，需要重写指定内存区域赋值，不能使用原有的 value 进行赋值。  
      当对现有的字符串进行连接操作时，也需要重新指定内存区域赋值，不能使用原有的 value 进行赋值。 - 当调用 String 的 replace()方法修改指定字符或字符串时，也需要重新指定内存区域赋值，不能使用原有的 value 进行赋值。
-
 
 #### 5.2.2 创建 String 对象细节
 
@@ -2457,7 +2314,6 @@ public class Person{
 
        - 原因为 intern()方法会在常量池中查找是否存在该字符串，存在时返回常量池中的对象（含地址），不存在则创建。
 
-
    - `String a = "hello";String b = "abc" +  a;`只要有变量参与，就会调用 StringBuilder()创建对象。
 
      - 但假如`final String a = "hello"` ，则结果仍在常量池，因为此时 a 变成了常量
@@ -2467,8 +2323,6 @@ public class Person{
      - 常量与常量的拼接结果在常量池。且常量池中不会存在相同内容的常量。
      - 只要其中有一个是变量，结果就在堆中。
      - 如果拼接的结果调用 intern()方法，返回值就在常量池中
-
-
 
 #### 5.2.3 JVM 中涉及字符串的存放位置
 
@@ -2542,7 +2396,6 @@ public class Person{
    - 基本数据类型、包装类 --> String:调用 String 重载的 valueOf(xxx)
    - **注意：** 由于字符串是不可变的，所以操作字符串的方法基本都有返回值，而原字符串不会发生改变。
 
-
 #### 5.2.5 StringBuffer
 
 1. 特性：
@@ -2579,8 +2432,6 @@ public class Person{
 
      - 底层原理：StringBuffer 的方法底层返回了 this，既是对当前数据的返回，也表明支持链式操作
 
-
-
 #### 5.2.6 StringBuilder
 
 - 同 StringBuffer，JDK5.0 新增，只是线程不安全，效率优于 StringBuffer。
@@ -2588,138 +2439,305 @@ public class Person{
 
 ### 5.3 时间 API
 
-1. JDK8 之前：
+#### 5.3.1 JDK8之前
 
-   > - java.lang.System 类：`currentTimeMillis()`，获取当前时间距离 1970 年 1 月 1 日 0 时 0 分 0 秒的毫秒数
-   > - java.util.Date 类 ：
+**1. 核心类及作用：**
 
-   >   - 构造器：
+以下是 JDK 8 之前 Java 时间 API（主要位于 `java.util` 和 `java.sql` 包中）的总结，包括核心类、常见用法及其局限性。
 
-   >     - `Date()`
-   >     - `Date(long date)`
+| 类名                               | 用途                                                     | 问题与缺陷                                                     |
+| -------------------------------- | ------------------------------------------------------ | --------------------------------------------------------- |
+| **`java.lang.System`**           | `currentTimeMillis()`，获取当前时间距离 1970 年1月1日0时0分0秒的毫秒数    |                                                           |
+| **`java.util.Date`**             | 表示特定的时间点（精确到毫秒），但大部分方法已废弃（如 `getYear()`）。              | - 设计混乱（日期和时间混合操作）<br>- 时区处理不透明（依赖系统默认时区）<br>- 线程不安全（可变对象） |
+| **`java.util.Calendar`**         | 用于操作日期字段（如年、月、日），提供时区支持，常用子类为 `GregorianCalendar`。     | - API 繁琐（需通过字段常量操作）<br>- 月份从 0 开始（易出错）<br>- 线程不安全         |
+| **`java.sql.Date`**              | 继承自 `java.util.Date`，用于表示 SQL 的 `DATE` 类型（仅日期部分）。      | - 时间部分被截断（强制归零）<br>- 与 `java.util.Date` 混用易出错             |
+| **`java.sql.Time`**              | 继承自 `java.util.Date`，用于表示 SQL 的 `TIME` 类型（仅时间部分）。      | - 日期部分被固定为 1970-01-01<br>- 设计冗余                           |
+| **`java.sql.Timestamp`**         | 继承自 `java.util.Date`，用于表示 SQL 的 `TIMESTAMP` 类型（含纳秒精度）。 | - 与 `Date` 的兼容性问题（强制类型转换）<br>- 纳秒支持有限                     |
+| **`java.text.SimpleDateFormat`** | 用于日期格式化和解析（如 `"yyyy-MM-dd"`），但非线程安全。                   | - 线程不安全（需同步或每次新建实例）<br>- 解析容错性差（易抛异常）                     |
 
-   >   - 方法：
+**2. 核心方法及示例：**
 
-   >     - `getTime()`：获取当前时间距离 1970 年 1 月 1 日 0 时 0 分 0 秒的毫秒数
-   >     - `toString()`：【重写方法】按照 down mon dd hh:mm:ss zzz yyy 的格式输出
+**(1) `Date` 类**
 
-   >       - down：星期几
-   >       - zzz：时间标准
+```java
+// 创建当前时间
+Date now = new Date(); 
+System.out.println(now); // 输出默认格式：Thu Jun 03 15:30:45 CST 2021
 
+// 获取毫秒时间戳
+long timestamp = now.getTime(); 
 
-   >   - java.sql.Date 类：
+// 通过时间戳创建 Date
+Date date = new Date(1622505600000L); // 2021-06-01 00:00:00 UTC
 
-   >     - java.util.Date 类的子类
-   >     - 创建时使用全包名：即`new java.sql.Date()`
-   >     - 相互转换：
+// 废弃方法（不推荐）
+int year = now.getYear() + 1900; // 2021（getYear() 返回 121）
+int month = now.getMonth() + 1;  // 6（0-11 对应 1-12 月）
+```
 
-   >       - 方式一：创建 Date 对象的多态 java.sql.Date 对象；创建 java.sql.Date 对象，使用向上转型（强转）——注意：强转的前提是 Date 对象是由 java.sql.Date 创建的。
-   >       - 方式二：通过共有方法`getTime()`获取时间戳
+**(2) `Calendar` 类：**
 
+```java
+// 获取默认时区的实例
+Calendar cal = Calendar.getInstance();
 
+// 设置日期（2023年10月1日）
+cal.set(Calendar.YEAR, 2023);
+cal.set(Calendar.MONTH, Calendar.SEPTEMBER); // 月份从0开始（9表示10月）
+cal.set(Calendar.DAY_OF_MONTH, 1);
 
-   > - java.text.SimpleDataFormat 类：
+// 获取字段值
+int year = cal.get(Calendar.YEAR); // 2023
+int month = cal.get(Calendar.MONTH) + 1; // 10
 
-   >   - 用于对 Date 类的格式化和解析
-   >   - 创建指定格式的对象：
+// 时间计算（加3天）
+cal.add(Calendar.DAY_OF_MONTH, 3);
 
-   >     - `SimpleDateFormat()`：默认格式
-   >     - `SimpleDateFormat("yyyy-MM-dd")`：指定格式
+// 转换为 Date
+Date date = cal.getTime();
+```
 
-   >   - 格式化：将日期输出为字符串
+**(3) `SimpleDateFormat`：**
 
-   >     - 调用`foramt(Date date)`方法：
+```java
+// 格式化 Date -> String
+SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+String formatted = sdf.format(new Date()); // 2023-10-01 15:30:00
 
-   >   - 解析：将字符串转换为日期
+// 解析 String -> Date
+Date parsedDate = sdf.parse("2023-10-01 15:30:00");
 
-   >     - 调用`parse(String sourse)`方法：
+// 线程不安全示例（错误用法）
+// 多线程共享同一个 SimpleDateFormat 实例会导致数据错乱或异常！
+```
 
-   >       - 这里 sourse 的格式必须与创建`SimpleDateFormat()`对象的格式一致
-   >       - 有异常问题
+**3. 主要问题总结：**
 
+| 问题类型             | 具体表现                                                                               |
+|----------------------|--------------------------------------------------------------------------------------|
+| **设计缺陷**         | - `Date` 的日期计算能力弱（依赖 `Calendar`）<br>- `Calendar` 的月份从 0 开始，易导致逻辑错误       |
+| **线程不安全**       | - `SimpleDateFormat` 和 `Calendar` 不是线程安全的，需额外同步处理                               |
+| **时区处理混乱**     | - `Date` 的 `toString()` 使用默认时区，但内部存储为 UTC，易误导开发者                             |
+| **可变性**           | - `Date` 和 `Calendar` 是可变的，修改实例会破坏原始数据（如缓存中的日期对象被意外修改）                |
+| **格式化问题**       | - `SimpleDateFormat` 解析严格，容错性差（如 `"2023-13-01"` 会抛异常）                           |
 
+**4. 常见替代方案（JDK8前）：**
 
-   > - java.util.Calendar(日历)类 ：
+**(1) 第三方库 Joda-Time：**
 
-   >   - 用于日期字段（fileld）间的相互操作
+- **优点**：线程安全、API 直观、支持时区。
+- **示例**：
 
-   >     - field：Calendar 类的静态属性：YEAR、MONTH、DAY_OF_WEEK、HOUR_OF_DAY 、 MINUTE、SECOND
+```java
+DateTime dt = new DateTime(2023, 10, 1, 15, 30); // Joda-Time
+DateTime plusDays = dt.plusDays(3);
+```
 
-   >   - 获取 Calendar 实例：`Calendar calendar = Calendar.getInstance();`
+**(2) 手动封装工具类：**
 
-   >     - Calendar 时抽象类，无法实例化，调用静态方法`getInstance()`实际上会调用其子类`GregorianCalendar`创建对象。
+```java
+public class DateUtils {
+   private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+   
+   // 使用 ThreadLocal 解决线程安全问题
+   private static final ThreadLocal<SimpleDateFormat> threadLocalSdf = 
+         ThreadLocal.withInitial(() -> new SimpleDateFormat("yyyy-MM-dd"));
+   
+   public static String format(Date date) {
+         return threadLocalSdf.get().format(date);
+   }
+}
+```
 
-   >   - 常用方法：
+**总结：**
 
-   >     - `int get(int field,int value)`
-   >     - `void set(int field,int value)`
-   >     - `void add(int field,int amount)`
-   >     - `Date getTime()`：日历类转换 Date 类
-   >     - `void setTime(Date date)`：Date 类转换日历类
+| 场景                     | 推荐操作                                                                 |
+|--------------------------|------------------------------------------------------------------------|
+| **维护旧代码**           | - 使用 `Calendar` 做日期计算<br>- 用 `ThreadLocal` 包装 `SimpleDateFormat`    |
+| **新功能开发**           | **直接迁移到 `java.time`**（如 `LocalDate`、`ZonedDateTime`）               |
+| **数据库交互**           | 优先使用 `java.sql.Timestamp`，并通过 `java.time` 转换工具类处理               |
 
+#### 5.3.2 JDK8
 
+JDK 8 引入的 `java.time` 包的总结，涵盖其核心类、设计优势及常见用法，帮助开发者高效处理日期和时间。
 
-2. 日期时间 API 的迭代：
+**1. 核心类及用途:**
 
-   - 第一代：jdk 1.0 Date 类
-   - 第二代：jdk 1.1 Calendar 类，一定程度上替换 Date 类
-   - 第三代：jdk 1.8 提出了新的一套 API
+| 类名                   | 用途                                       | 示例值                     |
+|------------------------|------------------------------------------|---------------------------|
+| **`LocalDate`**        | 仅日期（年-月-日），无时区                  | `2023-10-01`              |
+| **`LocalTime`**        | 仅时间（时:分:秒.纳秒），无时区              | `15:30:45.123456789`      |
+| **`LocalDateTime`**    | 日期 + 时间，无时区                        | `2023-10-01T15:30:45.123` |
+| **`ZonedDateTime`**    | 日期 + 时间 + 时区                        | `2023-10-01T15:30:45+08:00[Asia/Shanghai]` |
+| **`Instant`**          | 时间戳（UTC 时间，精确到纳秒）              | `2023-10-01T07:30:45Z`    |
+| **`Period`**           | 日期间隔（年/月/日）                       | `P1Y2M3D`（1年2月3天）    |
+| **`Duration`**         | 时间间隔（时/分/秒/纳秒）                   | `PT2H30M`（2小时30分钟）  |
+| **`DateTimeFormatter`**| 日期时间格式化和解析                       | `yyyy-MM-dd HH:mm:ss`     |
 
-3. 前两代存在的问题举例：
+**2. 核心方法及示例：**
 
-   - 可变性：像日期和时间这样的类应该是不可变的。
-   - 偏移性：Date 中的年份是从 1900 开始的，而月份都从 0 开始。
-   - 格式化：格式化只对 Date 用，Calendar 则不行。
-   - 此外，它们也不是线程安全的；不能处理闰秒等。
+**(1) 获取当前时间：**
 
-4. JDK8 新增 API
+```java
+LocalDate currentDate = LocalDate.now();       // 2023-10-01
+LocalTime currentTime = LocalTime.now();       // 15:30:45.123
+LocalDateTime currentDateTime = LocalDateTime.now(); // 2023-10-01T15:30:45.123
+Instant currentInstant = Instant.now();        // UTC 时间戳
+ZonedDateTime currentZoned = ZonedDateTime.now(ZoneId.of("Asia/Shanghai"));
+```
 
-   - java.time – 包含值对象的基础包
-   - java.time.chrono – 提供对不同的日历系统的访问
-   - java.time.format – 格式化和解析时间和日期
-   - java.time.temporal – 包括底层框架和扩展特性
-   - java.time.zone – 包含时区支持的类
+ **(2) 创建特定时间：**
+ 
+```java
+LocalDate date = LocalDate.of(2023, Month.OCTOBER, 1);
+LocalTime time = LocalTime.of(15, 30, 45); // 15:30:45
+LocalDateTime dateTime = LocalDateTime.of(2023, 10, 1, 15, 30);
+ZonedDateTime zonedDateTime = ZonedDateTime.of(dateTime, ZoneId.of("UTC"));
+```
 
-5. JDK8 新增时间类（构造方法私有的，不能实例化）：
+ **(3) 时间运算：**
+ 
+```java
+// 加减时间
+LocalDate nextWeek = currentDate.plusDays(7);
+LocalDateTime minusHours = currentDateTime.minusHours(2);
 
-   - LocalDate：获取 ISO 格式（yyyy-MM-dd)的日期
-   - LocalTime：获取时间
-   - LocalDateTime：获取日期和时间
-   - 常用方法：
+// 使用 Period 和 Duration
+Period period = Period.ofMonths(1);
+LocalDate nextMonth = currentDate.plus(period);
 
-     - `now()`（静态方法）：获取当前的日期、时间、日期+时间，创建类对象
-     - `of()`：设置指定的年、月、日、时、分、秒。没有偏移量
-     - `getXxx()`：获取相关的属性
-     - `withXxx()`：设置相关的属性
+Duration duration = Duration.ofMinutes(30);
+LocalTime laterTime = currentTime.plus(duration);
+```
 
-   - Instant（类似于 Calendar，不可实例化)：
+ **(4) 时间比较：**
+ 
+```java
+boolean isAfter = currentDate.isAfter(LocalDate.of(2023, 9, 1));
+boolean isBefore = currentTime.isBefore(LocalTime.NOON); // 是否在12:00前
+```
 
-     - `now()`（静态方法）：获取本初子午线对应的标准时间。`Instant instant = Instant.now()`
-     - `atOffset()`：添加时间的偏移量
-     - `toEpochMilli()`：获取自 1970 年 1 月 1 日 0 时 0 分 0 秒（UTC）开始的毫秒数
-     - `ofEpochMilli()`：通过给定的毫秒数，获取 Instant 实例
+ **(5) 解析与格式化：**
+ 
+```java
+// 字符串 -> 时间对象
+LocalDate parsedDate = LocalDate.parse("2023-10-01");
+LocalDateTime parsedDateTime = LocalDateTime.parse("2023-10-01T15:30:45");
 
-   - DateTimeFormatter：格式化或解析日期、时间
+// 时间对象 -> 字符串
+DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+String formatted = currentDateTime.format(formatter); // "2023-10-01 15:30:45"
+```
 
-     - 预定义的标准格式：
+**3. 时区处理：**
 
-       - `DateTimeFormatter.ISO_LOCAL_DATE_TIME`
-       - `DateTimeFormatter.ISO_LOCAL_DATE`
-       - `DateTimeFormatter.ISO_LOCAL_TIME`
+ **(1) 时区转换：**
+ 
+```java
+ZoneId shanghaiZone = ZoneId.of("Asia/Shanghai");
+ZoneId utcZone = ZoneId.of("UTC");
 
-     - 本地化相关格式：
+ZonedDateTime shanghaiTime = ZonedDateTime.now(shanghaiZone);
+ZonedDateTime utcTime = shanghaiTime.withZoneSameInstant(utcZone);
+```
 
-       - `DateTimeFormatter._ofLocalizedDateTime_(FFormatStyle.LONG / FormatStyle.MEDIUM / FormatStyle.SHORT)`
-       - `DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL / FormatStyle.LONG / FormatStyle.MEDIUM / FormatStyle.SHORT)`
+**(2) 处理夏令时：**
 
-     - 自定义格式：
+```java
+// 自动处理夏令时变化（如纽约时区）
+ZoneId newYorkZone = ZoneId.of("America/New_York");
+ZonedDateTime dt = ZonedDateTime.of(2023, 3, 12, 2, 30, 0, 0, newYorkZone);
+// 纽约在3月12日会跳过2:30（夏令时切换），此时会抛出异常！
+```
 
-       - `DateTimeFormatter._ofPattern_("yyyy-MM-dd hh:mm:ss")`
+**4. 时间间隔计算：**
 
-     - 格式化：`时间格式.format(时间)`，返回字符串
-     - 解析：`时间格式.parse(符合时间格式的字符串)`，返回 TemporalAccessor 类型日期
+| 类              | 适用场景        | 示例                                     |
+| -------------- | ----------- | -------------------------------------- |
+| **`Period`**   | 日期间隔（年/月/日） | `Period.between(startDate, endDate)`   |
+| **`Duration`** | 精确时间间隔（纳秒级） | `Duration.between(startTime, endTime)` |
 
+```java
+LocalDate startDate = LocalDate.of(2023, 1, 1);
+LocalDate endDate = LocalDate.of(2023, 10, 1);
+Period period = Period.between(startDate, endDate); // P9M（9个月）
 
+LocalTime startTime = LocalTime.of(9, 0);
+LocalTime endTime = LocalTime.of(17, 30);
+Duration duration = Duration.between(startTime, endTime); // PT8H30M
+```
+
+**5. 与旧 API 的互操作：**
+
+JDK8 的 `java.time` 类与旧 API 可以通过以下方法互转：
+
+| 旧类 → 新类               | 转换方法                                                                 |
+|--------------------------|------------------------------------------------------------------------|
+| **`Date` → `Instant`**   | `Date date = new Date(); Instant instant = date.toInstant();`          |
+| **`Calendar` → `ZonedDateTime`** | `ZonedDateTime zdt = cal.toInstant().atZone(cal.getTimeZone().toZoneId());` |
+| **`java.sql.Date` → `LocalDate`** | `LocalDate localDate = new java.sql.Date(value).toLocalDate();`        |
+
+ **(1) 旧类 → 新类：**
+
+```java
+// Date/Calendar → java.time
+Date oldDate = new Date();
+Instant instant = oldDate.toInstant();
+ZonedDateTime zdt = instant.atZone(ZoneId.systemDefault());
+
+Calendar calendar = Calendar.getInstance();
+Instant calInstant = calendar.toInstant();
+```
+
+ **(2) 新类 → 旧类：**
+ 
+```java
+// java.time → Date
+ZonedDateTime zdt = ZonedDateTime.now();
+Date date = Date.from(zdt.toInstant());
+
+// java.time → Calendar
+Calendar cal = Calendar.getInstance();
+cal.clear();
+cal.setTimeInMillis(zdt.toInstant().toEpochMilli());
+```
+
+ **6. 设计优势：**
+
+| 特性               | 说明                                                                 |
+|--------------------|--------------------------------------------------------------------|
+| **不可变性**       | 所有类均为不可变对象，线程安全，避免并发问题                                   |
+| **清晰的分层设计** | 明确区分日期（`LocalDate`）、时间（`LocalTime`）和时区（`ZonedDateTime`）     |
+| **链式调用**       | 支持流畅的 API 设计（如 `date.plusDays(1).minusMonths(2)`）                   |
+| **内置时区支持**   | 直接处理全球时区和夏令时规则（基于 IANA 时区数据库）                            |
+
+**7. 最佳实践：**
+
+1. **优先使用 `LocalDateTime`**  ，当不需要时区时，使用 `LocalDateTime` 代替 `ZonedDateTime`，减少复杂性。
+2. **数据库交互**
+
+   - 使用 `LocalDateTime` 对应 MySQL 的 `DATETIME`。
+   - 使用 `Instant` 或 `ZonedDateTime` 存储带时区的时间戳。
+
+3. **避免时区硬编码**  
+
+   ```java
+   // 错误：硬编码时区偏移
+   ZonedDateTime zdt = ZonedDateTime.now(ZoneId.of("UTC+8"));
+   
+   // 正确：使用地区时区标识
+   ZonedDateTime zdt = ZonedDateTime.now(ZoneId.of("Asia/Shanghai"));
+   ```
+
+**总结：**
+
+| 场景                     | 推荐类/方法                                |
+|--------------------------|------------------------------------------|
+| 仅需日期                 | `LocalDate`                              |
+| 需时间戳（UTC）          | `Instant`                                |
+| 带时区的日期时间         | `ZonedDateTime`                          |
+| 计算日期间隔             | `Period`                                 |
+| 高精度时间差             | `Duration`                               |
 
 ### 5.4 其他类
 
@@ -2753,7 +2771,6 @@ public class Person{
      - `void gc()`
      - `String getProperty(String key)`
 
-
 3. BigInteger 类
 
    - BigInteger 可以表示不可变的任意精度的整数
@@ -2781,7 +2798,6 @@ public class Person{
 
    - `next()`：接收数据，输入空格、回车、英文引号表示结束
 
-
 ### 5.5 比较器
 
 1. 作用：比较两个对象，用于对象数组排序。
@@ -2807,7 +2823,6 @@ public class Person{
      - 如果返回 0，表示相等；
      - 返回负整数，表示 o1 小于 o2。
 
-
 4. 补充：
 
    - 包装类具有`compare`、`compareTo`两个方法，其中`compareTo`是静态方法。
@@ -2821,7 +2836,6 @@ public class Person{
    - int test = s1.compareTo(s2); result = 0 , 则 s1=s2 ; result < 0, 则 s1 0 , 则 s1 > s2 。
    - int test= compare(T o1, T o2); 结果同上。 （若是 o2-o1，则反之。）
    - 如果对象的排序需要基于自然顺序，使用 Comparable 比较合适，如果需要按照对象的不同属性进行排序，使用 Comparator 比较合适。
-
 
 ## 第 6 章 枚举和注解
 
@@ -2837,7 +2851,6 @@ public class Person{
    - 属性不允许被改动：属性使用 private final 修饰、且不设置 setter
    - 为了能够初始化属性，使用构造器传参的方式，在构造器内赋值。
    - 在枚举类内创建实例。
-
 
 #### 6.1.2 枚举类型的实现
 
@@ -2857,8 +2870,6 @@ public class Person{
      - 对象使用 public static final 修饰，进行底层优化
 
        - 三个可省略任意多个
-
-
 
 2. enum 关键字（JDK1.5 之后）：
 
@@ -2899,8 +2910,6 @@ public class Person{
 
      - 默认使用 private final 修饰，可以省略
 
-
-
 #### 6.1.3 常用方法
 
 1. enum 声明的类会隐式继承 Enum 类，因此可以使用 Enum 中的相关方法：
@@ -2919,8 +2928,6 @@ public class Person{
    - `compareTo()`：比较两个枚举常量的位置编号，返回常量值。
 
      - 调用的 - 参数的
-
-
 
 #### 6.1.4 enum 实现接口
 
@@ -2941,7 +2948,6 @@ public class Person{
    - javase 中，注解主要用于标记过时功能、忽略警告等
    - Javaee 中，可以用于配置应用程序的任何切面，代替旧版 javaee 中的繁冗代码和 XML 配置
 
-
 #### 6.2.2 常见类型及基本使用
 
 1. `@Override`：方法前使用，表示重写父类方法
@@ -2951,7 +2957,6 @@ public class Person{
    - 如果写了该注解，程序在编译阶段检查是否真正重写。
 
      - 非重写时会报错。
-
 
 2. `@Deprecated`：表示程序元素（类、方法等）已过时。
 
@@ -2996,7 +3001,6 @@ public class Person{
      > - unchecked，抑制与未检查的作业相关的警告
      > - unqualified-field-access，抑制与栏位存取不合格相关的警告
      > - unused，抑制与未用的程式码及停用的程式码相关的警告
-
 
 4. 源码中`@interface xxx`表示 xxx 是一个注解类。
 5. 元注解：修饰其他注解的注解
@@ -3048,7 +3052,8 @@ public class Person{
   - 如果只有一个参数成员，通常使用 value
 
 - 使用自定义注解时，如果定义注解时声明了成员变量（配置参数），那么使用时必须指定参数值，除非它有默认 值。格式是“参数名 = 参数值” ，如果只有一个参数成员，且名称为 value， 可以省略“value=”
-- 自定义注解通过都会指明两个元注解：Retention、Target</div>  
+- 自定义注解通过都会指明两个元注解：Retention、Target
+
   ![image.png](Java%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%8A%EF%BC%89/image.png)
 
 ## 第 7 章 异常处理
@@ -3067,28 +3072,11 @@ public class Person{
 2. Exception：
 
    - 编译时异常：
-   - 运行时异常：  
-     java.lang.Throwabe> java.lang.Throwable
-
-     > |-----java.lang.Error:一般不编写针对性的代码进行处理。  
-|-----java.lang.Exception:可以进行异常的处理  
-|------编译时异常(checked)  
-|-----IOException  
-|-----FileNotFoundException  
-|-----ClassNotFoundException  
-|------运行时异常(unchecked,RuntimeException)  
-|-----NullPointerException：空指针异常  
-|-----ArrayIndexOutOfBoundsException：数组下标越界  
-|-----ClassCastException：类型不匹配  
-|-----NumberFormatException：数字格式错误  
-|-----InputMismatchException：输入不匹配  
-|-----ArithmeticException：运算错误
-
-
+   - 运行时异常：
 
 ### 7.3 异常处理机制
 
-#### 7.3.1 抓抛模型：
+#### 7.3.1 抓抛模型
 
 - "抛"：程序执行的过程中，一旦出现异常，就会在异常代码处生成一个对应异常类的对象，并会将此对象抛出给调用它的方法，直到 main 方法，如果 main 方法没能处理，则程序运行终止，发生异常位置后面的代码也不会执行。
 
@@ -3098,7 +3086,6 @@ public class Person{
 
   - try-catch-finally
   - throws
-
 
 #### 7.3.2 try-catch-finally
 
@@ -3140,12 +3127,10 @@ public class Person{
      - try 中有多个异常，且父类一致（如 Exception），如果 catch 只匹配父类，则只捕获第一个异常，try 中后面的代码（所有代码）不会被执行
      - try 中有多个异常，catch 匹配多个异常，但只捕获第一个异常，try 块中后面的代码（所有代码）不会被执行，异常也不会捕获到
 
-
 4. 常用的异常对象处理的方式：
 
    - getMessage() ：打印异常信息
    - printStackTrace()： 获取异常类名和异常信息，以及异常出现在程序中的位置。返回值 void。
-
 
 #### 7.3.3 throws + 异常类型
 

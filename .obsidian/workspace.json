@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "读书笔记/Vue3 入门指南与实战案例/Vue3 入门指南与实战案例.md",
+                "file": "Java/javase/Java语言基础（上）.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -70,7 +70,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "db4e00768853bc2e",
@@ -86,7 +87,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "读书笔记/Vue3 入门指南与实战案例/Vue3 入门指南与实战案例.md"
+                "file": "Java/javase/Java语言基础（上）.md"
               }
             }
           }
@@ -105,6 +106,12 @@
   },
   "active": "6d80a5f1723118b0",
   "lastOpenFiles": [
+    "Java/javase/Java语言基础（中）.md",
+    "Java/javase/Java语言基础（上）.md",
+    "Java/javase/Java语言基础（下）.md",
+    "数据库/mysql/mysql/MySQL.md",
+    "数据库/mysql/mysql实践/mysql实践.md",
+    "读书笔记/Vue3 入门指南与实战案例/Vue3 入门指南与实战案例.md",
     "黑马AI/数据挖掘基础/数据挖掘基础.md",
     "黑马AI/数据挖掘基础/assets/20250223-10.png",
     "黑马AI/数据挖掘基础/assets/20250223-9.png",
@@ -125,7 +132,6 @@
     "黑马AI",
     "Python/黑马AI-Python基础.pdf",
     "eladmin/前端/eladmin.md",
-    "读书笔记/Vue3 入门指南与实战案例/Vue3 入门指南与实战案例.md",
     "读书笔记/Vue3 入门指南与实战案例/assets",
     "Linux/Linux/Linux.md",
     "C#/C sharp.md",

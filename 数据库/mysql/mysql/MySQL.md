@@ -1,13 +1,3 @@
----
-title: MySQL
-urlname: fzurqy
-date: '2022-05-31 18:29:20 +0800'
-tags: [MySQL]
-categories: [数据库]
----
-*MySQL 是最流行的关系型数据库管理系统，在 WEB 应用方面 MySQL 是最好的 RDBMS(Relational Database Management System：关系数据库管理系统)应用软件之一。*
-<!-- more -->
-
 ## 1. 数据库概述
 
 ### 1.1 数据库与数据库管理系统
@@ -2427,7 +2417,7 @@ create table 表名称(
   字段名 数据类型,
   [constraint 约束名] unique key(字段名)
 );
-------------------------------
+
 create table student(
   sid int,
   sname varchar(20),
@@ -2610,7 +2600,7 @@ ALTER TABLE 从表名 DROP INDEX 索引名;
 
 #### 15.5.6 外键约束规范
 
-#### ![image.png](mysql/image-1669757894148.png)
+![image.png](mysql/image-1669757894148.png)
 
 ### 15.6 CHECK 约束
 
@@ -2645,7 +2635,7 @@ create table 表名称(
   字段名 数据类型 unique key,
   字段名 数据类型 not null default 默认值,
 );
-create table 表名称(再举例：
+create table 表名称(
   字段名 数据类型 default 默认值 ,
   字段名 数据类型 not null default 默认值,
   字段名 数据类型 not null default 默认值,
@@ -2672,11 +2662,30 @@ alter table 表名称 modify 字段名 数据类型 ;#删除默认值约束，�
 alter table 表名称 modify 字段名 数据类型 not null; #删除默认值约束，保留非空约束
 ```
 
+#### 15.7.4 案例
+
+```sql
+CREATE TABLE events (
+	id INT AUTO_INCREMENT PRIMARY KEY, 
+	event_name VARCHAR(255) NOT NULL, 
+	event_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL 
+);
+
+- 插入记录
+INSERT INTO events (event_name) VALUES ('Birthday Party');
+```
+
+- 由于建表语句中，设置了`NOT NULL`，因此如果插入语句为：`INSERT INTO events (event_name, event_time) VALUES ('Birthday Party', null);`则会报错。
+- 但是如果建表语句没有`NOT NULL`，则执行以下语句都不会报错：
+
+	- `INSERT INTO events (event_name, event_time) VALUES ('Birthday Party', null);`
+	- `INSERT INTO events (event_name) VALUES ('Birthday Party');`
+
 ### 15.8 自增列：AUTO_INCREMENT
 
 #### 15.8.1 作用
 
-某个字段的值自增.
+某个字段的值自增。
 
 #### 15.8.2 特点
 
@@ -2695,7 +2704,7 @@ create table 表名称(
   字段名 数据类型 primary key auto_increment,
   字段名 数据类型 unique key not null,
   字段名 数据类型 unique key,
-字段名 数据类型 not null default 默认值,
+  字段名 数据类型 not null default 默认值,
 );
 create table 表名称(
   字段名 数据类型 default 默认值 ,
