@@ -385,7 +385,7 @@ ESM 使用 `export default` （默认导出）和 `export` （命名导出�
 
 **默认导入和导出**：
 
-默认导出的时候，一个模块只包含一个值。
+默认导出的时候，一个模块只包含一个值。与CJS一致。
 
 ```js
 // src/cjs/module.cjs 导出：
@@ -400,7 +400,7 @@ console.log(m)
 
 **命名导入和导出：**
 
-命名导入和导出，一个模块可以包含多个值。
+命名导入和导出，一个模块可以包含多个值。与CJS不同。
 
 ```js
 // src/cjs/module.cjs 导出：
@@ -413,7 +413,7 @@ export const bar = 'Hello World from bar.'
 
 ```js
 // src/cjs/index.cjs 导入：
-import { foo, bar } from './module.mjs' 
+import { foo, bar } from './module.mjs' //这种大括号导入的方式只能适配明明导入，不能适配默认导入（export default）
 
 foo()
 console.log(bar)
