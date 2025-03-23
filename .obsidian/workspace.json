@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "d057e4707c5f63df",
+        "id": "7496c8dd55b9ef99",
         "type": "tabs",
         "children": [
           {
-            "id": "6d80a5f1723118b0",
+            "id": "d3a095ffbf665d31",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/javase/Java语言基础（上）.md",
+                "file": "读书笔记/Vue3 入门指南与实战案例/Vue3 入门指南与实战案例.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -87,7 +87,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/javase/Java语言基础（上）.md"
+                "file": "读书笔记/Vue3 入门指南与实战案例/Vue3 入门指南与实战案例.md"
               }
             }
           }
@@ -95,7 +95,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -104,25 +105,32 @@
       "pdf-to-markdown-plugin:PDF to Markdown": false
     }
   },
-  "active": "6d80a5f1723118b0",
+  "active": "d3a095ffbf665d31",
   "lastOpenFiles": [
-    "Java/javase/Java语言基础（中）.md",
+    "转型/PLC编程/PLC编程.md",
+    "转型/PLC编程/assets/20250323-5.png",
+    "转型/PLC编程/assets/20250323-4.png",
+    "转型/PLC编程/assets/20250323-3.png",
+    "转型/PLC编程/assets/20250323-2.png",
+    "转型/PLC编程/assets/20250323-1.png",
+    "转型/PLC编程/assets/20250323.png",
+    "转型/PLC编程/assets",
+    "转型/个人.md",
+    "转型/电气工程师/电气工程师.md",
+    "转型/PLC编程",
+    "转型/电气工程师/assets/20250323-33.png",
+    "转型/电气工程师/assets/20250323-32.png",
+    "转型/电气工程师/assets/20250323-31.png",
+    "转型/电气工程师/assets/20250323-30.png",
+    "转型/工控与自动化/工控与自动化.md",
+    "转型/工控与自动化",
+    "读书笔记/Vue3 入门指南与实战案例/Vue3 入门指南与实战案例.md",
     "Java/javase/Java语言基础（上）.md",
+    "Java/javase/Java语言基础（中）.md",
     "Java/javase/Java语言基础（下）.md",
     "数据库/mysql/mysql/MySQL.md",
     "数据库/mysql/mysql实践/mysql实践.md",
-    "读书笔记/Vue3 入门指南与实战案例/Vue3 入门指南与实战案例.md",
     "黑马AI/数据挖掘基础/数据挖掘基础.md",
-    "黑马AI/数据挖掘基础/assets/20250223-10.png",
-    "黑马AI/数据挖掘基础/assets/20250223-9.png",
-    "黑马AI/数据挖掘基础/assets/20250223-8.png",
-    "黑马AI/数据挖掘基础/assets/20250223-7.png",
-    "黑马AI/数据挖掘基础/assets/20250223-6.png",
-    "黑马AI/数据挖掘基础/assets/20250223-5.png",
-    "黑马AI/数据挖掘基础/assets/20250223-4.png",
-    "黑马AI/数据挖掘基础/assets/20250223-3.png",
-    "黑马AI/数据挖掘基础/assets/20250223-2.png",
-    "黑马AI/数据挖掘基础/assets/20250223-1.png",
     "黑马AI/数据挖掘基础/assets",
     "黑马AI/Python基础/黑马AI-Python基础.pdf",
     "黑马AI/数据挖掘基础",
@@ -136,13 +144,11 @@
     "Linux/Linux/Linux.md",
     "C#/C sharp.md",
     "Java/juc/JUC.md",
-    "转型/个人.md",
     "Java/javaweb/javaweb.md",
     "Java/压力测试/压力测试.md",
     "Linux/Linux/tongyi.md",
     "Linux/Linux/coplit.md",
     "读书笔记/利用Python进行数据分析/利用Python进行数据分析.md",
-    "读书笔记/利用Python进行数据分析/assets/Pasted image 20250126131220.png.nssyncsc",
     "Python/Django/Django.md",
     "工具/01.Obsidian使用/Obsidian使用.md"
   ]
