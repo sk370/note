@@ -13,11 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "读书笔记/Vue3 入门指南与实战案例/Vue3 入门指南与实战案例.md",
+                "file": "黑马AI/数据挖掘基础/数据挖掘基础.md",
                 "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "数据挖掘基础"
             }
           }
         ]
@@ -39,8 +41,11 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
-              }
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
             }
           },
           {
@@ -55,7 +60,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
             }
           },
           {
@@ -63,7 +70,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
             }
           }
         ]
@@ -87,16 +96,20 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "读书笔记/Vue3 入门指南与实战案例/Vue3 入门指南与实战案例.md"
-              }
+                "file": "黑马AI/数据挖掘基础/数据挖掘基础.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "数据挖掘基础 的大纲"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -107,6 +120,13 @@
   },
   "active": "d3a095ffbf665d31",
   "lastOpenFiles": [
+    "黑马AI/数据挖掘基础/assets/20250325-4.png",
+    "黑马AI/数据挖掘基础/assets/20250325-3.png",
+    "黑马AI/数据挖掘基础/assets/20250325-2.png",
+    "黑马AI/数据挖掘基础/assets/20250325-1.png",
+    "黑马AI/数据挖掘基础/assets/20250325.png",
+    "Python/anaconda/anaconda开发.md",
+    "读书笔记/Vue3 入门指南与实战案例/Vue3 入门指南与实战案例.md",
     "转型/PLC编程/PLC编程.md",
     "转型/PLC编程/assets/20250323-5.png",
     "转型/PLC编程/assets/20250323-4.png",
@@ -118,13 +138,8 @@
     "转型/个人.md",
     "转型/电气工程师/电气工程师.md",
     "转型/PLC编程",
-    "转型/电气工程师/assets/20250323-33.png",
-    "转型/电气工程师/assets/20250323-32.png",
-    "转型/电气工程师/assets/20250323-31.png",
-    "转型/电气工程师/assets/20250323-30.png",
     "转型/工控与自动化/工控与自动化.md",
     "转型/工控与自动化",
-    "读书笔记/Vue3 入门指南与实战案例/Vue3 入门指南与实战案例.md",
     "Java/javase/Java语言基础（上）.md",
     "Java/javase/Java语言基础（中）.md",
     "Java/javase/Java语言基础（下）.md",
