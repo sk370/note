@@ -405,7 +405,7 @@ console.log(m)
 ```js
 // src/cjs/module.cjs 导出：
 export function foo() { 
-	console.log('Hello World from foo.') 
+  console.log('Hello World from foo.') 
 } 
 
 export const bar = 'Hello World from bar.'
@@ -662,3 +662,5 @@ const nums = []
 // 这个时候再 push 一个 number 数据进去，也不会使其成为 number[]
 nums.push(1)
 ```
+
+### 3.4 对象（接口）
