@@ -1,17 +1,17 @@
 ## 目录含义
 
-![](./attachments/2023-07-05.png)
+![](./assets/2023-07-05.png)
 
 ## 安装nodejs
 
 1. 下载nodejs压缩包
-    - ![](./attachments/2023-07-14.png)
+    - ![](./assets/2023-07-14.png)
 2. 上传到opt目录。如果直接上传opt目录没有权限，就先上传到tmp目录，然后再使用`mv /tmp/node-v18.16.1-linux-x64.tar.xz /opt/`下移动到opt目录。如果权限还不够，则检查是不是root账户。
 3. 进入node/bin目录，执行`./node -v`，如果有如下提示，则表示版本过高，降低nodejs版本。
-    - ![](./attachments/2023-07-14-1.png)
+    - ![](./assets/2023-07-14-1.png)
     - 各版本下载地址：<https://nodejs.org/en/download/releases>
 4. 安装完后如果执行`./node -v`没问题，但执行`./npm -v`提示如下报错：则执行第5步。报错原因为默认去`/usr/bin`目录下查找，使用全路径执行时则不报错。
-    - ![](./attachments/2023-07-15.png)
+    - ![](./assets/2023-07-15.png)
 5. 创建软连接，使node和npm可以全局执行：
     - `ln -s /opt/node-v16/bin/node /usr/bin//node`
     - `ln -s /opt/node-v16/bin/npm /usr/bin//npm`
@@ -26,9 +26,9 @@
 1. `nohup node red.js &`：
     - nohup 命令，在默认情况下（非重定向时），会输出一个名叫 nohup.out 的文件到当前目录下，如果当前目录的 nohup.out 文件不可写，输出重定向到 `HOME/nohup.out`文件中。
     - `&`：让命令在后台执行，终端退出后命令仍旧执行。
-    - ![](./attachments/2023-07-17.png)
+    - ![](./assets/2023-07-17.png)
 2. `ps -ef | grep red*`：查看进程是否运行。
-    - ![](./attachments/2023-07-17-1.png)
+    - ![](./assets/2023-07-17-1.png)
 3. `tail -f nohup.out`：查看输出日志。
 
 - 参考：[Linux nohup 命令 | 菜鸟教程 (runoob.com)](https://www.runoob.com/linux/linux-comm-nohup.html)

@@ -35,11 +35,11 @@
 
 帆软提供的模板使用了内置数据库，如果在安装时没有选择内置数据库，会导致模板无法使用。
 
-![Alt text](assets/image.png)
+![Alt text](工具/Fine%20Report/assets/image.png)
 
 sqlite 数据库是内置的 frdemo 使用的数据库，若内置的数据库和驱动被误删，可重新下载并创建连接。
 
-- ![Alt text](assets/image-3.png)
+- ![Alt text](工具/Fine%20Report/assets/image-3.png)
 - [文档链接](https://help.fanruan.com/finereport/doc-view-2583.html)
 
 内置数据库连接方式如下：

@@ -11,11 +11,11 @@ MQTT（Message Queuing Telemetry Transport）是一种轻量级、基于发布-�
 任何运行 [MQTT 客户端库](https://www.emqx.com/zh/mqtt-client-sdk)的应用或设备都是 MQTT 客户端。例如，使用 MQTT 的即时通讯应用是客户端，使用 MQTT 上报数据的各种传感器是客户端，各种 [MQTT 测试工具](https://www.emqx.com/zh/blog/mqtt-client-tools)也是客户端。
 
 1. 常见客户端：
-    - ![](./attachments/2023-08-14.png)
+    - ![](./assets/2023-08-14.png)
 2. mqtt explorer：[mqtt explorer](https://mqtt-explorer.com/)
 3. MQTTX客户端
     1. 下载地址：[Releases · emqx/MQTTX (github.com)](https://github.com/emqx/MQTTX/releases)
-        - ![Alt text](assets/image.png)
+        - ![Alt text](开源/EMQX实践/assets/image.png)
     2. 使用教程：[MQTTX 桌面客户端使用指南 | EMQ (emqx.com)](https://www.emqx.com/zh/blog/mqtt-x-guideline)
 
 #### MQTT Broker

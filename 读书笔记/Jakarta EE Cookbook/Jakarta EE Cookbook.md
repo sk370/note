@@ -1,10 +1,3 @@
----
-tags:
-  - Jakarta
-  - Jakarta
-categories:
-  - Java EE
----
 
 > [!note]  
 基于Jakarta EE 8，但是Jakarta EE 9也完美适配。

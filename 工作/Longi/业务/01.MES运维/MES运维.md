@@ -29,7 +29,7 @@
 ### 用户权限
 
 - 切片操作工：
-  - ![ddd](attachments/Pasted%20image%2020230404143213.png)
+  - ![ddd](attachments/20230404143213.png)
 
 实际上现场操作工没有MES，这个权限都是开给班长。但是也得注意个别员工有MES的情况。
 
@@ -82,24 +82,24 @@ function save()
 
 1. 生产环境PD导入新Form。
 2. so界面进入 菜单信息维护 ，添加新界面
-	- ![](attachments/Pasted%20image%2020230317103217.png)
+	- ![](attachments/20230317103217.png)
 3. 如果需要设置权限，则关闭SO界面，重新进入 菜单信息维护界面
-	- ![](attachments/Pasted%20image%2020230317103436.png)
+	- ![](attachments/20230317103436.png)
 4. 关闭SO界面，进入用户组权限管理，给需要查看/编辑权限的用户组添加功能。
-	- ![](attachments/Pasted%20image%2020230320084807.png)
+	- ![](attachments/20230320084807.png)
 5. 也可以针对单独的用户添加权限：
 
 ## SOS用户
 
 MES上下料时，未填写上下料人员，记录过站时会写入SOS
 
-![](attachments/Pasted%20image%2020230703130346.png)
+![](attachments/20230703130346.png)
 
 ## AT表与8个类字段必须一致
 
 当8个类的字段比AT表字段多时，会报如下错误：
 
-![](attachments/Pasted%20image%2020230705163309.png)
+![](attachments/20230705163309.png)
 
 原因分析：
 

@@ -30,7 +30,7 @@ DTD（文档定义类型）的作用是定义 XML 文档的结构。它使用一
 - `<!ELEMENT note (to,from,heading,body)>`：定义 note元素有四个元素："to、from、heading,、body"。
 - `<!ELEMENT to (#PCDATA)>`：定义 to元素为 "#PCDATA" 类型。后续同理。
 - DTD声明顺序与使用顺序无关，如：
-	- ![](attachments/2023-05-17-4.png)
+	- ![](assets//2023-05-17-4.png)
 
 外部引入（对上述示例转换）示例：
 
@@ -189,7 +189,7 @@ PCDATA 的意思是被解析的字符数据（parsed character data）。被解�
 
 ### 属性类型
 
-![](attachments/2023-05-17-5.png)
+![](assets//2023-05-17-5.png)
 
 枚举属性实例：
 
@@ -206,7 +206,7 @@ PCDATA 的意思是被解析的字符数据（parsed character data）。被解�
 
 ### 默认值
 
-![](attachments/2023-05-17-6.png)
+![](assets//2023-05-17-6.png)
 
 值实例：
 

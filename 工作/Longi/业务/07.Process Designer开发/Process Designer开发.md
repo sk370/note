@@ -21,7 +21,7 @@
 
 -  `class java.lang.Float::valueOf(testFloat_01)`
 - `Float::valueOf(testFloat_01)`
-![](attachments/Pasted%20image%2020230404110110.png)![](attachments/Pasted%20image%2020230404110033.png)
+![](attachments/20230404110110.png)![](attachments/20230404110033.png)
 
 #### 其他类的导入
 
@@ -31,7 +31,7 @@
 
 ### 继承关系图
 
-![](attachments/Pasted%20image%2020230307163354.png)
+![](attachments/20230307163354.png)
 
 ### 内部方法
 
@@ -58,7 +58,7 @@
 
 ### `GridDataDictActivity`表格
 
-![](attachments/Pasted%20image%2020230308095149.png)
+![](attachments/20230308095149.png)
 
 ## DML
 
@@ -264,9 +264,9 @@ filter.addOrderBy(IATRowFilterAttributes::CREATIONTIME, IFilterSortOrders::DESCE
 ### ChoicelistFieldActivity
 
 1. 使用ChoicelistFieldActivity控件。
-	- ![](attachments/Pasted%20image%2020230302173447.png)1
+	- ![](attachments/20230302173447.png)1
 2. 绑定下拉列表参数的国际化message对象。
-	- ![](attachments/Pasted%20image%2020230302173619.png)
+	- ![](attachments/20230302173619.png)
 
 ### ComboxBox
 
@@ -274,7 +274,7 @@ filter.addOrderBy(IATRowFilterAttributes::CREATIONTIME, IFilterSortOrders::DESCE
 
 1. 使用ComboxBox控件。
 2. stringVector绑定下拉列表值。
-	- ![](attachments/Pasted%20image%2020230302174157.png)
+	- ![](attachments/20230302174157.png)
 
 #### SQL值
 
@@ -313,7 +313,7 @@ comboboxNumberOfShifts.setItems(shiftsItems)
 
 1. 维护业务参数：
 
-![](attachments/Pasted%20image%2020230314141414.png)
+![](attachments/20230314141414.png)
 
 2. 编写代码——方式1：
 
@@ -394,7 +394,7 @@ setGridSeq(activityControlSampleRecord.getGrid())
 ### `FastLaneReaderGridActivity`控件 - SQL查询
 
 1. 控件绑定SQL语句：
-	- ![](attachments/Pasted%20image%2020230307171627.png)
+	- ![](attachments/20230307171627.png)
 	- 注意：SQL语句以`FROM`开始，查询结果定义为`t`
 
 2. 编写代码：`activityGridResult.setObjects(vectorObj)`
@@ -433,15 +433,15 @@ if(vectorObj.size() > 0) {
 #### 格式化时间
 
 1. 方式一：使用sql语法格式化为STRING，绑定时以STRING类型绑定。
-	- ![](attachments/Pasted%20image%2020230312135715.png)
-	- ![](attachments/Pasted%20image%2020230312135750.png)
+	- ![](attachments/20230312135715.png)
+	- ![](attachments/20230312135750.png)
 	- 如果绑定类型为DATETIME，则报**查询异常**。
 2. 方式二：使用sql直接查询，绑定时以DATETIME类型绑定。
-	- ![](attachments/Pasted%20image%2020230312135924.png)
-	- ![](attachments/Pasted%20image%2020230312135954.png)
-	- ![](attachments/Pasted%20image%2020230312140512.png)
+	- ![](attachments/20230312135924.png)
+	- ![](attachments/20230312135954.png)
+	- ![](attachments/20230312140512.png)
 	- 如果绑定为STRING，则展示结果带时区：
-		- ![](attachments/Pasted%20image%2020230312140700.png)
+		- ![](attachments/20230312140700.png)
 3. 小总结：
 	- 推断：控件绑定的sql语句默认查询结果总是STRING类型，但可以通过绑定的数据类型进行格式化，如STRING和DATETIME。
 	- 推断：控件绑定的sql语句默认查询结果显示格式化为STRING类型，则绑定的数据类型只能是STRING类型。
@@ -510,7 +510,7 @@ initComboboxPlineDes(comboboxArea,null,getCurrentUser())//初始化片区
 AREA_TYPE="QP"
 initComboboxUserAccessArea(comboboxWorkshop,AREA_TYPE)//初始化车间（在MES_UM_DataAccess中）
 ```
-![](attachments/Pasted%20image%2020230313103347.png)
+![](attachments/20230313103347.png)
 
 #### 样式2
 
@@ -521,7 +521,7 @@ initComboboxArea(comboboxWorkshop)//初始化车间
 initComboboxArea(comboboxWorkshop,getCurrentUser(),AREA_TYPE)//初始化车间
 initComboboxPline(comboboxArea)//初始化片区
 ```
-![](attachments/Pasted%20image%2020230313102819.png)
+![](attachments/20230313102819.png)
 
 ## 回显数据
 
@@ -545,7 +545,7 @@ if(sampleResultItems[0].equals(sampleResult))
 ### 控件
 
 适用于ComboboxActivity，使用ObjectBinderEnchanced控件双向绑定。
-![](attachments/Pasted%20image%2020230314144139.png)
+![](attachments/20230314144139.png)
 - `selectedId`：根据下拉框的id进行展示——自动转换数据库存储值和显示值。
 - `selectedText`：根据下拉框的文本进行展示——不会转换数据库存储值，如果存储值与显示值不一致，则数据不会回显。
 
@@ -553,7 +553,7 @@ if(sampleResultItems[0].equals(sampleResult))
 
 ### UI
 
-![](attachments/Pasted%20image%2020230317091053.png)
+![](attachments/20230317091053.png)
 
 - 一般将一个button包含在一个Panel中。（为什么？）
 - 一般一个button配合一个panel——最细粒度控制。
@@ -633,7 +633,7 @@ function setupButtonAccess(hashtableButton)
 
 ### 配置
 
-![](attachments/Pasted%20image%2020230317092706.png)
+![](attachments/20230317092706.png)
 
 ## DA配置时，编写SOS服务
 
@@ -643,7 +643,7 @@ function setupButtonAccess(hashtableButton)
 
 ### LiveData TagSet Definitions增加标记
 
-![](attachments/Pasted%20image%2020230417154131.png)
+![](attachments/20230417154131.png)
 
 ## 参数查询
 

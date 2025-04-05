@@ -17,9 +17,9 @@ WHERE
 ```
 
 * `APP_TABLE`：Oracle系统表，保存表的属性。
-    * ![](attachments/Pasted%20image%2020230313092829.png)
+    * ![](attachments/20230313092829.png)
 * `APP_TABLE_COLUMN`：Oracle系统表，保存列的属性。
-    * ![](attachments/Pasted%20image%2020230313092842.png)
+    * ![](attachments/20230313092842.png)
 * `OM_DataCollection`：要查询的表。
 
 ### 钢线

@@ -1,12 +1,3 @@
----
-title: Java语言基础（下）
-urlname: onaknd
-date: '2022-06-25 13:05:06 +0800'
-tags: [Java]
-categories: [Java基础]
----
-*本文介绍了Java语言的企业开发特性，如JDBC，企业开发中常封装成各种工具、框架进行使用。*
-<!-- more -->
 ## 第 14 章 JDBC 和数据库连接池
 
 > - 要求：学习了 Mysql（sql 语句）之后

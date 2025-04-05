@@ -33,7 +33,7 @@ categories: [Spring Framework]
 4.x 版本
 ![](spring5/jvme0c60b4606711fc4a0b6faf03230247a.png)
 spring5
-![](spring5/20200831175708.png)
+![](spring5/200831175708.png)
 
 ### 1.2 Spring5.2 下载
 

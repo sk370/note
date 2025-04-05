@@ -170,9 +170,9 @@ soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
 
 SOAP 的 Fault 元素拥有下列子元素：
 
-![](attachments/2023-05-19.png)
+![](assets/2023-05-19.png)
 
 faultcode取值为：
 
-![](attachments/2023-05-19-1.png)
+![](assets/2023-05-19-1.png)
 

@@ -214,7 +214,7 @@ xsi:schemaLocation="http://www.w3school.com.cn note.xsd">
 
 限定（restriction）用于为 XML 元素或者属性定义可接受的值。对 XML 元素的限定被称为 facet。
 
-![](attachments/2023-05-18.png)
+![](assets//2023-05-18.png)
 
 #### 范围限定
 

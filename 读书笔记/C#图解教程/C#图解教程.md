@@ -15,7 +15,6 @@
 
    - FCL是BCL的超集。
 
-
 ### 1.2 源码执行过程
 
 1. 源码→程序集
@@ -27,7 +26,6 @@
       - CIL
       - 类型元数据
       - 对其他程序集引用的元数据。
-
 
 2. CIL→本机代码
 
@@ -42,11 +40,11 @@
 
 关键字：
 
-![Alt text](assets/image-1.png)
+![Alt text](读书笔记/C#图解教程/assets/image-1.png)
 
 上下文关键字：
 
-![Alt text](assets/image-2.png)
+![Alt text](读书笔记/C#图解教程/assets/image-2.png)
 
 - 上下文关键字仅在特定的语言结构中充当关键字的标识符。
 - 关键字不能被用作标识符，上下文关键字可以在代码的其他部分用作标识符。
@@ -117,13 +115,13 @@ Write和WriteLne输出多个参数时：
 
 1. 替代标记位置和数量任意。
 
-   - ![Alt text](assets/image-3.png)
+   - ![Alt text](读书笔记/C#图解教程/assets/image-3.png)
 
 2. 替代标记的整数值不能超过替换值的数量。
 
    - 不会产生编译错误。
    - 会产生运行时错误（异常）。
-   - ![Alt text](assets/image-4.png)
+   - ![Alt text](读书笔记/C#图解教程/assets/image-4.png)
 
 
 #### 2.6.5 格式化数字字符串
@@ -1897,7 +1895,7 @@ class Program
 
 2. 委托声明：
 
-   1. ![Alt text](assets/image.png)
+   1. ![Alt text](读书笔记/C#图解教程/assets/image.png)
 
 3. 委托是引用类型，因此有引用和对象。
 4. 创建委托对象：

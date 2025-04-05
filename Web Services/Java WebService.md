@@ -70,7 +70,7 @@ d：从使用场景来说，如果你需要多语言的支持，你应该选择A
 
 ## 调用过程
 
-![](attachments/2023-05-18-11.png)
+![](assets/2023-05-18-11.png)
 
 ## 实践
 
@@ -134,7 +134,7 @@ public class Server {
 
 最终项目结构：
 
-![](attachments/2023-05-18.png)
+![](assets/2023-05-18.png)
 
 项目说明：
 
@@ -148,7 +148,7 @@ public class Server {
 
 如果没有配置JAVA_HOME环境变量，执行命令是不起作用的，因为安装jdk是默认会在`C:\ProgramData\Oracle\Java\javapath`下复制命令，而该目录没有`wsimport`命令。需要进入Java安装目录的bin目录下执行。
 
-![](attachments/2023-05-18-1.png)
+![](assets/2023-05-18-1.png)
 
 - encoding：可选参数。指定生成代码的编码格式。
 - keep：必选参数。保存生成的代码。
@@ -157,7 +157,7 @@ public class Server {
 
 生成代码如下：
 
-![](attachments/2023-05-18-2.png)
+![](assets/2023-05-18-2.png)
 
 创建客户端调用服务：
 
@@ -179,11 +179,11 @@ public class Client {
 
 执行main方法调用接口服务，会报错：
 
-![](attachments/2023-05-18-3.png)
+![](assets/2023-05-18-3.png)
 
 为什么会报错没搞明白。解决方案是修改生成代码中的注解`@xmlType.name`属性值（默认生成的值为该类名的首字母小写，所以只需要改为任意不同即可）：
 
-![](attachments/2023-05-18-4.png)
+![](assets/2023-05-18-4.png)
 
 #### Tomcat部署
 
@@ -193,7 +193,7 @@ public class Client {
 
 添加web框架：
 
-![](attachments/2023-05-18-5.png)
+![](assets/2023-05-18-5.png)
 
 WEB-INF目录下创建`sun-jaxws.xml`（文件名任意）：
 
@@ -278,15 +278,15 @@ servlet3.0可以将web.xml简写为（但`sun-jaxws.xml`文件中的`url-pattern
 
 #### 服务端
 
-![](attachments/2023-05-18-6.png)
+![](assets/2023-05-18-6.png)
 
 #### 客户端
 
-![](attachments/2023-05-18-9.png)
+![](assets/2023-05-18-9.png)
 
-![](attachments/2023-05-18-7.png)
+![](assets/2023-05-18-7.png)
 
-![](attachments/2023-05-18-10.png)
+![](assets/2023-05-18-10.png)
 
 ## CXF
 
@@ -296,7 +296,7 @@ cxf自带jetty服务器，jetty部署即main方法运行。
 
 项目结构：
 
-![](attachments/2023-05-19-4.png)
+![](assets/2023-05-19-4.png)
 
 ```java
 package top.sk370;  

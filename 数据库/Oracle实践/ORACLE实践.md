@@ -111,7 +111,7 @@ listagg对字段长度有限制，会报下列错误：
 
 可以使用xmlagg实现：
 
-![](attachments/2023-08-29.png)
+![](assets/2023-08-29.png)
 
 ## WHERE和HAVING的区别
 
@@ -172,7 +172,7 @@ FROM
 	dual ;
 ```
 
-![](attachments/Pasted%20image%2020230312155704.png)
+![](assets/20230312155704.png)
 
 **截取小数：**
 
@@ -191,7 +191,7 @@ FROM
 	dual;
 ```
 
-![](attachments/Pasted%20image%2020230312160049.png)
+![](assets/20230312160049.png)
 
 **格式化小数（舍去）：**
 
@@ -382,22 +382,21 @@ ORDER BY
 
 1. 在pl/slq工具中新建解释计划窗口：
 
-   - ![](attachments/Pasted%20image%2020230228144634.png)
+   - ![](assets/20230228144634.png)
 
 2. 粘贴sql语句，点击执行：
 
-   - ![](attachments/Pasted%20image%2020230228144820.png)
+   - ![](assets/20230228144820.png)
 
 3. 查看执行结果：
 
-   - ![](attachments/Pasted%20image%2020230228144941.png)
+   - ![](assets/20230228144941.png)
 
 4. 分析执行结果：
 
    - filter表示全表过滤
    - acesss表示根据索引查询
    - 上述sql主表进行了全表过滤，但其他关联表均通过索引查询，**所以执行效率没有问题**。
-
 
 ### 方式二：使用sql语句
 
@@ -558,14 +557,14 @@ WITH READ ONLY;
 - Oracle 会读取表中所有的行，并检查每一行是否满足 where 限制条件
 - 全表扫描时可以使用多块读（一次 I/O 读取多块数据块）操作，提升吞吐量
 - 使用建议：数据量太大的表不建议使用全表扫描，除非本身需要取出的数据较多，占到表数据总量的 5% ~ 10% 或以上。
-- ![](attachments/Pasted%20image%2020230228150526.png)
+- ![](assets/20230228150526.png)
 
 ### table access by rowid（通过 rowid 扫描）
 
 - rowid：伪列，Oracle 自带的，不会存储 rowid 的值，不能被增、删、改
 - 一旦一行数据插入后，则其对应的 rowid 在该行的生命周期内是唯一的，即使发生行迁移，该行的 rowid 值也不变
 - `select ROWID form dual`可以查询行数据的rowid。
-- ![](attachments/Pasted%20image%2020230228150609.png)
+- ![](assets/20230228150609.png)
 
 ### table access by index scan（索引扫描）
 
@@ -575,7 +574,7 @@ WITH READ ONLY;
   - 扫描索引得到对应的 rowid
   - 通过 rowid 定位到具体的行读取数据
 
-- ![](attachments/Pasted%20image%2020230228151108.png)
+- ![](assets/20230228151108.png)
 
 #### index unique scan（索引唯一扫描）
 
@@ -585,7 +584,7 @@ WITH READ ONLY;
   - unique
   - primary key
 
-- ![](attachments/Pasted%20image%2020230228150855.png)
+- ![](assets/20230228150855.png)
 
 #### index range scan（索引范围扫描）
 
@@ -600,7 +599,7 @@ WITH READ ONLY;
 #### index full scan（索引全扫描）
 
 - order by 唯一索引列
-- ![](attachments/Pasted%20image%2020230228151045.png)
+- ![](assets/20230228151045.png)
 
 #### index fast full scan（索引快速扫描）
 
@@ -659,7 +658,7 @@ select a.*, b.* from a, b where a.id = b.id(+);
 - nested loops：
 - hash join
 - merge
-- ![](attachments/Pasted%20image%2020230228152121.png)
+- ![](assets/20230228152121.png)
 
 #### nested loops
 
@@ -803,7 +802,7 @@ round(to_NUMBER(to_date( to_char(NVL(curing_end_time_T, SYSDATE), 'yyyy-MM-dd HH
 
 ### 哪个字段有值用哪个
 
-![](attachments/2023-08-24.png)
+![](assets/2023-08-24.png)
 
 ### case when判断null
 
@@ -815,7 +814,7 @@ round(to_NUMBER(to_date( to_char(NVL(curing_end_time_T, SYSDATE), 'yyyy-MM-dd HH
 | 10     | 白班最终 |
 | 20     | 夜班最终 |
 
-![](attachments/2023-08-25.png)
+![](assets/2023-08-25.png)
 
 错误写法一：
 
@@ -827,7 +826,7 @@ WHEN 20 THEN substr(CREATION_TIME,8,2) || '日夜班最终'
 END AS createTime,
 ```
 
-![](attachments/2023-08-24-1.png)
+![](assets/2023-08-24-1.png)
 
 错误写法二：
 
@@ -839,7 +838,7 @@ WHEN 20 THEN substr(CREATION_TIME,8,2) || '日夜班最终'
 END AS createTime,
 ```
 
-![](attachments/2023-08-24-2.png)
+![](assets/2023-08-24-2.png)
 
 正确写法：
 
@@ -972,7 +971,7 @@ WHERE
 
 执行计划：
 
-![](attachments/2023-08-30.png)
+![](assets/2023-08-30.png)
 
 **方式二：内连接**
 
@@ -995,7 +994,7 @@ INNER JOIN (
 
 执行计划：
 
-![](attachments/2023-08-30-1.png)
+![](assets/2023-08-30-1.png)
 
 两种方式比较：本案例中，内连接稍优。实际业务中，也建议使用内连接。
 
@@ -1036,11 +1035,11 @@ from t
 
 官方工具有（[Instant Client for Microsoft Windows (x64) 64-bit (oracle.com)](https://www.oracle.com/database/technologies/instant-client/winx64-64-downloads.html)）：
 
-![](attachments/2023-09-04-1.png)
+![](assets/2023-09-04-1.png)
 
 区别如下：
 
-![](attachments/2023-09-04-2.png)
+![](assets/2023-09-04-2.png)
 
 安装使用pl/sql一般使用basic。
 
@@ -1050,14 +1049,14 @@ from t
 
 ### Oracle SQL Developer
 
-![](attachments/2023-09-04.png)
+![](assets/2023-09-04.png)
 
 - 官方使用文档：[Oracle SQL Developer 入门](https://www.oracle.com/ocom/groups/public/@otn/documents/webcontent/229078_zhs.htm)
 - 下载地址：[Oracle SQL Developer Downloads](https://www.oracle.com/database/sqldeveloper/technologies/download/)
 
 保存数据连接密码：
 
-![](attachments/2023-09-06-1.png)
+![](assets/2023-09-06-1.png)
 
 #### 对比PL/SQL
 
@@ -1068,12 +1067,12 @@ plsql安装过程如下：
 1. 使用plsql需要先安装oracle客户端，即Oracle install client，同时，plsql与oracle client的版本（32/64）要一致。。
 
    - 下载地址：[Oracle Instant Client Downloads](https://www.oracle.com/database/technologies/instant-client/downloads.html)
-   - ![](attachments/2023-09-05-1.png)
+   - ![](assets/2023-09-05-1.png)
    - 
 
 2. 选择激活安装：
 
-   - ![](attachments/2023-09-05.png)
+   - ![](assets/2023-09-05.png)
    - 激活码：
 
 
@@ -1087,19 +1086,19 @@ plsql安装过程如下：
 
    - 首次登录及报错：
 
-     - ![](attachments/2023-09-05-2.png)
-     - ![](attachments/2023-09-05-3.png)
+     - ![](assets/2023-09-05-2.png)
+     - ![](assets/2023-09-05-3.png)
 
    - 解决步骤：
 
      - 登录界面选择取消。
-     - ![](attachments/2023-09-05-4.png)
+     - ![](assets/2023-09-05-4.png)
      - 重启plsql。
 
 
 4. 保存登录密码：
 
-   - ![](attachments/2023-09-06.png)
+   - ![](assets/2023-09-06.png)
 
 
 ## SQL Developer Data Modeler
@@ -1109,7 +1108,7 @@ plsql安装过程如下：
 - 下载地址：[SQL Developer Data Modeler Downloads (oracle.com)](https://www.oracle.com/database/sqldeveloper/technologies/sql-data-modeler/download/#sqldev-install-windows)
 - 官方文档：[List of Figures (oracle.com)](https://docs.oracle.com/en/database/oracle/sql-developer-data-modeler/23.1/dmdug/lof.html#List-of-Figures)
 
-![](attachments/2023-09-04-3.png)
+![](assets/2023-09-04-3.png)
 
 ### Live SQL
 

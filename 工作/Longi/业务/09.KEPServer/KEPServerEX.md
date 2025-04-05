@@ -7,7 +7,7 @@
 	- ![](attachments/2023-10-20.png)
 3. SOS服务器DCOM报错
 	- 查看步骤：控制面板 》 管理工具 》 事件查看器 》 Windows日志 》 系统
-	- ![](attachments/Pasted%20image%2020230303093811.png)
+	- ![](attachments/20230303093811.png)
 
 ### 解决方案
 
@@ -23,12 +23,12 @@
 ## KEPServer EX新增点位
 
 1. 获取厂家地址：
-	- ![](attachments/Pasted%20image%2020230303150044.png)
+	- ![](attachments/20230303150044.png)
 2. 手动添加：新建标记，添加点位地址【不建议】：
-	- ![](attachments/Pasted%20image%2020230303155846.png)
+	- ![](attachments/20230303155846.png)
 	- 上述为错误写法：虽然厂家给的地址为`unit/COM_HMI/cmd_real[88]`，但是KEPServer在读取时，上图箭头位置的`/`为`.`。
 3. 选择添加：设备 》 标记生成 》 选择导入项 》 选择地址 》 添加项
-	- ![](attachments/Pasted%20image%2020230303160533.png)
+	- ![](attachments/20230303160533.png)
 
 ## 设备OPC UA未配置表现
 
@@ -39,7 +39,7 @@
 
 ## QC通道显示不全
 
-![](../02.切片机运维/attachments/Pasted%20image%2020230309132923.png)
+![](../02.切片机运维/attachments/20230309132923.png)
 
 ## 手动给机台写入钢线上机线量
 
@@ -51,21 +51,21 @@
 ### FTSP连接
 
 - MESPDT：与DA配置的地址名一致。
-	- ![](attachments/Pasted%20image%2020230407093325.png)
+	- ![](attachments/20230407093325.png)
 - 连接url既可以手写，也可以在远程连接中选择。
 - 设置DA服务时，还要求客户端的电脑账号密码与服务器的账号密码一致。
 
-![](attachments/Pasted%20image%2020230407091040.png)
+![](attachments/20230407091040.png)
 
 ### UaExpert连接
 
 1. 查看OPC UA地址配置：
 
-![](attachments/Pasted%20image%2020230425110129.png)
+![](attachments/20230425110129.png)
 
-![](attachments/Pasted%20image%2020230425110147.png)
+![](attachments/20230425110147.png)
 
-![](attachments/Pasted%20image%2020230425110505.png)
+![](attachments/20230425110505.png)
 
 不论上图配置为ip或是计算机名，在UaExpert连接时，均须使用ip。
 
@@ -75,7 +75,7 @@
 	- `opc.tcp://10.22.0.212:49322`
 	- `opc.tcp://127.0.0.1:49322`
 	- `opc.tcp://MES-SOS-212:49322`
-	- ![](attachments/Pasted%20image%2020230619091320.png)
+	- ![](attachments/20230619091320.png)
 - 异机客户端连接方式：
 
 | OPCUA配置                     | 异机客户端连接                                            |
@@ -112,9 +112,9 @@
 
 查看允许登录的方式：
 
-![](attachments/Pasted%20image%2020230425110238.png)
+![](attachments/20230425110238.png)
 
-![](attachments/Pasted%20image%2020230425110259.png)
+![](attachments/20230425110259.png)
 
 设置允许匿名连接：
 
@@ -124,7 +124,7 @@
 
 连接地址设置：
 
-![](attachments/Pasted%20image%2020230407091149.png)
+![](attachments/20230407091149.png)
 
 连接方式选择：
 
@@ -182,7 +182,7 @@
 
 问题排查：查看日志报出：mes is off，检查代码，如下：
 
-![](attachments/Pasted%20image%2020230712135652.png)
+![](attachments/20230712135652.png)
 
 MES_OPEN_TAG_NAME代表MES控制激活功能，该点位公用，只不过碎片代码中注释掉了这段代码。
 
@@ -190,7 +190,7 @@ MES_OPEN_TAG_NAME代表MES控制激活功能，该点位公用，只不过碎片
 
 原因分析：检查kepware中的MES控制激活点位值，为1，说明获取正常，但PD代码取值异常，说明可能在FTSP从kepware中取数据时出错。
 
-![](attachments/Pasted%20image%2020230713105830.png)
+![](attachments/20230713105830.png)
 
 kepware是良好 但是mesisopen是out of service。
 
