@@ -2675,7 +2675,11 @@ CREATE TABLE events (
 INSERT INTO events (event_name) VALUES ('Birthday Party');
 ```
 
-- 由于建表语句中，设置了`NOT NULL`，因此如果插入语句为：`INSERT INTO events (event_name, event_time) VALUES ('Birthday Party', null);`则会报错。
+- 由于建表语句中，设置了`NOT NULL`，因此如果插入语句为：
+
+  - `INSERT INTO events (event_name, event_time) VALUES ('Birthday Party', null);`则会报错。
+  - `INSERT INTO events (event_name) VALUES ('Birthday Party');`不会报错，且会自动添加event_time字段的值为当前时间。
+
 - 但是如果建表语句没有`NOT NULL`，则执行以下语句都不会报错：
 
 	- `INSERT INTO events (event_name, event_time) VALUES ('Birthday Party', null);`

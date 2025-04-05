@@ -2,7 +2,7 @@
   "useMarkdownLinks": true,
   "showUnsupportedFiles": true,
   "attachmentFolderPath": ".//assets/",
-  "alwaysUpdateLinks": false,
+  "alwaysUpdateLinks": true,
   "newFileLocation": "current",
   "newLinkFormat": "relative",
   "livePreview": true
