@@ -916,7 +916,7 @@ function test(){
       }
     })
 
-    // 用watchEffect实现，不用
+    // 用watchEffect实现，不用关注新值还是旧值
     const stopWtach = watchEffect(()=>{
       // 室温达到50℃，或水位达到20cm，立刻联系服务器
       if(temp.value >= 50 || height.value >= 20){
@@ -960,15 +960,6 @@ function test(){
   let title3 = ref()
 
   function showLog(){
-    // 通过id获取元素
-    const t1 = document.getElementById('title1')
-    // 打印内容
-    console.log((t1 as HTMLElement).innerText)
-    console.log((<HTMLElement>t1).innerText)
-    console.log(t1?.innerText)
-  
-		/************************************/
-	
     // 通过ref获取元素
     console.log(title1.value)
     console.log(title2.value)
@@ -998,21 +989,19 @@ function test(){
   }
 </script>
 
-
 <!-- 子组件Person.vue中要使用defineExpose暴露内容 -->
 <script lang="ts" setup name="Person">
   import {ref,defineExpose} from 'vue'
-	// 数据
+  // 数据
   let name = ref('张三')
   let age = ref(18)
-  /****************************/
-  /****************************/
+  
   // 使用defineExpose将组件中的数据交给外部
   defineExpose({name,age})
 </script>
 ```
 
-### 3.12. 【props】
+### 3.12. 【props】父给子传值
 
 ```js
 // 定义一个接口，限制每个Person对象的格式
@@ -1068,6 +1057,7 @@ export type Persons = Array<PersonInter>
 
   // 第二种写法：接收+限制类型
   // defineProps<{list:Persons}()>
+  // defineProps<{list?:Persons}()>//可传可不传
 
   // 第三种写法：接收+限制类型+指定默认值+限制必要性
   let props = withDefaults(defineProps<{list?:Persons}(),{
