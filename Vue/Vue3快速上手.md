@@ -1151,6 +1151,10 @@ export type Persons = Array<PersonInter>
 - 什么是 `hook`？—— 本质是一个函数，把 `setup`函数中使用的 `Composition API`进行了封装，类似于 `vue2.x`中的 `mixin`。
 - 自定义 `hook`的优势：复用代码, 让 `setup`中的逻辑更清楚易懂。
 
+![alt text](assets/image-3.png)
+
+![alt text](assets/image-2.png)
+
 示例代码：
 
 - `useSum.ts`中内容如下：
