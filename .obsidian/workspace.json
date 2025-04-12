@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "7496c8dd55b9ef99",
+        "id": "3ec6673c6e436041",
         "type": "tabs",
         "children": [
           {
-            "id": "d3a095ffbf665d31",
+            "id": "80d7fcc906f5f469",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "转型/smart200/smart200.md",
+                "file": "Vue/Vue3快速上手.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -70,8 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "db4e00768853bc2e",
@@ -87,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "转型/smart200/smart200.md"
+                "file": "Vue/Vue3快速上手.md"
               }
             }
           }
@@ -105,7 +104,7 @@
       "pdf-to-markdown-plugin:PDF to Markdown": false
     }
   },
-  "active": "670e16253227c498",
+  "active": "80d7fcc906f5f469",
   "lastOpenFiles": [
     "转型/电气工程师/电气工程师.md",
     "转型/smart200/smart200.md",
