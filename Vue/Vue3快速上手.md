@@ -1150,6 +1150,7 @@ export type Persons = Array<PersonInter>
 
 - 什么是 `hook`？—— 本质是一个函数，把 `setup`函数中使用的 `Composition API`进行了封装，类似于 `vue2.x`中的 `mixin`。
 - 自定义 `hook`的优势：复用代码, 让 `setup`中的逻辑更清楚易懂。
+- 文件名规范：以 `use` 开头，后跟功能名称（以 `UpperCamelCase` 命名）
 
 示例代码：
 
@@ -1238,6 +1239,8 @@ export type Persons = Array<PersonInter>
     let {dogList,getDog} = useDog()
   </script>
   ```
+
+> vue3中，import的对象是以define开头的，可以不直接写，都是默认引入。
 
 ## 4. 路由
 
