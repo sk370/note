@@ -1054,6 +1054,8 @@ export type Persons = Array<PersonInter>
   
   // 第一种写法：仅接收
   // const props = defineProps(['list'])
+  // 或
+  // defineProps(['list'])
 
   // 第二种写法：接收+限制类型
   // defineProps<{list:Persons}()>
@@ -1255,7 +1257,10 @@ export type Persons = Array<PersonInter>
 ### 4.2. 【基本切换效果】
 
 - `Vue3`中要使用 `vue-router`的最新版本，目前是 `4`版本。
+- 通常新建route文件夹，并在route文件夹下创建index.ts文件，编写路由配置。
 - 路由配置文件代码如下：
+
+* `index.ts`代码如下：
 
   ```js
   import {createRouter,createWebHistory} from 'vue-router'
@@ -1434,6 +1439,8 @@ routes:[
    <router-link to="/news/detail">xxxx</router-link>
    <!-- 或 -->
    <router-link :to="{path:'/news/detail'}">xxxx</router-link>
+   <!-- 或可不可以采用name？ -->
+   <router-link :to="{name:'detail'}">xxxx</router-link>
    ```
 
 4. 记得去 `Home`组件中预留一个 `<router-view>`
@@ -1455,7 +1462,30 @@ routes:[
 
 ### 4.8. 【路由传参】
 
-#### 4.8.1 query参数
+#### 4.8.1 query参数(参数在浏览器路径)
+
+* route/index.ts
+
+```ts
+const router = createRouter({
+  history:createWebHistory(),
+  routes:[
+    {
+    name:'xinwen',
+    path:'/news',
+    component:News,
+    children:[
+      {
+      name:'xiang',
+      path:'detail',
+      component:Detail
+      }
+    ]
+    }
+  ]
+})
+export default router
+```
 
 1. 传递参数
 
@@ -1463,6 +1493,11 @@ routes:[
    <!-- 跳转并携带query参数（to的字符串写法） -->
    <router-link to="/news/detail?a=1&b=2&content=欢迎你">
    	跳转
+   </router-link>
+
+   <!-- 跳转并携带query参数（to的模板字符串写法） -->
+   <router-link :to="`/news/detail?id=${news.id}&title=${news.title}&content=${news.content}`">
+    跳转
    </router-link>
 
    <!-- 跳转并携带query参数（to的对象写法） -->
@@ -1492,16 +1527,42 @@ routes:[
 
 #### 4.8.2 params参数
 
+- route/index.ts
+
+```ts
+const router = createRouter({
+  history:createWebHistory(),
+  routes:[
+    {
+    name:'xinwen',
+    path:'/news',
+    component:News,
+    children:[
+      {
+      name:'xiang',
+      path:'detail/:id/:title/:content?',//占位
+      component:Detail
+      }
+    ]
+    }
+  ]
+})
+export default router
+```
+
+  >content? 表示可传可不传
+
 1. 传递参数
 
    ```vue
-   <!-- 跳转并携带params参数（to的字符串写法） -->
-   <RouterLink :to="`/news/detail/001/新闻001/内容001`">{{news.title}}</RouterLink>
+   <!-- 跳转并携带params参数（to的模板字符串写法） -->
+   <RouterLink :to="`/news/detail/${news.id}/${news.title}/${news.content}`">{{news.title}}</RouterLink>
 
    <!-- 跳转并携带params参数（to的对象写法） -->
    <RouterLink 
      :to="{
        name:'xiang', //用name跳转
+       // path: '/news/detail/',//不能用path跳转
        params:{
          id:news.id,
          title:news.title,
@@ -1513,21 +1574,79 @@ routes:[
    </RouterLink>
    ```
 
+   >params不能传对象类型（如数组）
+
 2. 接收参数：
 
    ```js
    import {useRoute} from 'vue-router'
-   const route = useRoute()
+   const route = useRoute()//得到的route是一个响应式对象，如果需要解构出的变量也具有响应式，则需要使用toRefs
    // 打印params参数
    console.log(route.params)
    ```
 
 > 备注1：传递 `params`参数时，若使用 `to`的对象写法，必须使用 `name`配置项，不能用 `path`。
-> 备注2：传递 `params`参数时，需要提前在规则中占位。
+> 备注2：传递 `params`参数时，需要提前在路由规则中占位。
 
 ### 4.9. 【路由的props配置】
 
 作用：让路由组件更方便的收到参数（可以将路由参数作为 `props`传给组件）
+
+- route/index.ts
+
+```ts
+const router = createRouter({
+  history:createWebHistory(),
+  routes:[
+    {
+    name:'xinwen',
+    path:'/news',
+    component:News,
+    children:[
+      {
+        name:'xiang',
+        path:'detail/:id/:title/:content?',//占位
+        component:Detail,
+        props: true
+      }
+    ]
+    }
+  ]
+})
+export default router
+```
+
+1. 传递参数：
+
+```vue
+<!-- 跳转并携带params参数（to的模板字符串写法） -->
+<RouterLink :to="`/news/detail/${news.id}/${news.title}/${news.content}`">{{news.title}}</RouterLink>
+
+<!-- 跳转并携带params参数（to的对象写法） -->
+<RouterLink 
+  :to="{
+    name:'xiang', //用name跳转
+    // path: '/news/detail/',//不能用path跳转
+    params:{
+      id:news.id,
+      title:news.title,
+      content:news.title
+    }
+  }"
+>
+  {{news.title}}
+</RouterLink>
+```
+
+2. 接收参数（Detail.vue）：
+
+```js
+<script setup lang="ts" name="Detail">
+  defineProps(['id', 'title', 'content'])
+</script>
+```
+
+3. props的其他传法（下面route/index.ts），接收参数（Detail.vue）不需要修改：
 
 ```js
 {
@@ -1535,18 +1654,21 @@ routes:[
 	path:'detail/:id/:title/:content',
 	component:Detail,
 
-  // props的对象写法，作用：把对象中的每一组key-value作为props传给Detail组件
-  // props:{a:1,b:2,c:3}, 
-
   // props的布尔值写法，作用：把收到了每一组params参数，作为props传给Detail组件
   // props:true
   
-  // props的函数写法，作用：把返回的对象中每一组key-value作为props传给Detail组件
+  // props的对象写法，作用：把对象中的每一组key-value作为props传给Detail组件
+  // props:{a:1,b:2,c:3}, 
+
+  // props的函数写法，配合query参数或params参数，作用：把返回的对象中每一组key-value作为props传给Detail组件
   props(route){
-    return route.query
+    return route.query//query参数
+    //return route.params//parmas参数
   }
 }
 ```
+
+> props传参，相当于`<Details a="a" b="b">`
 
 ### 4.10. 【 replace属性】
 
@@ -1576,6 +1698,8 @@ console.log(route.parmas)
 console.log(router.push)
 console.log(router.replace)
 ```
+
+![alt text](assets/image-4.png)
 
 ### 4.12. 【重定向】
 
