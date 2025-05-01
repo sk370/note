@@ -11,9 +11,9 @@
 
 - **账户信息：**
   - 账户名：root
-  - 密码：dimitre123
+  - 密码：dimitre123/918049
   - 账户名：zyq
-  - 密码：dimitre123
+  - 密码：dimitre123/918049
 
 - **极简安装CentOS迷你版：**
   - 一路默认安装。
@@ -101,6 +101,7 @@
   - `userdel 用户名` 删除用户
   - `id 用户名` 查询用户信息
   - `su - 用户名` 切换用户
+  - `sudo passwd`或`sudo passwd root`设置root账户密码
 
 - **运行级别：**
   - `systemctl get-default` 查看当前运行级别

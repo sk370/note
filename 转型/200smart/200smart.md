@@ -130,3 +130,21 @@ s7-200smart分类：
 ### 2.3 安装软件
 
 STEP7 MICROWIN SMART V2.6
+
+### 2.4 修改符号表
+
+给点位起名字。首先删除I/O变量表，其次新建一个表，然后编辑点位及点位名称。
+
+![alt text](assets/image-15.png)
+
+### 2.5 定时器
+
+![alt text](assets/image-16.png)
+
+### 2.6 系统自定义变量表
+
+#### 2.6.1 SM0.x
+
+![alt text](assets/image-17.png)
+
+SM0.1在
