@@ -130,6 +130,7 @@ s7-200smart分类：
 ### 2.3 安装软件
 
 STEP7 MICROWIN SMART V2.6
+STEP7 MICROWIN SMART V3，与2不兼容
 
 ### 2.4 修改符号表
 

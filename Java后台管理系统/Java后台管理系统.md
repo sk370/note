@@ -60,6 +60,10 @@
 
 > 测试：新建的子模块如果不在eladmin-system中引入会怎么样？
 
+#### 1.1.1 ELADMIN自学
+
+> [Title](https://gitee.com/minzhu-superstar/eladmin-study)
+
 ### 1.2 ruoyi
 
 **文件结构：**

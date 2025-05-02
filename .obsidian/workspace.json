@@ -13,11 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Vue/Vue3快速上手.md",
+                "file": "嵌入式/MQTT/MQTT.md",
                 "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "MQTT"
             }
           }
         ]
@@ -39,8 +41,11 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
-              }
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
             }
           },
           {
@@ -55,7 +60,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
             }
           },
           {
@@ -63,7 +70,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
             }
           }
         ]
@@ -86,8 +95,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Vue/Vue3快速上手.md"
-              }
+                "file": "嵌入式/MQTT/MQTT.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "MQTT 的大纲"
             }
           }
         ]
@@ -106,6 +120,7 @@
   },
   "active": "80d7fcc906f5f469",
   "lastOpenFiles": [
+    "Vue/Vue3快速上手.md",
     "转型/电气工程师/电气工程师.md",
     "转型/smart200/smart200.md",
     "读书笔记/Vue3 入门指南与实战案例/Vue3 入门指南与实战案例.md",
