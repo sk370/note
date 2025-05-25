@@ -149,3 +149,79 @@ STEP7 MICROWIN SMART V3，与2不兼容
 ![alt text](assets/image-17.png)
 
 SM0.1在
+
+## 3. 常见梯形图
+
+### 3.1 自锁
+
+![alt text](assets/image-18.png)
+
+### 3.2 延时启动
+
+#### 3.2.1 方式一
+
+![alt text](assets/image-19.png)
+
+#### 3.2.2 方式二
+
+![alt text](assets/image-20.png)
+
+### 3.3 延时停止
+
+![alt text](assets/image-21.png)
+
+### 3.4 顺序启动
+
+#### 3.4.1 方式一（TON）
+
+![alt text](assets/image-22.png)
+
+#### 3.4.2 方式二（TOF）
+
+![alt text](assets/image-23.png)
+
+### 3.5 震荡电路
+
+#### 3.5.1 方式一（SM0.5）
+
+![alt text](assets/image-24.png)
+
+#### 3.5.2 方式二（TON）
+
+![alt text](assets/image-25.png)
+
+#### 3.5.3 方式三（TON2）
+
+![alt text](assets/image-26.png)
+
+### 3.6 特殊灯
+
+#### 3.6.1 
+
+![alt text](assets/image-27.png)
+
+![alt text](assets/image-28.png)
+
+#### 3.6.2
+
+![alt text](assets/image-29.png)
+
+![alt text](assets/image-30.png)
+
+#### 3.6.3 
+
+![alt text](assets/image-31.png)
+
+### 3.7 流水灯
+
+#### 3.7.1 
+
+![alt text](assets/image-33.png)
+
+#### 3.7.2 
+
+![alt text](assets/image-32.png)
+
+* 程序段2不能放到程序段1的前面，否则会出错。
+
+####

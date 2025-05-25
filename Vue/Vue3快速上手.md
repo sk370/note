@@ -480,7 +480,7 @@ function test(){
 
 > 1. `ref`创建的变量必须使用 `.value`（可以使用 `volar`插件自动添加 `.value`）。
 >    `<img src="assets/自动补充value.png" alt="自动补充value" style="zoom:50%;border-radius:20px" />`
-> 2. `reactive`重新分配一个新对象，会**失去**响应式（可以使用 `Object.assign`去整体替换）。
+> 2. `reactive`重新分配一个新对象（将reactive定义的对象重新赋值，而不是对象中的某个属性重新赋值），会**失去**响应式（可以使用 `Object.assign`去整体替换）。
 
 - 使用原则：
 
