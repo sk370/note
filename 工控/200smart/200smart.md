@@ -148,4 +148,100 @@ STEP7 MICROWIN SMART V3，与2不兼容
 
 ![alt text](assets/image-17.png)
 
-SM0.1在
+SM0.1在常闭点位在下载程序到PLC时，瞬间断开，又立即复位（闭合），用于初始化程序，防止异常运行。
+
+## 3. 常见梯形图
+
+### 3.1 自锁
+
+![alt text](assets/image-18.png)
+
+### 3.2 延时启动
+
+#### 3.2.1 方式一
+
+![alt text](assets/image-19.png)
+
+#### 3.2.2 方式二
+
+![alt text](assets/image-20.png)
+
+### 3.3 延时停止
+
+按下I0.0，电机Q0.0启动，按下I0.1，电机Q0.0停止。
+
+![alt text](assets/image-21.png)
+
+### 3.4 顺序停止
+
+#### 3.4.1 方式一（TON）
+
+![alt text](assets/image-22.png)
+
+#### 3.4.2 方式二（TOF）
+
+![alt text](assets/image-23.png)
+
+### 3.5 震荡电路
+
+#### 3.5.1 方式一（SM0.5）
+
+灯每0.5s闪一次。
+
+![alt text](assets/image-24.png)
+
+#### 3.5.2 方式二（TON）
+
+![alt text](assets/image-25.png)
+
+#### 3.5.3 方式三（TON2）
+
+![alt text](assets/image-26.png)
+
+> 流水灯和震荡电路的这类循环程序有共同的解决方案：
+>
+> 1. 定时器和线圈捆绑，用完就断电。
+> 2. 定时器和线圈分开，让定时器、线圈一直有电，等到一轮结束的时候，把所有定时器断电重启。
+
+### 3.6 特殊灯
+
+#### 3.6.1 
+
+![alt text](assets/image-27.png)
+
+![alt text](assets/image-28.png)
+
+#### 3.6.2
+
+![alt text](assets/image-29.png)
+
+![alt text](assets/image-30.png)
+
+#### 3.6.3 
+
+![alt text](assets/image-31.png)
+
+### 3.7 流水灯
+
+#### 3.7.1 
+
+![alt text](assets/image-33.png)
+
+#### 3.7.2 
+
+![alt text](assets/image-32.png)
+
+* 程序段2不能放到程序段1的前面，否则会出错。
+
+## 4. 计数器
+
+Smart从C0-C255个。
+
+分为普通型和高速型（HC）。
+
+普通型分为CTU（加计数）、CTD（减计数）、CTUD（加减计数）。
+
+计数器会保持原来的计数，需要使用SM0.1的常开接到R位，进行复位。
+
+**定时器的自复位：**
+

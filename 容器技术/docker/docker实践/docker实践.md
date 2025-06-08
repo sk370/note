@@ -171,7 +171,7 @@ sudo systemctl restart docker
 
 EMQX是一款完全开源，高可用低时延的百万级分布式物联网 MQTT 5.0 消息服务器。
 
-官方文档：[产品概览 | EMQX 5.1 文档](https://www.emqx.io/docs/zh/v5/)
+官方文档：[产品概览 | EMQX 5.1 文档](https://docs.emqx.com/zh/emqx/latest/deploy/install-docker.html)
 
 快速开始：
 
@@ -180,6 +180,45 @@ docker run -d --name emqx -p 1883:1883 -p 8083:8083 -p 8883:8883 -p 8084:8084 -p
 ```
 
 访问dashboard：`http://ip:18083`。账号：admin，密码：public
+
+挂载和端口映射：
+
+```bash
+docker run -d --name emqx \
+  -p 1883:1883 -p 8083:8083 \
+  -p 8084:8084 -p 8883:8883 \
+  -p 18083:18083 \
+  -v $PWD/emqx/data:/opt/emqx/data \
+  -v $PWD/emqx/log:/opt/emqx/log \
+  --privileged=true \
+  emqx/emqx:5.6.1
+```
+
+> - 左侧都是本机
+> - $PWD表示执行命令的当前目录（绝对路径）
+> - `--privileged=true`表示容器具有root权限，避免容器无本机写入权限。
+
+但是，按照上面的指令执行完毕后，容器并不能启动成功，查看日志有报错：
+
+![alt text](assets/image.png)
+
+原因是docker命令使用root账户运行，但emqx的容器使用的是emqx用户，在linux的系统中，创建文件不成功。参考：https://coala.top/archives/docker%E4%B8%8B%E8%BF%90%E8%A1%8Cemqx%E6%95%B0%E6%8D%AE%E5%8D%B7%E6%8C%82%E8%BD%BD%E6%8F%90%E7%A4%BA%E6%9D%83%E9%99%90%E4%B8%8D%E8%B6%B3%E8%A7%A3%E5%86%B3
+
+修改之后的创建方式：
+
+```bash
+docker volume create emqx-data
+
+sudo docker run -d --name emqx \
+   -v emqx-data:/opt/emqx/data \
+   -v emqx-data:/opt/emqx/log \
+   -p 1883:1883 -p 8083:8083 \
+   -p 8084:8084 -p 8883:8883 \
+   -p 18083:18083  \
+   emqx/emqx:5.6.1
+```
+
+> 这里emqx-data后面不能再写路径。
 
 ### 2.5 安装zentao
 
@@ -389,6 +428,26 @@ docker run -d -p 8081:8080 shuiche/mind-map:latest
     -e JWT_SECRET=my_jwt_secret onlyoffice/documentserver
    ```
 
+<<<<<<< HEAD
+=======
+#### 2.13 安装mosquitto
+
+
+```bash
+docker run -it --name=mosquitto \
+   --privileged  \
+   -p 1883:1883 -p 9001:9001 \
+   -v /root/docker/mosquitto/config/mosquitto.conf:/mosquitto/config/mosquitto.conf  \
+   -v /root/docker/mosquitto/data:/mosquitto/data \
+   -v /root/docker/mosquitto/log:/mosquitto/log \
+   -d  eclipse-mosquitto
+```
+
+#### 2.14 安装mongodb
+
+
+#### 2.15 安装rabbitmq
+>>>>>>> 0b970430efbbf59861c57895bfc5d2d6d36cecbe
 
 
 ## 3.常见问题
