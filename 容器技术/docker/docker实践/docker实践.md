@@ -2,7 +2,7 @@
 
 linux系统不同发行版安装的命令不一样：
 
-### Ubuntu
+### 1.1 Ubuntu
 
 1. 更新软件包索引：`sudo apt update`
 2. 安装依赖包：`sudo apt install apt-transport-https ca-certificates curl software-properties-common`
@@ -29,7 +29,7 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
 
-### CentOS
+### 1.2 CentOS
 
 [CentOS Docker 安装 | 菜鸟教程 (runoob.com)](https://www.runoob.com/docker/centos-docker-install.html)
 
@@ -120,15 +120,14 @@ sudo systemctl restart docker
    -e MYSQL_ROOT_PASSWORD=123456 \
    -d mysql
    ```
-   
+
    - 创建容器时设置开机自启：`docker run --restart=always`
-   
+
    - 已经创建了容器设置开机自启：`docker update --restart=always 容器id/容器name`
-   
+
    - 账号：root，密码：123456。
-   
+
    - 查看mysql版本：[Linux系统中查看Mysql数据库版本号的四种方法（图文完整版）_linux查看mysql版本-CSDN博客](https://blog.csdn.net/weixin_50093343/article/details/116751228) 
-   
 
 #### 2.3.1 开启允许远程用户连接
 
@@ -389,6 +388,8 @@ docker run -d -p 8081:8080 shuiche/mind-map:latest
     -e DB_TYPE=mysql -e DB_HOST=127.0.0.1 -e DB_NAME=onlyoffice -e DB_USER=root -e DB_PASS=123456 \
     -e JWT_SECRET=my_jwt_secret onlyoffice/documentserver
    ```
+
+
 
 ## 3.常见问题
 
