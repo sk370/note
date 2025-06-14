@@ -40,11 +40,11 @@
 
 关键字：
 
-![Alt text](读书笔记/C#图解教程/assets/image-1.png)
+![alt text](assets/image.png)
 
 上下文关键字：
 
-![Alt text](读书笔记/C#图解教程/assets/image-2.png)
+![alt text](assets/image-1.png)
 
 - 上下文关键字仅在特定的语言结构中充当关键字的标识符。
 - 关键字不能被用作标识符，上下文关键字可以在代码的其他部分用作标识符。
@@ -75,7 +75,6 @@
 
    - 在语法上相当于一条一句。
    - 块末尾的大括号不需要`;`
-
 
 ### 2.6 输出
 
@@ -110,19 +109,17 @@ Write和WriteLne输出多个参数时：
    Console.WriteLine($"Two Sample integers are {var1} and {var2}");
    ```
 
-
 #### 2.6.4 多重标记和值
 
 1. 替代标记位置和数量任意。
 
-   - ![Alt text](读书笔记/C#图解教程/assets/image-3.png)
+   - ![alt text](assets/image-3.png)
 
 2. 替代标记的整数值不能超过替换值的数量。
 
    - 不会产生编译错误。
    - 会产生运行时错误（异常）。
-   - ![Alt text](读书笔记/C#图解教程/assets/image-4.png)
-
+   - ![alt text](assets/image-2.png)
 
 #### 2.6.5 格式化数字字符串
 
@@ -451,8 +448,6 @@ class C1{
    1. 非托管资源：通过 Win32API获得的文件句柄，或非托管内存块。
 
       - 使用.net资源无法获取。
-
-
 
 #### 4.3.6 索引器
 
