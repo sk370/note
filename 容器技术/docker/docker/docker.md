@@ -328,6 +328,210 @@ Docker 挂载主机目录访问如果出现 cannot open directory .: Permission 
 3. 容器 1 失去挂载不会影响容器 2 的数据卷
 4. 容器 1 重新挂载会自动建立容器 2 的继承
 
+### 2.5 创建命名卷
+
+#### 2.5.1 默认保存位置
+
+在Linux系统中，Docker创建的容器数据卷默认存储在以下目录：
+
+**/var/lib/docker/volumes/**
+  
+具体说明如下：
+
+- **命名卷**：使用`docker volume create <卷名>`命令创建命名卷，或Docker在创建容器时自动创建命名卷时，数据会存储在`/var/lib/docker/volumes/<卷名>/_data`目录中。每个命名卷在该目录下都有一个对应的文件夹。
+  
+- **匿名卷**：如果未指定卷名称，Docker会创建匿名卷。这些卷的数据同样存储在`/var/lib/docker/volumes`目录下，但文件夹名称是Docker自动生成的随机字符串。
+
+可以通过以下命令查看数据卷的详细信息，包括存储位置：
+
+```bash
+# 列出所有数据卷
+docker volume ls
+
+# 查看指定数据卷的详细信息
+docker volume inspect <卷名>
+```
+
+在输出的信息中，可以找到`Mountpoint`字段，指示数据卷在主机上的具体存储路径。
+
+请注意，以上路径是Docker默认配置下的存储位置。如果您修改了Docker的存储根目录（例如，通过`/etc/docker/daemon.json`配置文件中的`"data-root": "/new/path"`选项），数据卷的存储位置也会相应改变。
+
+此外，对于使用`bind mount`（绑定挂载）的情况，数据存储在您指定的宿主机目录中，而不是`/var/lib/docker/volumes`目录下。
+
+#### 2.5.2 修改默认保存位置
+
+1. 使用 `-v` 参数挂载宿主机目录
+
+在运行容器时，使用 `-v` 参数可以指定宿主机上的目录与容器内的目录进行挂载。
+
+**语法：**
+
+```bash
+docker run -v /宿主机目录:/容器内目录 镜像名称
+```
+
+**示例：**
+
+将宿主机的 `/data/myapp` 目录挂载到容器的 `/app/data` 目录：
+
+```bash
+docker run -v /data/myapp:/app/data my_image
+```
+
+2. 使用 `--mount` 参数详细配置挂载
+
+`--mount` 参数提供了更灵活的挂载选项，可以指定挂载类型、源路径、目标路径等。
+
+**语法：**
+
+```bash
+docker run --mount type=bind,source=/宿主机目录,target=/容器内目录 镜像名称
+```
+
+**示例：**
+
+```bash
+docker run --mount type=bind,source=/data/myapp,target=/app/data my_image
+```
+
+3. 在 `docker-compose.yml` 中配置
+
+如果您使用 Docker Compose 管理容器，可以在 `docker-compose.yml` 文件中指定数据卷挂载。
+
+**示例：**
+
+```yaml
+version: '3'
+services:
+  my_service:
+    image: my_image
+    volumes:
+      - /data/myapp:/app/data
+```
+
+4. 创建命名卷并指定位置（高级）
+
+Docker 允许您在创建命名卷时指定存储位置，但这需要修改 Docker 的配置文件。
+
+**步骤：**
+
+1. **编辑 Docker 配置文件 `daemon.json`：**
+
+   ```json
+   {
+     "graph": "/path/to/new/docker/data",
+     "volumes": {
+       "my_volume": {
+         "driver": "local",
+         "driver_opts": {
+           "o": "bind",
+           "device": "/path/to/volume/data"
+         }
+       }
+     }
+   }
+   ```
+
+2. **重启 Docker 服务：**
+
+   ```bash
+   systemctl restart docker
+   ```
+
+3. **使用命名卷：**
+
+   ```bash
+   docker run -v my_volume:/app/data my_image
+   ```
+
+**注意事项：**
+
+- **权限问题：** 确保宿主机目录的权限允许容器访问，可能需要调整目录权限或运行容器时使用特定的用户。
+- **目录存在性：** 指定的宿主机目录必须存在，否则 Docker 会报错。
+- **可移植性：** 使用绝对路径可以提高可移植性，避免因宿主机目录结构变化导致的问题。
+
+#### 2.5.3 命名卷修改保存位置
+
+**方法一：使用Docker配置文件（推荐）**
+
+1. **编辑Docker的配置文件`daemon.json`**
+
+   在Linux系统中，该文件通常位于`/etc/docker/daemon.json`。如果文件不存在，您可以创建它。
+
+   ```json
+   {
+     "volumes": {
+       "my_volume": {
+         "driver": "local",
+         "driver_opts": {
+           "o": "bind",
+           "device": "/path/to/volume/data"
+         }
+       }
+     }
+   }
+   ```
+
+   **说明：**
+
+   - `"my_volume"`是您要创建的命名数据卷的名称。
+   - `"/path/to/volume/data"`是您希望数据卷保存的宿主机目录，请替换为您实际的路径。
+
+2. **重启Docker服务**
+
+   使配置文件生效：
+
+   ```bash
+   sudo systemctl restart docker
+   ```
+
+3. **创建并使用数据卷**
+
+   运行容器时，通过`-v`参数挂载命名数据卷：
+
+   ```bash
+   docker run -v my_volume:/app/data my_image
+   ```
+
+   **说明：**
+
+   - `my_volume`是您在配置文件中定义的命名数据卷。
+   - `:/app/data`是容器内的挂载点。
+
+**方法二：使用`--volume-driver`和`--volume-opt`参数**
+
+1. **创建命名数据卷并指定位置**
+
+   ```bash
+   docker volume create --driver local \
+     --opt type=none \
+     --opt device=/path/to/volume/data \
+     --opt o=bind \
+     my_volume
+   ```
+
+   **说明：**
+
+   - `--driver local`指定使用本地驱动程序。
+   - `--opt`参数用于设置驱动选项：
+     - `type=none`表示使用绑定挂载。
+     - `device=/path/to/volume/data`指定数据卷的宿主机路径。
+     - `o=bind`指定挂载选项为绑定挂载。
+
+2. **使用数据卷**
+
+   启动容器时挂载该数据卷：
+
+   ```bash
+   docker run -v my_volume:/app/data my_image
+   ```
+
+**注意事项：**
+
+- **权限问题：** 确保指定的宿主机目录具有正确的权限，以便容器可以访问。
+- **目录存在性：** 指定的宿主机目录必须提前创建，否则会报错。
+- **Docker版本：** 不同版本的Docker可能对配置选项有所不同，请参考官方文档进行调整。
+
 ## 第 3 章 安装实战（单体应用）
 
 ### 3.1 总体步骤
