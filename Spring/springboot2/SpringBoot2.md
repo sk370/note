@@ -686,10 +686,11 @@ k:
 
 #### 5.2.2 静态资源访问
 
-1. 在 resources 路径下：静态资源放在`/static`/public`、`/META-INF/resources`路径下，则可以直接通过当前项目根路径/+静态资源名的方式访问到。
+1. 在 resources 路径下：静态资源放在`resourses``下的/static`、`/public`、`/META-INF/resources`路径下，则可以直接通过当前项目根路径/+静态资源名的方式访问到。
    - ![Alt text](assets/image.png)
    - 红框的可以访问到，绿框的访问不到
    - 原理：浏览器地址栏的请求首先经过 spring mvc 的 dispatcherServlet 处理，如果控制器 controller 中有对应的请求方法，则按该方法处理。如果没有对应的请求方法，则被 servlet 默认的控制器处理，直接去访问静态资源。
+   - `/**`代表springboot工程自带的resoures目录。
 2. 修改静态资源访问前缀
    - 控制器中设定的拦截请求为`/**`所有请求，这样会导致静态资源的访问和控制器处理的请求都被拦截。
    - 开发中一般希望将静态资源内的访问、和控制器处理前端请求分离开，所以一般会在核心配置文件中间通过`spring.mvc.static-path-pattern=/res/**`给静态资源的访问增加前缀（res 可以设定为其他名字）
