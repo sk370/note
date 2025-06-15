@@ -12,11 +12,11 @@ linux系统不同发行版安装的命令不一样：
 6. 安装 Docker：`sudo apt install docker-ce docker-ce-cli containerd.io`
 7. 查看是否安装成功：`docker --version`
 
-- 设置开机自启：`systemctl enable docker.service`或者`sudo systemctl enable docker`
-- 关闭开机自启：`systemctl disable docker.service`
-- 查看是否设置开机自启：`systemctl list-unit-files | grep enable`
-- 查看已启动的服务：`systemctl list-units --type=service`
-- 配置加速镜像su 镜像源：在 /etc/docker/ 中的 daemon.json 中添加下面内容 
+   - 设置开机自启：`systemctl enable docker.service`或者`sudo systemctl enable docker`
+   - 关闭开机自启：`systemctl disable docker.service`
+   - 查看是否设置开机自启：`systemctl list-unit-files | grep enable`
+   - 查看已启动的服务：`systemctl list-units --type=service`
+   - 配置加速镜像su 镜像源：在 /etc/docker/ 中的 daemon.json 中添加下面内容
 
 ```json
 sudo mkdir -p /etc/docker
@@ -29,7 +29,46 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
 
+<<<<<<< HEAD
+或者添加下列信息，然后重启docker服务：
+
+```json
+{
+　　"registry-mirrors":[
+　　　　　　"https://docker.m.daocloud.io/",
+　　　　　　"https://huecker.io/",
+　　　　　　"https://dockerhub.timeweb.cloud",
+　　　　　　"https://noohub.ru/",
+　　　　　　"https://dockerproxy.com",
+　　　　　　"https://docker.mirrors.ustc.edu.cn",
+　　　　　　"https://docker.nju.edu.cn",
+　　　　　　"https://xx4bwyg2.mirror.aliyuncs.com",
+　　　　　　"http://f1361db2.m.daocloud.io",
+　　　　　　"https://registry.docker-cn.com",
+　　　　　　"http://hub-mirror.c.163.com",
+　　　　　　"https://docker.mirrors.ustc.edu.cn"
+　　　　]
+}
+```
+
+```bash
+sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["https://bnzui6g7.mirror.aliyuncs.com"]
+}
+EOF
+sudo systemctl daemon-reload
+sudo systemctl stop docker.service
+sudo systemctl stop docker.socket
+sudo systemctl start docker.service
+sudo systemctl start docker.socket
+```
+
+### CentOS
+=======
 ### 1.2 CentOS
+>>>>>>> ab75d0a0fc8d0b8be46c27ab252e34b3d443d1db
 
 [CentOS Docker 安装 | 菜鸟教程 (runoob.com)](https://www.runoob.com/docker/centos-docker-install.html)
 

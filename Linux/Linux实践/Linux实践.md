@@ -51,7 +51,13 @@ Ubuntuh和Mint（基于Ubuntu），默认没有ssh服务，需要安装ssh服务
 5. 查看防火墙状态：`systemctl status ufw`或`ufw status`
 
 > 此时可以使用非root账户登录Ubuntu，登录之后可以切换root账户。
-> 如果需要使用root账户登录，则需要进入`etc/ssh/ssd.config`文件中进行设置。
+> 如果需要使用root账户登录，则需要进入`etc/ssh/sshd.config`文件中进行设置。如果不切换到root账户，上传文件会失败。
+
+修改如下：
+
+![alt text](assets/image.png)
+
+然后重启ssh服务：`systemctl restart ssh`
 
 ### 3. 全局安装
 
