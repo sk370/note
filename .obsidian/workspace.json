@@ -4,22 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "f41532a6645a72d9",
+        "id": "55ad981deebae0b7",
         "type": "tabs",
         "children": [
           {
-            "id": "47c655c4ef1444d0",
+            "id": "9a1e26305ba25018",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "工控/200smart/200smart.md",
+                "file": "Spring/spring5/Spring5.md",
                 "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "200smart"
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ]
@@ -41,11 +39,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical",
-                "autoReveal": false
-              },
-              "icon": "lucide-folder-closed",
-              "title": "文件列表"
+                "sortOrder": "alphabetical"
+              }
             }
           },
           {
@@ -60,9 +55,7 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              },
-              "icon": "lucide-search",
-              "title": "搜索"
+              }
             }
           },
           {
@@ -70,9 +63,7 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {},
-              "icon": "lucide-bookmark",
-              "title": "书签"
+              "state": {}
             }
           }
         ]
@@ -95,13 +86,8 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工控/200smart/200smart.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "200smart 的大纲"
+                "file": "Spring/spring5/Spring5.md"
+              }
             }
           }
         ]
@@ -117,8 +103,21 @@
       "pdf-to-markdown-plugin:PDF to Markdown": false
     }
   },
-  "active": "47c655c4ef1444d0",
+  "active": "9a1e26305ba25018",
   "lastOpenFiles": [
+    "spring5/200831175708.png.md",
+    "Spring/spring5/Spring5.md",
+    "spring5",
+    "IoT/OPC UA/OPC UA.md",
+    "IoT/node-red/node-red实践/node-red实践.md",
+    "IoT/node-red/node-red官方文档/用户指南.md",
+    "IoT/node-red/node-red官方文档/高频问题.md",
+    "IoT/node-red/node-red官方文档/教程.md",
+    "IoT/node-red/node-red官方文档/入门.md",
+    "IoT/node-red/node-red官方文档/食谱.md",
+    "Java后台管理系统/Java后台管理系统.md",
+    "转型/预测性维护技术/预测性维护技术.md",
+    "工控/200smart/200smart.md",
     "上位机/winform/winform.md",
     "上位机/winform/assets/20250525.png",
     "上位机/winform/assets/20250524-1.png",
@@ -148,22 +147,9 @@
     "Java/javase/Java语言基础（下）.md",
     "数据库/mysql/mysql/MySQL.md",
     "数据库/mysql/mysql实践/mysql实践.md",
-    "黑马AI/数据挖掘基础/数据挖掘基础.md",
     "黑马AI/数据挖掘基础/assets",
     "黑马AI/Python基础/黑马AI-Python基础.pdf",
     "黑马AI/数据挖掘基础",
-    "黑马AI/Python基础/Python基础.md",
-    "Python/廖学锋/廖雪峰.md",
-    "黑马AI/Python基础",
-    "黑马AI",
-    "eladmin/前端/eladmin.md",
-    "Linux/Linux/Linux.md",
-    "C#/C sharp.md",
-    "Java/juc/JUC.md",
-    "Java/javaweb/javaweb.md",
-    "Java/压力测试/压力测试.md",
-    "Linux/Linux/tongyi.md",
-    "Linux/Linux/coplit.md",
-    "读书笔记/利用Python进行数据分析/利用Python进行数据分析.md"
+    "黑马AI/Python基础"
   ]
 }

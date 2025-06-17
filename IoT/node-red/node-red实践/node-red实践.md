@@ -1,8 +1,8 @@
-## node-red安装
+## 1. node-red安装
 
 官方文档：[Node-RED](https://nodered.17coding.net/)
 
-### 非全局安装
+### 1.1 非全局安装
 
 1. 官方文档：[Node-RED](https://nodered.17coding.net/)
 2. 下载windows版本：[下载](https://github.com/node-red/node-red/releases/latest)
@@ -14,7 +14,7 @@
     - ![](attachments/2023-05-30-3.png)
 6. 访问：浏览器地址栏输入：[打开](http://localhost:1880/)
 
-### 全局安装
+### 1.2 全局安装
 
 1. 安装：
     - ![](attachments/2023-07-08.png)
@@ -30,11 +30,11 @@
         - ![](./assets/2023-07-17-1.png)
     3. `tail -f nohup.out`：查看输出日志。
 
-### 离线安装节点模块
+### 1.3 离线安装节点模块
 
 使用UI界面下载和使用命令行安装node-red节点模块，都会下载到：`C:\Users\zhuyuqi2\.node-red\node_modules`，对于windows系统，将`C:\Users\zhuyuqi2\.node-red`打包放到对应的位置即可。
 
-### docker安装
+### 1.4 docker安装
 
 ```bash
 docker run -it -p 1880:1880 --name mynodered nodered/node-red-docker
