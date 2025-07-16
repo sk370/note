@@ -134,6 +134,8 @@ sudo systemctl start docker.socket
 - docker ui：可以直接从镜像启动容器。
 - portainer：可以直接展示未使用容器数据卷。
 
+docker run --rm -v /var/lib/docker/volumes/e09ff18cd1ecb7243e3152e6d89c0a48a706ffe4affa15d17de6c74c79021c23/_data:/data portainer/helper-reset-password
+
 ### 2.3 安装mysql
 
 1. 启动容器：`docker run -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql`
