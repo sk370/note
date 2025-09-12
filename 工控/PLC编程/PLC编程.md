@@ -22,6 +22,7 @@
 
 	1. 解压缩所有文件：
 		1. ![](assets/20250323-1.png)
+        2. （2025-07-24）测试可以只安装`TIA_Portal_STEP7_Prof_Safety_WINCC_Adv_Unified_V18`
 	2. 注册表删除pending对象
 		1. ![](assets/20250323-2.png)
 
@@ -46,7 +47,8 @@
     2. 一路默认（安装路径会自动选择到与上面一致）
         1. ![alt text](assets/image-1.png)
     3. 继续在注册表删除pending对象
-    4. 安装完成无图标
+    4. 安装完成图标
+        1. ![alt text](assets/image-12.png)
 
 5. 激活：
 
