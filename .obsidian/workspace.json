@@ -13,11 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/spring5/Spring5.md",
+                "file": "IoT/node-red/B站Yongqi201入门/B站Yongqi201入门.md",
                 "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "B站Yongqi201入门"
             }
           }
         ]
@@ -39,8 +41,11 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
-              }
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
             }
           },
           {
@@ -55,7 +60,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
             }
           },
           {
@@ -63,7 +70,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
             }
           }
         ]
@@ -86,15 +95,21 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spring/spring5/Spring5.md"
-              }
+                "file": "IoT/node-red/B站Yongqi201入门/未命名.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "未命名 的大纲"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -103,13 +118,18 @@
       "pdf-to-markdown-plugin:PDF to Markdown": false
     }
   },
-  "active": "9a1e26305ba25018",
+  "active": "670e16253227c498",
   "lastOpenFiles": [
-    "spring5/200831175708.png.md",
-    "Spring/spring5/Spring5.md",
-    "spring5",
-    "IoT/OPC UA/OPC UA.md",
+    "IoT/node-red/B站Yongqi201入门/B站Yongqi201入门.md",
+    "IoT/node-red/B站Yongqi201入门/未命名.md",
     "IoT/node-red/node-red实践/node-red实践.md",
+    "IoT/node-red/B站Yongqi201入门",
+    "IoT/OPC UA/OPC UA.md",
+    "IoT/Arduino/ESP8266-NodeMCU开发板详解.md",
+    "IoT/智慧农业/智慧农业.md",
+    "Spring/spring5/Spring5.md",
+    "spring5/200831175708.png.md",
+    "spring5",
     "IoT/node-red/node-red官方文档/用户指南.md",
     "IoT/node-red/node-red官方文档/高频问题.md",
     "IoT/node-red/node-red官方文档/教程.md",
@@ -143,13 +163,8 @@
     "转型/工控与自动化/工控与自动化.md",
     "转型/工控与自动化",
     "Java/javase/Java语言基础（上）.md",
-    "Java/javase/Java语言基础（中）.md",
-    "Java/javase/Java语言基础（下）.md",
-    "数据库/mysql/mysql/MySQL.md",
-    "数据库/mysql/mysql实践/mysql实践.md",
     "黑马AI/数据挖掘基础/assets",
     "黑马AI/Python基础/黑马AI-Python基础.pdf",
-    "黑马AI/数据挖掘基础",
-    "黑马AI/Python基础"
+    "黑马AI/数据挖掘基础"
   ]
 }
