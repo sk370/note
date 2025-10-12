@@ -4,22 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "55ad981deebae0b7",
+        "id": "96ace60b09a611cd",
         "type": "tabs",
         "children": [
           {
-            "id": "9a1e26305ba25018",
+            "id": "bc99c00ec3c56483",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IoT/node-red/B站Yongqi201入门/B站Yongqi201入门.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "B站Yongqi201入门"
+              "title": "新标签页"
             }
           }
         ]
@@ -95,13 +90,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IoT/node-red/B站Yongqi201入门/未命名.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "未命名 的大纲"
+              "title": "大纲"
             }
           }
         ]
@@ -113,6 +107,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:创建新数据库": false,
       "command-palette:打开命令面板": false,
       "oz-clear-unused-images:Clear Unused Images": false,
       "pdf-to-markdown-plugin:PDF to Markdown": false
@@ -120,6 +115,33 @@
   },
   "active": "670e16253227c498",
   "lastOpenFiles": [
+    "01.Java/ehcache/02.Notes/EhCache.md",
+    "01.Java/ehcache/04.Projects",
+    "01.Java/ehcache/03.Exercises",
+    "01.Java/ehcache/02.Notes/assets/image.png",
+    "01.Java/ehcache/02.Notes/assets/20230407111255.png",
+    "01.Java/ehcache/02.Notes/assets/20230407110639.png",
+    "01.Java/ehcache/02.Notes/assets/20230407110511.png",
+    "01.Java/ehcache/02.Notes/assets/20230407110325.png",
+    "01.Java/ehcache/02.Notes/assets/20230407095018.png",
+    "01.Java/ehcache/02.Notes/assets/20230407094334.png",
+    "01.Java/ehcache/02.Notes/assets/20230404131445.png",
+    "01.Java/ehcache/02.Notes/assets",
+    "01.Java/ehcache/02.Notes/Java SE.md",
+    "01.Java/ehcache/02.Notes",
+    "01.Java/ehcache/01.Resources",
+    "01.Java/01.Java SE/04.Projects",
+    "01.Java/01.Java SE/03.Exercises",
+    "01.Java/01.Java SE/02.Notes",
+    "Python/爬虫/爬虫.md",
+    "IT运维/网络工程师/网络工程师.md",
+    "开源/rabbitmq/RabbitMQ.md",
+    "容器技术/docker/docker/docker.md",
+    "容器技术/docker/docker实践/docker实践.md",
+    "转型/个人.md",
+    "Java/juc/JUC.md",
+    "Java后台管理系统/Java后台管理系统.md",
+    "Java/javaweb/javaweb.md",
     "IoT/node-red/B站Yongqi201入门/B站Yongqi201入门.md",
     "IoT/node-red/B站Yongqi201入门/未命名.md",
     "IoT/node-red/node-red实践/node-red实践.md",
@@ -135,36 +157,9 @@
     "IoT/node-red/node-red官方文档/教程.md",
     "IoT/node-red/node-red官方文档/入门.md",
     "IoT/node-red/node-red官方文档/食谱.md",
-    "Java后台管理系统/Java后台管理系统.md",
     "转型/预测性维护技术/预测性维护技术.md",
     "工控/200smart/200smart.md",
-    "上位机/winform/winform.md",
     "上位机/winform/assets/20250525.png",
-    "上位机/winform/assets/20250524-1.png",
-    "上位机/winform/assets/20250524.png",
-    "上位机/winform/assets/20250521-1.png",
-    "上位机/winform/assets/20250521.png",
-    "嵌入式/Arduino/assets/20250505-3.png",
-    "嵌入式/Arduino/assets/20250505-2.png",
-    "嵌入式/Arduino/assets/20250505-1.png",
-    "嵌入式/Arduino/assets/20250505.png",
-    "嵌入式/MQTT/MQTT.md",
-    "Vue/Vue3快速上手.md",
-    "转型/电气工程师/电气工程师.md",
-    "转型/smart200/smart200.md",
-    "读书笔记/Vue3 入门指南与实战案例/Vue3 入门指南与实战案例.md",
-    "转型/smart200",
-    "转型/IoT",
-    "黑马AI/数据挖掘基础/assets/20250325.png",
-    "转型/PLC编程/PLC编程.md",
-    "转型/PLC编程/assets",
-    "转型/个人.md",
-    "转型/PLC编程",
-    "转型/工控与自动化/工控与自动化.md",
-    "转型/工控与自动化",
-    "Java/javase/Java语言基础（上）.md",
-    "黑马AI/数据挖掘基础/assets",
-    "黑马AI/Python基础/黑马AI-Python基础.pdf",
-    "黑马AI/数据挖掘基础"
+    "上位机/winform/assets/20250524-1.png"
   ]
 }

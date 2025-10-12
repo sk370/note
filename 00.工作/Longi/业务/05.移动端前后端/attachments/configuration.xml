@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+<!-- 西咸切片测试环境 -->
+<remote>remote://10.22.0.245:8080</remote>
+<http>http://10.22.0.245:8080</http>
+<plant_operations>http://10.22.0.245:8080/PlantOperations</plant_operations>
+<user>webUser</user>
+<password>91,-125,61,51,-7,100,-42,54</password>
+</configuration> 
