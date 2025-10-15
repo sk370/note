@@ -1,0 +1,17 @@
+package iceriver.dubbo.service.impl;
+
+import java.util.List;
+
+import iceriver.dubbo.bean.UserAddress;
+import iceriver.dubbo.service.OrderService;
+import iceriver.dubbo.service.UserService;
+@ser
+public class OrderServiceImpl implements OrderService{
+	UserService userService;
+	@Override
+	public void initOrder(String userId) {
+		// TODO 自动生成的方法存根
+		List<UserAddress> list = userService.getUserAddressList(userId);
+		System.out.println(list);
+	}
+}

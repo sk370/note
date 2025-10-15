@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="pro01-base-env:war">
+    <output-path>$PROJECT_DIR$/pro01-base-env/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>false</exploded>
+        <module>pro01-base-env</module>
+        <packaging>war</packaging>
+        <unpackNestedArchives>false</unpackNestedArchives>
+      </options>
+    </properties>
+    <root id="archive" name="pro01-base-env-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="pro01-base-env:war exploded" />
+    </root>
+  </artifact>
+</component>

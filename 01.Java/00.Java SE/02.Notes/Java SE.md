@@ -1,55 +1,27 @@
-## 多环境配置
+## 1. Java多版本配置
 
-以java8和java17为例，先安装java17、后安装java8。
+**必要性：**
 
-### 方式一
+1. 兼容性：不同版本Java的兼容性。
+2. JAVA_HOME：maven、nacos等多个应用均需要使用JAVA_HOME。
 
-java8和java17都会自动添加环境变量，并将bin目录下的部分`exe`文件拷贝至该目录，默认运行的为为后安装的软件版本，因为后安装的环境变量配置在先安装上面。
+**配置过程：**
 
-![](/assets/20230407094334.png)
+1. 步骤一：删除系统自动配置的环境变量，防止切换失败。
 
-![](assets/2023-05-19.png)
+![Alt text](assets/image2.png)
 
-![](/assets/20230407095018.png)
+2. 步骤二：在 Path 中添加两个变量：`%JAVA_HOME%\bin` 以及 `%JAVA_HOME%\jre\bin`
 
-**1. 调整环境变量的顺序即可变更默认运行的java版本。**  
-**2. 进入相应的路径打开终端执行也可运行相应的版本。**
+![Alt text](assets/image-1.png)
 
-但是无论哪种操作方式，执行`javac -version`命令，总是执行的高版本Java命令（低版本不会拷贝`javac.exe`到默认环境变量的地址中）。只安装一个版本的java时，运行的版本与`java -version`一致。
+3. 步骤三：配置不同版本的JAVA_HOME，指向jdk安装路径。
 
-### 方式二
+![Alt text](assets/image-2.png)
 
-下载jvms：[https://github.com/ystyle/jvms](https://github.com/ystyle/jvms)
+4. 步骤四：添加 CLASSPATH 变量，值为：`.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar`、配置JAVA_HOME，指向其他JAVA_HOME名。
 
-![](/assets/20230407111255.png)
-
-管理员身份运行：`.\jvms.exe init`
-
-![](/assets/20230407110325.png)
-
-默认的设置`JAVA_HOME`路径：`C:\Program Files (x86)/jdk`
-
-显示可安装的远程java版本：`jvms rls`
-
-![](/assets/20230407110639.png)
-
-安装java：`jvms install 1.8.0_151`
-
-显示本地安装的java版本：`jvms ls`
-
-![](/assets/20230407110511.png)
-
-切换不同版本java：`jvms switch 1.8.0_31`
-
-停用jvms：卸载jdk、删除环境变量的JAVA_HOME、Path中的jdk路径即可。
-
-### 方式三
-
-个人最佳：默认安装高版本，手动配置环境变量低版本
-
-### 方式四
-
-https://blog.csdn.net/qq_45737830/article/details/140118906
+![Alt text](assets/image-3.png)
 
 ## 注意事项
 

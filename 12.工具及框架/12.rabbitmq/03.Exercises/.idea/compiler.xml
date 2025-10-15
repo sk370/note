@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="pro04-route-model" />
+        <module name="pro03-fanout-model" />
+        <module name="pro02-worker-model" />
+        <module name="pro10-senior-confirm-backup-exchange" />
+        <module name="pro10-senior-confirm" />
+        <module name="pro02-confirm-tactics" />
+        <module name="pro09-boot-delayed-exchange" />
+        <module name="pro08-deadletter" />
+        <module name="pro01-simple-model" />
+        <module name="pro05-topic-model" />
+        <module name="pro09-boot-ttl-optimization" />
+        <module name="pro09-boot-ttl" />
+        <module name="pro02-workerack-model" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="pro09-boot-delayed-exchange" options="-parameters" />
+      <module name="pro09-boot-ttl" options="-parameters" />
+      <module name="pro09-boot-ttl-optimization" options="-parameters" />
+      <module name="pro10-senior-confirm" options="-parameters" />
+      <module name="pro10-senior-confirm-backup-exchange" options="-parameters" />
+    </option>
+  </component>
+</project>

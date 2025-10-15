@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="pro03-static-index:war">
+    <output-path>$PROJECT_DIR$/pro03-static-index/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>false</exploded>
+        <module>pro03-static-index</module>
+        <packaging>war</packaging>
+        <unpackNestedArchives>false</unpackNestedArchives>
+      </options>
+    </properties>
+    <root id="archive" name="pro03-static-index-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="pro03-static-index:war exploded" />
+    </root>
+  </artifact>
+</component>

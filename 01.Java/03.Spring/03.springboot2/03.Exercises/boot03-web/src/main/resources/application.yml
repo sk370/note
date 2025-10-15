@@ -1,0 +1,8 @@
+spring:
+#  mvc:
+#    static-path-pattern=/resources/**
+
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true

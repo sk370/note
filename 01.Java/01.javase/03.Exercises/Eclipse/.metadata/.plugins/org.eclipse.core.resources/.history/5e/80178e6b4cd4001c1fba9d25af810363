@@ -1,0 +1,80 @@
+/**
+ * @author INFITNITY Juejin:https://juejin.cn/user/2788017217999896
+ * @date 2022年5月15日下午7:44:42
+ */
+package customer_info_manage;
+
+public class CustomerView {
+	CustomerList customerList = new CustomerList(10);
+	public void enterMainMenu() {
+		boolean flag = true;
+		while(flag) {
+			System.out.println("-----------------客户信息管理软件-----------------");
+			System.out.println();
+			System.out.println("                 1 添 加 客 户");
+			System.out.println("                 2 修 改 客 户");
+			System.out.println("                 3 删 除 客 户");
+			System.out.println("                 4 客 户 列 表");
+			System.out.println("                 5 退      出");
+			System.out.println();
+			System.out.println("                 请选择(1-5)：_");
+			char input = CMUtility.readMenuSelection();
+			switch(input) {
+			case '1':
+				this.addNewCustomer();
+				break;
+			case '2':
+				this.modifyCustomer();
+				break;
+			case '3':
+				this.deleteCustomer();
+				break;
+			case '4':
+				this.listAllCustomers();
+				break;
+			case '5':
+		        System.out.println("确定退出吗？（Y/N）");
+		        char confirm = CMUtility.readConfirmSelection();
+		        if(confirm == 'Y') {
+		        	flag = false;
+		        	System.out.println("成功退出！");
+		        	break;
+		        }else if(confirm == 'N') {
+		        	break;
+		        }
+			}
+		}		
+	}
+	private void addNewCustomer() {
+		System.out.print("姓名：");
+		String name = CMUtility.readString(255);
+		System.out.print("性别：");
+		char gender = CMUtility.readChar();
+		System.out.print("年龄：");
+		int age = CMUtility.readInt();
+		System.out.print("电话：");
+		String phone = CMUtility.readString(255);
+		System.out.print("邮箱：");
+		String email = CMUtility.readString(255);		
+		Customer customer = new Customer(name, gender, age, phone, email);
+		customerList.addCustomer(customer);		
+	}
+	private void modifyCustomer() {
+		
+	}
+	private void deleteCustomer() {
+		
+	}
+	private void listAllCustomers() {
+		System.out.println("序号" + "\t\t" + "姓名" + "\t\t" + "性别" + "\t\t" + "年龄" + "\t\t" + "电话" + "\t\t"+ "邮箱" + "\t\t");
+//		System.out.println(customerList.getTotal());
+//		for(int i = 0; i < customerList.getTotal() - 1; i++) {
+//			System.out.println((i + 1) + "\t\t" + customerList.returnAllCustomers()[i].getName() + "\t\t" + customerList.returnAllCustomers()[i].getGender() + "\t\t" + customerList.returnAllCustomers()[i].getAge() + "\t\t" + customerList.returnAllCustomers()[i].getPhone() + "\t\t"+ customerList.returnAllCustomers()[i].getEmail() + "\t\t");
+//		}
+	}
+	public static void main(String[] args) {
+		CustomerView cv = new CustomerView();
+		cv.enterMainMenu();
+	}
+
+}

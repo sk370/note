@@ -1,0 +1,10 @@
+package iceriver.dubbo;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+	public class MainApplication {
+	
+		ClassPathXmlApplicationContext ioc = new ClassPathXmlApplicationContext("consumer.xml");
+		ioc.getBean(OrderService.class)
+		System.in.read();//按任意键退出，为了观察效果设置的阻塞
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ResourceNavigator">
+		<item key="ResourceViewer.STORE_SORT_TYPE" value="1"/>
+		<item key="ResourceWorkingSetFilter.STORE_WORKING_SET" value="Aggregate for window 1652153033264"/>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="D:\PracticalExercise\23.CloudNative\alipay.trade-page.pay-JAVA-UTF-8"/>
+			<item value="D:\实践练习\05.Java\04.基础综合实践项目"/>
+			<item value="D:\娱乐\05.Java\04.基础综合实践项目"/>
+			<item value="D:\娱乐\05.Java\01.练习题\05.面向对象"/>
+			<item value="D:\娱乐\05.Java\02.问答题\Eclipse"/>
+			<item value="D:\编程\02.Java\01.Java基础\04.面向对象\02.练习题\Eclipse"/>
+			<item value="E:\1.尚硅谷全套JAVA教程--基础必备（67.32GB）\尚硅谷宋红康Java核心基础_好评如潮（30天入门）\课件笔记源码资料\4_代码\第1部分：Java基础编程\day06-day18：Eclipse\workspace0105"/>
+			<item value="D:\BaiduNetdiskDownload\尚硅谷Java学科全套教程（总207.77GB）\1.尚硅谷全套JAVA教程--基础必备（67.32GB）\尚硅谷宋红康Java核心基础_好评如潮（30天入门）\课件笔记源码资料\4_代码\第1部分：Java基础编程\day06-day18：Eclipse\workspace0105"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.jdt.ui.java"/>
+		</list>
+	</section>
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="false"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\PracticalExercise\23.CloudNative\alipay.trade-page.pay-JAVA-UTF-8"/>
+			<item value="E:\1.尚硅谷全套JAVA教程--基础必备（67.32GB）\尚硅谷宋红康Java核心基础_好评如潮（30天入门）\课件笔记源码资料\4_代码\第1部分：Java基础编程\day06-day18：Eclipse\workspace0105"/>
+			<item value="D:\笔记\java\练习题\1.5 对象基础"/>
+			<item value="D:\笔记\java\实践项目"/>
+		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="863"/>
+		<item key="DIALOG_Y_ORIGIN" value="287"/>
+	</section>
+</section>

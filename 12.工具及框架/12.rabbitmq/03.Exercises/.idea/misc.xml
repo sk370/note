@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/pro01-simple-model/pom.xml" />
+        <option value="$PROJECT_DIR$/pro02-worker-model/pom.xml" />
+        <option value="$PROJECT_DIR$/pro02-workerack-model/pom.xml" />
+        <option value="$PROJECT_DIR$/pro03-confirm-model-single/pom.xml" />
+        <option value="$PROJECT_DIR$/pro03-fanout-model/pom.xml" />
+        <option value="$PROJECT_DIR$/pro02-confirm-tactics/pom.xml" />
+        <option value="$PROJECT_DIR$/pro04-route-model/pom.xml" />
+        <option value="$PROJECT_DIR$/pro05-topic-model/pom.xml" />
+        <option value="$PROJECT_DIR$/pro08-deadletter/pom.xml" />
+        <option value="$PROJECT_DIR$/pro09-boot-ttl-optimization/pom.xml" />
+        <option value="$PROJECT_DIR$/pro09-boot-ttl/pom.xml" />
+        <option value="$PROJECT_DIR$/pro09-boot-ttl-plugins/pom.xml" />
+        <option value="$PROJECT_DIR$/pro10-senior-confirm/pom.xml" />
+        <option value="$PROJECT_DIR$/pro09-boot-delayed-exchange/pom.xml" />
+        <option value="$PROJECT_DIR$/pro10-senior-confirm-backup-exchange/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

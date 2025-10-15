@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="pro01-maven" />
+        <module name="pro02-springboot" />
+        <module name="pro03-ehcache" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="FEBS-Shiro" target="1.8" />
+      <module name="pro01-javase" target="1.8" />
+      <module name="pro02-springboot (1)" target="8" />
+      <module name="shiro-example" target="1.8" />
+      <module name="shiro-example-chapter10" target="1.8" />
+      <module name="shiro-example-chapter11" target="1.8" />
+      <module name="shiro-example-chapter12" target="1.8" />
+      <module name="shiro-example-chapter13" target="1.8" />
+      <module name="shiro-example-chapter14" target="1.8" />
+      <module name="shiro-example-chapter15-client" target="1.8" />
+      <module name="shiro-example-chapter15-server" target="1.6" />
+      <module name="shiro-example-chapter16" target="1.8" />
+      <module name="shiro-example-chapter17-client" target="1.8" />
+      <module name="shiro-example-chapter17-server" target="1.8" />
+      <module name="shiro-example-chapter18" target="1.8" />
+      <module name="shiro-example-chapter19" target="1.8" />
+      <module name="shiro-example-chapter2" target="1.8" />
+      <module name="shiro-example-chapter20" target="1.8" />
+      <module name="shiro-example-chapter21" target="1.8" />
+      <module name="shiro-example-chapter22" target="1.8" />
+      <module name="shiro-example-chapter23-app1" target="1.8" />
+      <module name="shiro-example-chapter23-app2" target="1.8" />
+      <module name="shiro-example-chapter23-client" target="1.8" />
+      <module name="shiro-example-chapter23-core" target="1.8" />
+      <module name="shiro-example-chapter23-nginx" target="1.8" />
+      <module name="shiro-example-chapter23-pom" target="1.8" />
+      <module name="shiro-example-chapter23-server" target="1.8" />
+      <module name="shiro-example-chapter24" target="1.8" />
+      <module name="shiro-example-chapter3" target="1.8" />
+      <module name="shiro-example-chapter4" target="1.8" />
+      <module name="shiro-example-chapter5" target="1.8" />
+      <module name="shiro-example-chapter6" target="1.8" />
+      <module name="shiro-example-chapter7" target="1.8" />
+      <module name="shiro-example-chapter8" target="1.8" />
+      <module name="shiro-example-chapter9" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="FEBS-Shiro" options="-parameters" />
+      <module name="pro02-springboot" options="-parameters" />
+      <module name="pro03-ehcache" options="-parameters" />
+    </option>
+  </component>
+</project>

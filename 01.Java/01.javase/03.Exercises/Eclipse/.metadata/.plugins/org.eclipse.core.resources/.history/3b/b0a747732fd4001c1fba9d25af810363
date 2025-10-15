@@ -1,0 +1,29 @@
+/**
+ * @author INFITNITY Juejin:https://juejin.cn/user/2788017217999896
+ * @date 2022年5月15日下午4:58:23
+ */
+package customer_info_manage;
+public class CustomerList {
+	int total;
+	Customer[] customers = new Customer[total];
+	public CustomerList(int totalCustomer) {
+	}
+	public boolean addCustomer(Customer customer) {
+		return false;
+	}
+	public boolean replaceCustomer(int index, Customer cust) {
+		return false;
+	}
+	public boolean deleteCustomer(int index) {
+		return false;
+	}
+	public Customer[] returnAllCustomers() {
+		return Customer[0];
+	}
+	public Customer getCustomer(int index) {
+		return Customer;
+	}
+	public int getTotal() {
+		return this.total;
+	}
+}

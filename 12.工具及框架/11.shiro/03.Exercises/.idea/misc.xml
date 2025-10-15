@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/shiro-example/shiro-example-chapter10" />
+    <file type="web" url="file://$PROJECT_DIR$/shiro-example/shiro-example-chapter12" />
+    <file type="web" url="file://$PROJECT_DIR$/shiro-example/shiro-example-chapter13" />
+    <file type="web" url="file://$PROJECT_DIR$/shiro-example/shiro-example-chapter14" />
+    <file type="web" url="file://$PROJECT_DIR$/shiro-example/shiro-example-chapter15-client" />
+    <file type="web" url="file://$PROJECT_DIR$/shiro-example/shiro-example-chapter15-server" />
+    <file type="web" url="file://$PROJECT_DIR$/shiro-example/shiro-example-chapter16" />
+    <file type="web" url="file://$PROJECT_DIR$/shiro-example/shiro-example-chapter17-client" />
+    <file type="web" url="file://$PROJECT_DIR$/shiro-example/shiro-example-chapter17-server" />
+    <file type="web" url="file://$PROJECT_DIR$/shiro-example/shiro-example-chapter18" />
+    <file type="web" url="file://$PROJECT_DIR$/shiro-example/shiro-example-chapter19" />
+    <file type="web" url="file://$PROJECT_DIR$/shiro-example/shiro-example-chapter21" />
+    <file type="web" url="file://$PROJECT_DIR$/shiro-example/shiro-example-chapter22" />
+    <file type="web" url="file://$PROJECT_DIR$/shiro-example/shiro-example-chapter24" />
+    <file type="web" url="file://$PROJECT_DIR$/shiro-example/shiro-example-chapter7" />
+    <file type="web" url="file://$PROJECT_DIR$/shiro-example/shiro-example-chapter8" />
+    <file type="web" url="file://$PROJECT_DIR$/shiro-example/shiro-example-chapter9" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/pro01-javase/pom.xml" />
+        <option value="$PROJECT_DIR$/shiro-example/pom.xml" />
+        <option value="$PROJECT_DIR$/FEBS-Shiro/pom.xml" />
+        <option value="$PROJECT_DIR$/pro01-maven/pom.xml" />
+        <option value="$PROJECT_DIR$/pro02-springboot/pom.xml" />
+        <option value="$PROJECT_DIR$/pro03-ehcache/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

@@ -1,0 +1,18 @@
+- pro01-base-env:空springmvcweb项目
+- pro02-basesecurity-env:引入springsecurity，并做好配置
+  - 效果：此时所有请求都被拦截，要求登录才能访问，登录失败有错误提示
+    - 静态资源也被拦截，要求登录
+- pro03-static-index:放行首页和静态资源
+  - 效果：访问/layui路径下的index.jsp会放行，访问/layui路径下的其他资源会报403错误
+- pro04-jump-login:跳转登录页
+  - 效果：解决访问/layui路径下的其他资源报403错误，实现跳转到登录页。
+- pro05-login:实现登录(登录名和密码写死在项目中，在内存中验证)
+- pro06-logout-nocrsf:禁用crsf下的退出功能
+- pro07-logout-crsf:开启crsf下的退出功能
+- pro08-roleorauth:设置访问角色和权限
+- pro09-error-403:出现403错误跳转到指定界面
+- pro10-remberme-memory:记住登录状态（保存在本地cookie），关闭浏览器后重新打开登录状态仍在
+- pro11-remberme-database:记住登录状态（保存在数据库）
+- pro12-login-database:连接数据库的登录验证。
+- pro13-password-encrypt:密码加密(md5)
+- pro14-password-salt-encrypt:密码加密(salt)

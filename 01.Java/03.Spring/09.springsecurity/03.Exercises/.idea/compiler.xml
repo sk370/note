@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="pro01-base-env" />
+        <module name="pro04-jump-login" />
+        <module name="pro10-remberme-memory" />
+        <module name="pro05-login" />
+        <module name="pro02-basesecurity-env" />
+        <module name="pro03-static-index" />
+        <module name="pro11-remberme-database" />
+        <module name="pro14-password-salt-encrypt" />
+        <module name="pro06-logout-nocsrf" />
+        <module name="pro12-login-database" />
+        <module name="pro09-error-403" />
+        <module name="pro13-password-md5-encrypt" />
+        <module name="pro08-roleorauth" />
+        <module name="pro07-logout-csrf" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="pro01-base-env" target="1.8" />
+      <module name="pro02-basesecurity-env" target="1.8" />
+      <module name="pro03-static-index" target="1.8" />
+      <module name="pro04-jump-login" target="1.8" />
+      <module name="pro05-login" target="1.8" />
+      <module name="pro06-logout-nocsrf" target="1.8" />
+      <module name="pro07-logout-csrf" target="1.8" />
+      <module name="pro08-roleorauth" target="1.8" />
+      <module name="pro09-error-403" target="1.8" />
+      <module name="pro10-remberme-memory" target="1.8" />
+      <module name="pro11-remberme-database" target="1.8" />
+      <module name="pro12-login-database" target="1.8" />
+      <module name="pro13-password-md5-encrypt" target="1.8" />
+      <module name="pro14-password-salt-encrypt" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

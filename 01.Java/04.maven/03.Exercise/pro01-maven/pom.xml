@@ -1,0 +1,32 @@
+<!-- 根标签，表示对当前工程（模块）进行配置、管理 -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <!-- 从Maven2开始就是4.0.0，代表pom.xml文件所采用的标签结构 -->
+  <modelVersion>4.0.0</modelVersion>
+  <!-- 当前Maven工程的坐标 -->
+  <groupId>iceriver.maventest</groupId>
+  <artifactId>pro01-maven</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <!-- 打包方式：jar表示Java工程，war表示web工程，pom表示管理其他工程的工程 -->
+  <packaging>jar</packaging>
+
+  <name>pro01-maven</name>
+  <url>http://maven.apache.org</url>
+  <!-- 定义maven使用的属性值 -->
+  <properties>
+    <!-- 工程读取源码时使用的字符集 -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <!-- 配置具体依赖信息 -->
+  <dependencies>
+    <!-- 配置一个具体的依赖 -->
+    <dependency>
+      <!-- 依赖所在的坐标信息 -->
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <!-- 配置依赖的作用范围 -->
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>

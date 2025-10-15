@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/pro01-base-env" />
+    <file type="web" url="file://$PROJECT_DIR$/pro02-basesecurity-env" />
+    <file type="web" url="file://$PROJECT_DIR$/pro03-static-index" />
+    <file type="web" url="file://$PROJECT_DIR$/pro04-jump-login" />
+    <file type="web" url="file://$PROJECT_DIR$/pro05-login" />
+    <file type="web" url="file://$PROJECT_DIR$/pro06-logout-nocsrf" />
+    <file type="web" url="file://$PROJECT_DIR$/pro07-logout-csrf" />
+    <file type="web" url="file://$PROJECT_DIR$/pro08-roleorauth" />
+    <file type="web" url="file://$PROJECT_DIR$/pro09-error-403" />
+    <file type="web" url="file://$PROJECT_DIR$/pro10-remberme-memory" />
+    <file type="web" url="file://$PROJECT_DIR$/pro11-remberme-database" />
+    <file type="web" url="file://$PROJECT_DIR$/pro12-login-database" />
+    <file type="web" url="file://$PROJECT_DIR$/pro13-password-md5-encrypt" />
+    <file type="web" url="file://$PROJECT_DIR$/pro14-password-salt-encrypt" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pro01-base-env/pom.xml" />
+        <option value="$PROJECT_DIR$/pro02-basesecurity-env/pom.xml" />
+        <option value="$PROJECT_DIR$/pro03-static@index/pom.xml" />
+        <option value="$PROJECT_DIR$/pro03-static-index/pom.xml" />
+        <option value="$PROJECT_DIR$/pro04-jump-login/pom.xml" />
+        <option value="$PROJECT_DIR$/pro05-login/pom.xml" />
+        <option value="$PROJECT_DIR$/pro06-logout-nocsrf/pom.xml" />
+        <option value="$PROJECT_DIR$/pro07-logout-csrf/pom.xml" />
+        <option value="$PROJECT_DIR$/pro08-roleorauth/pom.xml" />
+        <option value="$PROJECT_DIR$/pro09-error-403/pom.xml" />
+        <option value="$PROJECT_DIR$/pro10-remberme-memory/pom.xml" />
+        <option value="$PROJECT_DIR$/pro11-remberme-database/pom.xml" />
+        <option value="$PROJECT_DIR$/pro12-login-database/pom.xml" />
+        <option value="$PROJECT_DIR$/pro13-password-encrypt/pom.xml" />
+        <option value="$PROJECT_DIR$/pro13-password-md5-encrypt/pom.xml" />
+        <option value="$PROJECT_DIR$/pro14-password-salt-encrypt/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>

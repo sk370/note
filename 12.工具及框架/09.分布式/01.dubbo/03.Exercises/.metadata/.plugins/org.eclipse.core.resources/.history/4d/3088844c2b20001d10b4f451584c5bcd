@@ -1,0 +1,12 @@
+package iceriver.dubbo.service.impl;
+
+import iceriver.dubbo.service.OrderService;
+
+public class OrderServiceImpl implements OrderService{
+
+	public void initOrder(String userId) {
+		// TODO 自动生成的方法存根
+		
+	}
+
+}

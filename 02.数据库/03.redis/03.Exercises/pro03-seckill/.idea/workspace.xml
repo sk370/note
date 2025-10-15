@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4a9197bd-c245-44ab-b9cf-930f6b818232" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/../../05.JavaSE/IDEA/exam/src/Main02.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../07.JavaWeb" beforeDir="false" afterPath="$PROJECT_DIR$/../../07.JavaWeb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13.Vue/pro02-vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../13.Vue/pro02-vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/OpcUaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/OpcUaApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/client/KeyStoreLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/client/KeyStoreLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/client/OpcUAClientRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/client/OpcUAClientRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/config/RedisCacheConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/config/RedisCacheConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/config/ScheduleConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/config/ScheduleConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/config/Swagger2Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/config/Swagger2Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/config/WebSocketConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/config/WebSocketConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/constant/BrowseNameAndDisplayNameEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/constant/BrowseNameAndDisplayNameEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/constant/RedisKeyConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/constant/RedisKeyConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/controller/OpcUaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/controller/OpcUaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/controller/ReadNodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/controller/ReadNodeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/controller/WebSocketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/controller/WebSocketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/dto/MachineDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/dto/MachineDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/dto/NodeTreeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/dto/NodeTreeDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/dto/ResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/dto/ResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/dto/ServerStatusDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/dto/ServerStatusDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/dto/SimulationDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/dto/SimulationDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/entity/NodeStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/entity/NodeStructure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/entity/VirtualMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/entity/VirtualMachine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/listener/OpcInitContextRefreshedListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/listener/OpcInitContextRefreshedListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/mapper/NodeStructureMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/mapper/NodeStructureMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/mapper/VirtualMachineMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/mapper/VirtualMachineMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/service/impl/ReadDeviceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/service/impl/ReadDeviceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/task/OpcUaReadNodeTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/task/OpcUaReadNodeTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/task/OpcUaSubscriptionTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/java/com/sk370/opcua/task/OpcUaSubscriptionTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../29.OPCUA/sk370-opcua/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/DAL/DAL.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/DAL/Modbus.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/DAL/bin/Debug/net6.0/DAL.deps.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/DAL/bin/Debug/net6.0/DAL.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/DAL/bin/Debug/net6.0/DAL.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/DAL/obj/DAL.csproj.nuget.dgspec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/DAL/obj/DAL.csproj.nuget.g.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/DAL/obj/DAL.csproj.nuget.g.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/DAL/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/DAL/obj/Debug/net6.0/DAL.AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/DAL/obj/Debug/net6.0/DAL.AssemblyInfoInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/DAL/obj/Debug/net6.0/DAL.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/DAL/obj/Debug/net6.0/DAL.GlobalUsings.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/DAL/obj/Debug/net6.0/DAL.assets.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/DAL/obj/Debug/net6.0/DAL.csproj.AssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/DAL/obj/Debug/net6.0/DAL.csproj.BuildWithSkipAnalyzers" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/DAL/obj/Debug/net6.0/DAL.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/DAL/obj/Debug/net6.0/DAL.csproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/DAL/obj/Debug/net6.0/DAL.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/DAL/obj/Debug/net6.0/DAL.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/DAL/obj/Debug/net6.0/DAL.sourcelink.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/DAL/obj/Debug/net6.0/ref/DAL.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/DAL/obj/Debug/net6.0/refint/DAL.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/DAL/obj/project.assets.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/DAL/obj/project.nuget.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/.vs/ModbusDemo/DesignTimeBuild/.dtbcache.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/.vs/ModbusDemo/FileContentIndex/0654b71f-ed15-48f9-8fed-8d5b81576db8.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/.vs/ModbusDemo/FileContentIndex/442b34fb-2380-4d5e-b146-f0522a90b9ac.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/.vs/ModbusDemo/FileContentIndex/7faab5ad-adfa-4fb9-a9ac-0a8efb62b46d.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/.vs/ModbusDemo/FileContentIndex/8567f7df-eddb-4e11-ba3a-989e86d02211.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/.vs/ModbusDemo/FileContentIndex/bffd3d3d-7dab-4a4c-bafd-968deae9a4d2.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/.vs/ModbusDemo/v17/.futdcache.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/.vs/ModbusDemo/v17/.suo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/.vs/ProjectEvaluation/modbusdemo.metadata.v7.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/.vs/ProjectEvaluation/modbusdemo.projects.v7.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/FormModbus.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/FormModbus.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/FormModbus.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/ModbusDemo.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/ModbusDemo.csproj.user" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/ModbusDemo.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/bin/Debug/net6.0-windows/DAL.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/bin/Debug/net6.0-windows/DAL.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/bin/Debug/net6.0-windows/ModbusDemo.deps.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/bin/Debug/net6.0-windows/ModbusDemo.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/bin/Debug/net6.0-windows/ModbusDemo.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/bin/Debug/net6.0-windows/ModbusDemo.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/bin/Debug/net6.0-windows/ModbusDemo.runtimeconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/bin/Debug/net6.0-windows/System.IO.Ports.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/bin/Debug/net6.0-windows/runtimes/linux-arm/native/libSystem.IO.Ports.Native.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/bin/Debug/net6.0-windows/runtimes/linux-arm64/native/libSystem.IO.Ports.Native.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/bin/Debug/net6.0-windows/runtimes/linux-x64/native/libSystem.IO.Ports.Native.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/bin/Debug/net6.0-windows/runtimes/osx-arm64/native/libSystem.IO.Ports.Native.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/bin/Debug/net6.0-windows/runtimes/osx-x64/native/libSystem.IO.Ports.Native.dylib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/bin/Debug/net6.0-windows/runtimes/unix/lib/net6.0/System.IO.Ports.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/bin/Debug/net6.0-windows/runtimes/win/lib/net6.0/System.IO.Ports.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/obj/Debug/net6.0-windows/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/obj/Debug/net6.0-windows/ModbusDemo.AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/obj/Debug/net6.0-windows/ModbusDemo.AssemblyInfoInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/obj/Debug/net6.0-windows/ModbusDemo.FormModbus.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/obj/Debug/net6.0-windows/ModbusDemo.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/obj/Debug/net6.0-windows/ModbusDemo.GlobalUsings.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/obj/Debug/net6.0-windows/ModbusDemo.assets.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/obj/Debug/net6.0-windows/ModbusDemo.csproj.AssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/obj/Debug/net6.0-windows/ModbusDemo.csproj.BuildWithSkipAnalyzers" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/obj/Debug/net6.0-windows/ModbusDemo.csproj.CopyComplete" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/obj/Debug/net6.0-windows/ModbusDemo.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/obj/Debug/net6.0-windows/ModbusDemo.csproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/obj/Debug/net6.0-windows/ModbusDemo.csproj.GenerateResource.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/obj/Debug/net6.0-windows/ModbusDemo.designer.deps.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/obj/Debug/net6.0-windows/ModbusDemo.designer.runtimeconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/obj/Debug/net6.0-windows/ModbusDemo.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/obj/Debug/net6.0-windows/ModbusDemo.genruntimeconfig.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/obj/Debug/net6.0-windows/ModbusDemo.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/obj/Debug/net6.0-windows/ModbusDemo.sourcelink.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/obj/Debug/net6.0-windows/apphost.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/obj/Debug/net6.0-windows/ref/ModbusDemo.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/obj/Debug/net6.0-windows/refint/ModbusDemo.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/obj/ModbusDemo.csproj.nuget.dgspec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/obj/ModbusDemo.csproj.nuget.g.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/obj/ModbusDemo.csproj.nuget.g.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/obj/project.assets.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../31.C#/ModbusDemo/obj/project.nuget.cache" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2yMqojGhMzTCnilvTffhDNRXDqU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/Github/opcua-milo-blog",
+    "project.structure.last.edited": "全局库",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="4a9197bd-c245-44ab-b9cf-930f6b818232" name="更改" comment="" />
+      <created>1749654966219</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1749654966219</updated>
+    </task>
+    <servers />
+  </component>
+</project>

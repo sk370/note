@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/16.MyBatis-Plus.iml" filepath="$PROJECT_DIR$/.idea/16.MyBatis-Plus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plus01-base/plus01-base.iml" filepath="$PROJECT_DIR$/plus01-base/plus01-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plus02-optimistic-lock/plus02-optimistic-lock.iml" filepath="$PROJECT_DIR$/plus02-optimistic-lock/plus02-optimistic-lock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plus03-enum/plus03-enum.iml" filepath="$PROJECT_DIR$/plus03-enum/plus03-enum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plus04-generator/plus04-generator.iml" filepath="$PROJECT_DIR$/plus04-generator/plus04-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plus05-datasources/plus05-datasources.iml" filepath="$PROJECT_DIR$/plus05-datasources/plus05-datasources.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plus06-mybatisx/plus06-mybatisx.iml" filepath="$PROJECT_DIR$/plus06-mybatisx/plus06-mybatisx.iml" />
+    </modules>
+  </component>
+</project>

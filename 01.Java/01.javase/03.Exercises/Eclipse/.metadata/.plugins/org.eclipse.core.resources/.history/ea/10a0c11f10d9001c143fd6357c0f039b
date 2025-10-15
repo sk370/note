@@ -1,0 +1,32 @@
+/**
+ * @author INFITNITY Juejin:https://juejin.cn/user/2788017217999896
+ * @date 2022年5月21日下午9:30:15
+ */
+package com.infinity.question_and_answer;
+
+public class ModifierAndKeywords {
+	public void a() {};
+	abstract int  a = 0;
+	static protected  void b() {};
+	void c() {} ;
+	private void d () {};
+	 private  ModifierAndKeywords() {
+		final int b =3;
+	}
+	public final static  void s() {}
+	static{
+		
+	}
+}
+//public class Modifier{
+//	
+//}
+ abstract  class Keywords{
+	public void a() {};
+	protected void b() {};
+	abstract static void c();
+	abstract static   class  Ins{
+		
+	}
+}
+abstract  interface   fly{}
