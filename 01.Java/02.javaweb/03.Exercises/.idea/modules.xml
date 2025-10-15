@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/qqzone/native/01.native.iml" filepath="$PROJECT_DIR$/qqzone/native/01.native.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fruit_demo/thymeleaf/01.thymeleaf.iml" filepath="$PROJECT_DIR$/fruit_demo/thymeleaf/01.thymeleaf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fruit_demo/pages/02.pages.iml" filepath="$PROJECT_DIR$/fruit_demo/pages/02.pages.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fruit_demo/keywords/03.keywords.iml" filepath="$PROJECT_DIR$/fruit_demo/keywords/03.keywords.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fruit_demo/mvc/04.mvc.iml" filepath="$PROJECT_DIR$/fruit_demo/mvc/04.mvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fruit_demo/mvc-reflect/05.mvc-reflect.iml" filepath="$PROJECT_DIR$/fruit_demo/mvc-reflect/05.mvc-reflect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fruit_demo/dispatcherservlet/06.dispatcherservlet.iml" filepath="$PROJECT_DIR$/fruit_demo/dispatcherservlet/06.dispatcherservlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fruit_demo/ioc/07.ioc.iml" filepath="$PROJECT_DIR$/fruit_demo/ioc/07.ioc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fruit_demo/transaction/08.transaction.iml" filepath="$PROJECT_DIR$/fruit_demo/transaction/08.transaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fruit_demo/listener/09.listener.iml" filepath="$PROJECT_DIR$/fruit_demo/listener/09.listener.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fruit_demo/fruit_demo.iml" filepath="$PROJECT_DIR$/fruit_demo/fruit_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ioc_native/ioc_native.iml" filepath="$PROJECT_DIR$/ioc_native/ioc_native.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jdbc&amp;dao/jdbc&amp;dao.iml" filepath="$PROJECT_DIR$/jdbc&amp;dao/jdbc&amp;dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jsp1.8_bookstore/jsp1.8_bookstore.iml" filepath="$PROJECT_DIR$/jsp1.8_bookstore/jsp1.8_bookstore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jsptest/jsptest.iml" filepath="$PROJECT_DIR$/jsptest/jsptest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jdbc&amp;dao/native_/native_.iml" filepath="$PROJECT_DIR$/jdbc&amp;dao/native_/native_.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jdbc&amp;dao/optimizeDaoMethod/optimizeDaoMethod.iml" filepath="$PROJECT_DIR$/jdbc&amp;dao/optimizeDaoMethod/optimizeDaoMethod.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jdbc&amp;dao/optimizeJDBC/optimizeJDBC.iml" filepath="$PROJECT_DIR$/jdbc&amp;dao/optimizeJDBC/optimizeJDBC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/parsexml/parsexml.iml" filepath="$PROJECT_DIR$/parsexml/parsexml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qqzone/qqzone.iml" filepath="$PROJECT_DIR$/qqzone/qqzone.iml" />
+    </modules>
+  </component>
+</project>

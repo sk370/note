@@ -1,0 +1,43 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <link href="css/edit.css" rel="stylesheet">
+    <!--    <script language="JavaScript" src="js/index.js"></script>-->
+</head>
+<body>
+<div id="div_container">
+    <div id="div_fruit_list">
+        <p class="center f30">编辑库存信息</p>
+        <form method="post" th:action="@{/update.do}">
+            <table id="tbl_fruit">
+                <tr>
+                    <th class="w20">名称</th>
+                    <th class="w20">单价</th>
+                    <th class="w20">库存</th>
+                    <th class="w20">备注</th>
+                    <th>操作</th>
+                </tr>
+                <tr>
+                    <input name="fid" th:value="${fruit.fid}" type="hidden">
+                    <td>
+                        <input name="fname" th:value="${fruit.fname}" type="text">
+                    </td>
+                    <td>
+                        <input name="price" th:value="${fruit.price}" type="text">
+                    </td>
+                    <td>
+                        <input name="fcount" th:value="${fruit.fcount}" type="text">
+                    </td>
+                    <td>
+                        <input name="remark" th:value="${fruit.remark}" type="text">
+                    </td>
+                    <td>
+                        <input name="修改" type="submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+</body>
+</html>
