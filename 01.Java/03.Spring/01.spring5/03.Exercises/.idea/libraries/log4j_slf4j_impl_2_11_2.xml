@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="log4j-slf4j-impl-2.11.2">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/spring5/libs/log4j-slf4j-impl-2.11.2.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

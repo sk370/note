@@ -1,5 +1,0 @@
-package iceriver.dubbo.service;
-
-public class OrderService {
-
-}

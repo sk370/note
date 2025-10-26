@@ -1,7 +1,0 @@
-INDEX VERSION 1.4+D:\PracticalExercise\18.Dubbo\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-729406175.index
-3970501254.index
-543276411.index
-3210833228.index
-320917103.index
-1797034175.index

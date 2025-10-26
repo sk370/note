@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-
-<beans>
-    <!--   将servletPath中涉及名字是furit的，都交给FruitController进行处理-->
-    <bean id="fruit" class="fruit.controllers.FruitController"/>
-</beans>

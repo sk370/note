@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="thymeleaf-3.0.12.RELEASE">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/fruit_demo/libs/thymeleaf-3.0.12.RELEASE.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

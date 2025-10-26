@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="ognl-3.1.26">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/fruit_demo/libs/ognl-3.1.26.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

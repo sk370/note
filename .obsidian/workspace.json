@@ -1,58 +1,14 @@
 {
   "main": {
-    "id": "a1639ab7c1203711",
+    "id": "04406861286760c0",
     "type": "split",
     "children": [
       {
-<<<<<<< HEAD
-        "id": "89bee13fa572f4e2",
-=======
-        "id": "96ace60b09a611cd",
->>>>>>> 4ae0fc35474d735e5458459be4e28d4fc4f0cb83
+        "id": "2a5a68b03137dde3",
         "type": "tabs",
-        "dimension": 77.6015228426396,
         "children": [
           {
-<<<<<<< HEAD
-            "id": "871a238991bab362",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Java后台管理系统/Java后台管理系统.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "Java后台管理系统"
-            },
-            "group": "91b0483b7e128c13"
-          }
-        ]
-      },
-      {
-        "id": "fd51f1368548076a",
-        "type": "tabs",
-        "dimension": 22.398477157360404,
-        "children": [
-          {
-            "id": "383bb138c9ec5d02",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "Java后台管理系统/Java后台管理系统.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Java后台管理系统 的大纲"
-            },
-            "group": "91b0483b7e128c13"
-=======
-            "id": "bc99c00ec3c56483",
+            "id": "ea6fe8ec908c635a",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -60,7 +16,6 @@
               "icon": "lucide-file",
               "title": "新标签页"
             }
->>>>>>> 4ae0fc35474d735e5458459be4e28d4fc4f0cb83
           }
         ]
       }
@@ -68,28 +23,28 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "ce7d54674d6588ed",
+    "id": "f941048da5df8ece",
     "type": "split",
     "children": [
       {
-        "id": "9db9e36bf081942c",
+        "id": "c1aa92773f6728c1",
         "type": "tabs",
         "children": [
           {
-            "id": "670e16253227c498",
+            "id": "ad00dbef0dacc84a",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": true
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
             }
           },
           {
-            "id": "6efd49c69cbf7499",
+            "id": "81487b28d338b034",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -106,7 +61,7 @@
             }
           },
           {
-            "id": "e80fb9af183d27b4",
+            "id": "028dd5e69c8e6732",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -122,25 +77,26 @@
     "width": 300
   },
   "right": {
-    "id": "db4e00768853bc2e",
+    "id": "d1181e3ea8704f6b",
     "type": "split",
     "children": [
       {
-        "id": "dca9ee936bb28123",
+        "id": "745c9dedecf3dd35",
         "type": "tabs",
         "children": [
           {
-            "id": "d9e5b8990a648cbd",
+            "id": "a5dd1190eaa036be",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
+                "file": "未命名.base",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "未命名 的大纲"
             }
           }
         ]
@@ -152,91 +108,13 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:创建新数据库": false,
       "command-palette:打开命令面板": false,
-      "oz-clear-unused-images:Clear Unused Images": false,
-      "pdf-to-markdown-plugin:PDF to Markdown": false
+      "bases:创建新数据库": false,
+      "oz-clear-unused-images:Clear Unused Images": false
     }
   },
-  "active": "383bb138c9ec5d02",
+  "active": "ad00dbef0dacc84a",
   "lastOpenFiles": [
-<<<<<<< HEAD
-    "未命名.base",
-=======
-    "01.Java/ehcache/02.Notes/EhCache.md",
-    "01.Java/ehcache/04.Projects",
-    "01.Java/ehcache/03.Exercises",
-    "01.Java/ehcache/02.Notes/assets/image.png",
-    "01.Java/ehcache/02.Notes/assets/20230407111255.png",
-    "01.Java/ehcache/02.Notes/assets/20230407110639.png",
-    "01.Java/ehcache/02.Notes/assets/20230407110511.png",
-    "01.Java/ehcache/02.Notes/assets/20230407110325.png",
-    "01.Java/ehcache/02.Notes/assets/20230407095018.png",
-    "01.Java/ehcache/02.Notes/assets/20230407094334.png",
-    "01.Java/ehcache/02.Notes/assets/20230404131445.png",
-    "01.Java/ehcache/02.Notes/assets",
-    "01.Java/ehcache/02.Notes/Java SE.md",
-    "01.Java/ehcache/02.Notes",
-    "01.Java/ehcache/01.Resources",
-    "01.Java/01.Java SE/04.Projects",
-    "01.Java/01.Java SE/03.Exercises",
-    "01.Java/01.Java SE/02.Notes",
-    "Python/爬虫/爬虫.md",
-    "IT运维/网络工程师/网络工程师.md",
-    "开源/rabbitmq/RabbitMQ.md",
-    "容器技术/docker/docker/docker.md",
-    "容器技术/docker/docker实践/docker实践.md",
-    "转型/个人.md",
-    "Java/juc/JUC.md",
-    "Java后台管理系统/Java后台管理系统.md",
-    "Java/javaweb/javaweb.md",
->>>>>>> 4ae0fc35474d735e5458459be4e28d4fc4f0cb83
-    "IoT/node-red/B站Yongqi201入门/B站Yongqi201入门.md",
-    "IoT/node-red/B站Yongqi201入门/未命名.md",
-    "IoT/node-red/node-red实践/node-red实践.md",
-    "IoT/node-red/B站Yongqi201入门",
-    "IoT/OPC UA/OPC UA.md",
-    "IoT/Arduino/ESP8266-NodeMCU开发板详解.md",
-    "IoT/智慧农业/智慧农业.md",
-    "Spring/spring5/Spring5.md",
-    "spring5/200831175708.png.md",
-    "spring5",
-    "IoT/node-red/node-red官方文档/用户指南.md",
-    "IoT/node-red/node-red官方文档/高频问题.md",
-    "IoT/node-red/node-red官方文档/教程.md",
-    "IoT/node-red/node-red官方文档/入门.md",
-    "IoT/node-red/node-red官方文档/食谱.md",
-    "转型/预测性维护技术/预测性维护技术.md",
-    "工控/200smart/200smart.md",
-    "上位机/winform/assets/20250525.png",
-<<<<<<< HEAD
-    "上位机/winform/assets/20250524-1.png",
-    "上位机/winform/assets/20250524.png",
-    "上位机/winform/assets/20250521-1.png",
-    "上位机/winform/assets/20250521.png",
-    "嵌入式/Arduino/assets/20250505-3.png",
-    "嵌入式/Arduino/assets/20250505-2.png",
-    "嵌入式/Arduino/assets/20250505-1.png",
-    "嵌入式/Arduino/assets/20250505.png",
-    "嵌入式/MQTT/MQTT.md",
-    "Vue/Vue3快速上手.md",
-    "转型/电气工程师/电气工程师.md",
-    "转型/smart200/smart200.md",
-    "读书笔记/Vue3 入门指南与实战案例/Vue3 入门指南与实战案例.md",
-    "转型/smart200",
-    "转型/IoT",
-    "黑马AI/数据挖掘基础/assets/20250325.png",
-    "转型/PLC编程/PLC编程.md",
-    "转型/PLC编程/assets",
-    "转型/个人.md",
-    "转型/PLC编程",
-    "转型/工控与自动化/工控与自动化.md",
-    "转型/工控与自动化",
-    "黑马AI/数据挖掘基础/assets",
-    "黑马AI/Python基础/黑马AI-Python基础.pdf",
-    "黑马AI/数据挖掘基础"
-=======
-    "上位机/winform/assets/20250524-1.png"
->>>>>>> 4ae0fc35474d735e5458459be4e28d4fc4f0cb83
+    "未命名.base"
   ]
 }
