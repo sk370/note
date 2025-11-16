@@ -1,12 +1,4 @@
----
-title: Redis
-urlname: mpee0p
-date: '2022-08-16 15:55:31 +0800'
-tags: [Redis]
-categories: [数据库]
----
 *Redis（Remote Dictionary Server )，即远程字典服务，是一个开源的使用ANSI C语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。*
-<!-- more -->
 
 [尚硅谷\_Redis6 课件.docx](https://www.yuque.com/attachments/yuque/0/2022/docx/1604140/1660638593883-8d8d1335-7e87-4500-a518-77c7647c7dc6.docx)
 
